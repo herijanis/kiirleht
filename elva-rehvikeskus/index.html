@@ -5,7 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0b0d11">
-<title>Autoteenindus</title>
+<title>Talverehvid alla Elvas – broneeri aeg enne järjekordi | Elva Rehvikeskus</title>
+<meta name="description" content="Elva Rehvikeskus (Kummix OÜ) tegutseb Elvas aastast 1996. Vahetame rehvid, aitame valida uued ja hoiame su rehve järgmise hooajani.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="et_EE">
+<meta property="og:site_name" content="Elva Rehvikeskus">
+<meta property="og:title" content="Talverehvid alla Elvas – broneeri aeg enne järjekordi | Elva Rehvikeskus">
+<meta property="og:description" content="Elva Rehvikeskus (Kummix OÜ) tegutseb Elvas aastast 1996. Vahetame rehvid, aitame valida uued ja hoiame su rehve järgmise hooajani.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoRepair", "name": "Elva Rehvikeskus", "description": "Elva Rehvikeskus (Kummix OÜ) tegutseb Elvas aastast 1996. Vahetame rehvid, aitame valida uued ja hoiame su rehve järgmise hooajani.", "telephone": "+3725253613", "address": {"@type": "PostalAddress", "streetAddress": "Kirde põik 14", "addressLocality": "Elva", "addressCountry": "EE"}, "email": "raul.kummix@mail.ee", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "16:00"}]}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b0d11'/%3E%3Ccircle cx='12' cy='12' r='7.5' fill='none' stroke='%23ffb020' stroke-width='2.6'/%3E%3Ccircle cx='12' cy='12' r='2.6' fill='%23ffb020'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +21,7 @@
 <script>document.documentElement.classList.add('js');
 /* ===== FIRMA ANDMED: muuda ainult seda plokki ===== */
 const FIRMA = {
+  naidis: true,
   nimi: "Elva Rehvikeskus",
   nimiLyhike: ["Elva", "Rehvikeskus"],          // logo: teine osa värviline
   linn: "Elva",
@@ -48,8 +57,7 @@ const FIRMA = {
   arvustused: [],
   // [päev, avamine, sulgemine] — null = suletud. 0=P, 1=E ... 6=L
   lahti: {1:["08:00","18:00"],2:["08:00","18:00"],3:["08:00","18:00"],4:["08:00","18:00"],5:["08:00","18:00"],6:["09:00","16:00"],0:null},
-  kaartOtsing: "Kirde põik 14, Elva",
-  naidis: true
+  kaartOtsing: "Elva Rehvikeskus, Kirde põik 14, Elva, Eesti"   // kontrollitud: Google leiab firma (58.2328, 26.4140)
 };
 /* ===== andmete lõpp ===== */
 </script>
@@ -63,11 +71,13 @@ const FIRMA = {
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,.logo,.num{font-family:Sora,Inter,sans-serif}
+h1,h2,h3,.logo,.num{font-family:Sora,Inter,system-ui,sans-serif}
 a{color:inherit}
 button{font:inherit;color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
 ::selection{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section[id]{scroll-margin-top:72px}
 
 /* progress + header */
 .progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:50}
@@ -123,7 +133,7 @@ h1 .hl{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-b
 .tyre-glow{position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.35),transparent 65%);filter:blur(30px);animation:breathe 4s ease-in-out infinite}
 @keyframes breathe{0%,100%{opacity:.55;transform:scale(.95)}50%{opacity:1;transform:scale(1.05)}}
 .chip{position:absolute;background:rgba(20,24,32,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:0 20px 40px -10px rgba(0,0,0,.6);animation:bob 5s ease-in-out infinite}
-.chip b{display:block;font-family:Sora;font-size:18px;color:var(--accent)}
+.chip b{display:block;font-family:Sora,Inter,sans-serif;font-size:18px;color:var(--accent)}
 .chip.c1{top:8%;left:-4%}
 .chip.c2{bottom:10%;right:-2%;animation-delay:-2.5s}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -138,7 +148,7 @@ h1 .hl{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-b
 .marquee{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:16px 0;user-select:none}
 .marquee-track{display:flex;gap:42px;width:max-content;animation:marq 35s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
-.marquee span{font-family:Sora;font-weight:600;font-size:18px;color:#c9cfd9;white-space:nowrap;display:flex;align-items:center;gap:42px}
+.marquee span{font-family:Sora,Inter,sans-serif;font-weight:600;font-size:18px;color:#c9cfd9;white-space:nowrap;display:flex;align-items:center;gap:42px}
 .marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
@@ -147,13 +157,14 @@ section{padding:84px 0;position:relative}
 .eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
 h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
 .sub{color:var(--muted);margin-bottom:34px;max-width:620px;font-size:17px}
+.reveal>h2:last-child{margin-bottom:34px}
 
 /* reveal */
 .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .reveal.in{opacity:1;transform:none}
 
 /* service cards w/ spotlight */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:14px}
 .card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;overflow:hidden;transition:transform .35s var(--ease),border-color .3s}
 .card::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,-20%),rgba(255,176,32,.13),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
 @media (hover:hover){.card:hover{transform:translateY(-6px);border-color:#3a3226}}
@@ -162,8 +173,10 @@ h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin
 .card:hover .ico{transform:rotate(-8deg) scale(1.08)}
 .card .ico svg{width:24px;height:24px}
 .card h3{font-size:19px;margin-bottom:6px;letter-spacing:-.01em}
+.grid>.card p{margin-bottom:16px}
 .card p{color:var(--muted);font-size:15px}
-.price-tag{display:inline-flex;margin-top:16px;font-weight:600;font-size:14px;color:var(--accent);background:rgba(255,176,32,.09);border:1px solid rgba(255,176,32,.22);padding:5px 11px;border-radius:999px}
+.grid>.card{display:flex;flex-direction:column;align-items:flex-start}
+.price-tag{display:inline-flex;margin-top:auto;font-weight:600;font-size:14px;color:var(--accent);background:rgba(255,176,32,.09);border:1px solid rgba(255,176,32,.22);padding:5px 11px;border-radius:999px}
 
 /* prices */
 .ptable{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
@@ -177,7 +190,7 @@ h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
 .step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px}
-.step::before{counter-increment:s;content:"0" counter(s);font-family:Sora;font-weight:800;font-size:44px;line-height:1;background:linear-gradient(135deg,var(--accent),transparent 90%);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:12px}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Sora,Inter,sans-serif;font-weight:800;font-size:44px;line-height:1;background:linear-gradient(135deg,var(--accent),transparent 90%);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:12px}
 .step h3{font-size:18px;margin-bottom:4px}
 .step p{color:var(--muted);font-size:15px}
 
@@ -185,11 +198,13 @@ h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin
 .countdown{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:linear-gradient(120deg,rgba(255,176,32,.14),rgba(255,122,26,.06) 60%,transparent);border:1px solid rgba(255,176,32,.25);border-radius:22px;padding:26px}
 .countdown h3{font-size:22px;letter-spacing:-.02em}
 .countdown p{color:var(--muted);font-size:15px}
-.cd-num{font-family:Sora;font-weight:800;font-size:clamp(40px,6vw,58px);line-height:1;color:var(--accent)}
+.cd-num{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:clamp(40px,6vw,58px);line-height:1;color:var(--accent)}
 .cd-num small{font-size:16px;color:var(--muted);font-weight:600;margin-left:6px}
 
 /* why + reviews */
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.why.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:1180px){.why{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}}
 .why .card{display:flex;gap:14px;align-items:flex-start}
 .why .ico{margin:0;flex:none}
 .review .stars{color:var(--accent);letter-spacing:3px}
@@ -197,12 +212,15 @@ h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin
 .review small{color:var(--muted)}
 
 /* booking */
-.book{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-.book>*{min-width:0}
-.contact-list .btn{min-width:0}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px}
 .bstep{font-size:13px;color:var(--muted);margin:18px 0 10px;display:flex;align-items:center;gap:8px}
-.bstep:first-of-type{margin-top:0}
+.bcol>.bstep:first-child{margin-top:0}
+.bform{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:34px}
+.bcol{min-width:0}
+.bnote{color:var(--muted);font-size:13px;margin-top:10px;text-align:center}
+.err{color:#ff8a7a;font-size:14px;margin-top:10px;min-height:0}
+.err:empty{display:none}
+input[aria-invalid="true"]{border-color:#ff8a7a}
 .bstep i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--surface2);border:1px solid var(--line);font-size:12px;color:var(--text)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chipbtn{border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:10px 14px;cursor:pointer;font-size:14px;transition:all .2s var(--ease)}
@@ -211,7 +229,7 @@ h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin
 .days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;scrollbar-width:thin}
 .day{flex:none;scroll-snap-align:start;width:64px;border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:10px 0;text-align:center;cursor:pointer;transition:all .2s var(--ease)}
 .day small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
-.day b{display:block;font-family:Sora;font-size:20px}
+.day b{display:block;font-family:Sora,Inter,sans-serif;font-size:20px}
 .day:hover:not(:disabled){border-color:#4a4f5a;transform:translateY(-2px)}
 .day:disabled{opacity:.35;cursor:not-allowed}
 .day[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);border-color:transparent}
@@ -226,24 +244,47 @@ h2{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.03em;line-height:1.1;margin
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .fields .full{grid-column:1/-1}
 input,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;transition:border-color .2s,box-shadow .2s}
-input::placeholder,textarea::placeholder{color:#626a78}
+input::placeholder,textarea::placeholder{color:#7f8796}
 input:focus,textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,176,32,.15)}
 .summary{background:var(--bg);border:1px dashed #3a404b;border-radius:14px;padding:14px;font-size:14px;color:var(--muted);margin:16px 0}
+.summary.warn{border-color:#ff8a7a;color:#ffb3a8}
 .summary b{color:var(--text)}
 .done{display:none;text-align:center;padding:30px 10px}
 .done svg{width:64px;height:64px;color:var(--ok)}
 .done .ck{stroke-dasharray:60;stroke-dashoffset:60;animation:draw .7s .1s var(--ease) forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 .done h3{font-size:22px;margin:12px 0 6px}
-.done p{color:var(--muted)}
+.done p{color:var(--muted);max-width:460px;margin:0 auto}
+.done a{color:var(--accent)}
+.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:14px;margin-top:16px}
 
-.hours div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;padding:30px}
+.contact h3{font-size:26px;letter-spacing:-.02em;margin-bottom:4px}
+.c-addr{color:var(--muted);display:flex;gap:8px;align-items:flex-start;overflow-wrap:anywhere}
+.c-addr svg{width:18px;height:18px;flex:none;margin-top:4px;color:var(--accent)}
+.contact .pill{margin:16px 0 22px}
+.c-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.c-actions .btn{white-space:nowrap;min-width:0}
+.c-actions .btn-accent{grid-column:1/-1}
+@media (min-width:1180px){.c-actions{display:flex;flex-wrap:wrap}}
+.c-mail{display:inline-flex;align-items:flex-start;gap:8px;margin-top:16px;color:var(--muted);font-size:15px;text-decoration:none;overflow-wrap:anywhere;min-width:0;max-width:100%}
+.c-mail svg{width:18px;height:18px;flex:none;margin-top:3px}
+.c-mail:hover{color:var(--text)}
+.c-mail span{text-decoration:underline;text-decoration-color:#4a4f5a;text-underline-offset:3px}
+.c-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px;font-family:Inter,system-ui,sans-serif}
+.hours div{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
 .hours div:last-child{border-bottom:0}
-.hours div span:first-child{color:var(--muted)}
-.hours div.today{color:var(--accent)}
-.hours div.today span:first-child{color:var(--accent)}
-.contact-list{display:grid;gap:10px;margin-top:18px}
-.map{border:0;width:100%;height:340px;border-radius:22px;margin-top:16px;filter:grayscale(.4) invert(.9) hue-rotate(180deg) contrast(.9)}
+.hours-note{color:var(--muted);font-size:15px;padding:10px 0;overflow-wrap:anywhere}
+.hours-note a{color:var(--accent);white-space:nowrap}
+.contact .pill[hidden]+.c-actions{margin-top:22px}
+[hidden]{display:none!important}
+.hours div span:first-child{color:#d6dbe3;display:flex;align-items:center;gap:8px}
+.hours div span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.hours div.closed span{color:var(--muted)}
+.hours div.today span{color:var(--accent);font-weight:600}
+.hours div.today span:first-child::after{content:"täna";font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent);border-radius:999px;padding:1px 7px}
+.map{display:block;border:0;width:100%;height:340px;border-radius:22px;margin-top:16px;background:var(--surface);filter:saturate(.85) brightness(.92)}
 
 /* faq */
 .faq{display:grid;gap:10px;max-width:820px}
@@ -266,9 +307,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr}
   .tyre-wrap{max-width:300px;order:-1;margin-top:-10px}
-  .book{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
+  .bform{grid-template-columns:1fr;gap:0}
+  .bcol+.bcol>.bstep:first-child{margin-top:18px}
+  .contact{grid-template-columns:1fr;gap:26px}
   nav.links{display:none}
+  .why.n3{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .hero{padding-top:20px}
@@ -280,26 +323,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   section{padding:64px 0}
   .fields{grid-template-columns:1fr}
   .panel{padding:18px}
+  .contact{padding:20px}
+  .c-actions{grid-template-columns:1fr}
+  .steps,.why{grid-template-columns:1fr}
+  .map{height:280px}
 }
 @media (max-width:420px){
   header.top .btn-ghost{display:none}
-  .stat .num{font-size:17px}
+  .stats{grid-template-columns:1fr;gap:8px}
+  .stat{display:flex;align-items:baseline;gap:10px;padding:12px 16px}
+  .stat .num{font-size:20px;flex:none}
   h1{font-size:34px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   h1 .w,.fade-up,.reveal{opacity:1!important;transform:none!important;filter:none!important}
   html{scroll-behavior:auto}
+  .done .ck{stroke-dashoffset:0}
 }
 </style>
 </head>
 <body>
+<noscript><style>.chip,.pills,#heroCall,.stats,.marquee,#broneeri,.countdown,.contact,.map,.callbar,.progress,header.top{display:none!important}</style><div style="padding:16px;text-align:center;background:#141820;border-bottom:1px solid #252b36"><b>Elva Rehvikeskus</b> · Kirde põik 14, Elva · <a href="tel:+3725253613" style="white-space:nowrap">+372 525 3613</a> · <a href="mailto:raul.kummix@mail.ee">raul.kummix@mail.ee</a></div></noscript>
 <div class="progress" id="progress"></div>
 
 <header class="top" id="top">
   <div class="wrap">
     <a class="logo" href="#" id="logo"></a>
-    <nav class="links"><a href="#teenused">Teenused</a><a href="#hinnad">Hinnad</a><a href="#broneeri">Broneeri</a><a href="#kontakt">Kontakt</a></nav>
+    <nav class="links" aria-label="Peamenüü"><a href="#teenused">Teenused</a><a href="#hinnad">Hinnad</a><a href="#broneeri">Broneeri</a><a href="#kontakt">Kontakt</a></nav>
     <div style="display:flex;gap:8px">
       <a class="btn btn-ghost btn-sm" id="topCall"></a>
       <a class="btn btn-accent btn-sm" href="#broneeri">Broneeri aeg</a>
@@ -313,7 +364,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="hero-grid">
         <div>
           <div class="pills fade-up">
-            <span class="pill"><span class="dot" id="heroDot"></span><b id="heroOpen"></b></span>
+            <span class="pill" id="heroPill"><span class="dot" id="heroDot"></span><b id="heroOpen"></b></span>
             <span class="pill" id="hooaeg"></span>
           </div>
           <h1 id="pealkiri"></h1>
@@ -357,7 +408,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section id="hinnad" style="padding-top:0">
     <div class="wrap">
-      <div class="reveal"><span class="eyebrow">Hinnakiri</span><h2>Selged hinnad</h2><p class="sub">Hind lepitakse kokku enne töö algust.</p></div>
+      <div class="reveal"><span class="eyebrow">Hinnakiri</span><h2 id="hinnadH">Selged hinnad</h2><p class="sub" id="hinnadSub">Hind lepitakse kokku enne töö algust.</p></div>
       <div class="ptable reveal" id="hinnadBody"></div>
       <p class="note" id="hinnaMarkus"></p>
     </div>
@@ -365,7 +416,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section style="padding-top:0">
     <div class="wrap">
-      <div class="reveal"><span class="eyebrow">Kuidas see käib</span><h2>Kolm sammu</h2><p class="sub">Ilma helistamata, ilma ootamata.</p></div>
+      <div class="reveal"><span class="eyebrow">Kuidas see käib</span><h2>Kolm sammu</h2><p class="sub">Broneerimine võtab vähem kui minuti.</p></div>
       <div class="steps">
         <div class="step reveal"><h3>Vali aeg</h3><p>Broneeri endale sobiv päev ja kellaaeg siinsamas lehel.</p></div>
         <div class="step reveal"><h3>Tule kohale</h3><p>Kinnitame aja ja ootame sind kokkulepitud ajal.</p></div>
@@ -376,14 +427,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section style="padding-top:0">
     <div class="wrap">
-      <div class="reveal"><span class="eyebrow">Miks meie</span><h2>Lihtne ja aus asjaajamine</h2><p class="sub">&nbsp;</p></div>
+      <div class="reveal"><span class="eyebrow">Miks meie</span><h2>Lihtne ja aus asjaajamine</h2></div>
       <div class="why" id="miks"></div>
     </div>
   </section>
 
   <section style="padding-top:0" id="arvustusedSec">
     <div class="wrap">
-      <div class="reveal"><span class="eyebrow">Tagasiside</span><h2>Kliendid räägivad</h2><p class="sub">&nbsp;</p></div>
+      <div class="reveal"><span class="eyebrow">Tagasiside</span><h2>Kliendid räägivad</h2></div>
       <div class="grid" id="arvustused"></div>
     </div>
   </section>
@@ -391,51 +442,69 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <section id="broneeri" style="padding-top:0">
     <div class="wrap">
       <div class="reveal"><span class="eyebrow">Broneeri</span><h2>Pane aeg kirja minutiga</h2><p class="sub" id="bookSub">Vali teenus, päev ja kellaaeg – kinnitame aja esimesel võimalusel.</p></div>
-      <div class="book">
-        <div class="panel reveal" id="bookPanel">
-          <form id="bookForm" novalidate>
-            <div class="bstep"><i>1</i>Teenus</div>
-            <div class="chips" id="svcChips"></div>
-            <div class="bstep"><i>2</i>Päev</div>
-            <div class="days" id="days"></div>
-            <div class="bstep"><i>3</i>Kellaaeg</div>
-            <div class="slots" id="slots"></div>
-            <div class="bstep"><i>4</i>Sinu andmed</div>
-            <div class="fields">
-              <input name="nimi" placeholder="Nimi" required autocomplete="name">
-              <input name="tel" type="tel" placeholder="Telefon" required autocomplete="tel">
-              <input name="auto" class="full" placeholder="Auto mark, mudel (nt VW Golf 2008)">
-              <textarea name="info" class="full" rows="2" placeholder="Lisainfo: rehvide mõõt, soovid…"></textarea>
+      <div class="panel reveal" id="bookPanel">
+        <form id="bookForm" novalidate>
+          <div class="bform">
+            <div class="bcol">
+              <div class="bstep" id="lblSvc"><i>1</i>Teenus</div>
+              <div class="chips" id="svcChips" role="group" aria-labelledby="lblSvc"></div>
+              <div class="bstep" id="lblDay"><i>2</i>Päev</div>
+              <div class="days" id="days" role="group" aria-labelledby="lblDay"></div>
+              <div class="bstep" id="lblTime"><i>3</i><span id="lblTimeTxt">Kellaaeg</span></div>
+              <div class="slots" id="slots" role="group" aria-labelledby="lblTime"></div>
             </div>
-            <div class="summary" id="summary"></div>
-            <button class="btn btn-accent" type="submit" style="width:100%">Saada broneering</button>
-          </form>
-          <div class="done" id="done">
-            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24" opacity=".25"/><path class="ck" d="M15 27l7 7 15-16"/></svg>
-            <h3>Aitäh! Broneering on teele saadetud.</h3>
-            <p>Kinnitame aja telefoni teel. Kiire küsimus? <a id="doneCall"></a></p>
+            <div class="bcol">
+              <div class="bstep"><i>4</i>Sinu andmed</div>
+              <div class="fields">
+                <input name="nimi" placeholder="Nimi" aria-label="Nimi" required autocomplete="name">
+                <input name="tel" type="tel" placeholder="Telefon" aria-label="Telefon" required autocomplete="tel" inputmode="tel">
+                <input name="auto" class="full" placeholder="Auto mark ja mudel (nt VW Golf, 2008)" aria-label="Auto mark ja mudel">
+                <textarea name="info" class="full" rows="2" placeholder="Lisainfo: rehvide mõõt, soovid…" aria-label="Lisainfo"></textarea>
+              </div>
+              <div class="summary" id="summary" aria-live="polite"></div>
+              <button class="btn btn-accent" type="submit" style="width:100%">Saada broneering</button>
+              <p class="err" id="bookErr" role="alert"></p>
+              <p class="bnote" id="bookNote"></p>
+            </div>
           </div>
-        </div>
-        <div class="panel reveal" id="kontakt">
-          <span class="eyebrow">Kontakt</span>
-          <h3 style="font-size:22px;margin-bottom:4px" id="kNimi"></h3>
-          <p style="color:var(--muted)" id="aadress"></p>
-          <div class="pill" style="margin:14px 0 6px"><span class="dot" id="dot"></span><span id="openTxt"></span></div>
-          <div class="hours" id="hours"></div>
-          <div class="contact-list">
-            <a class="btn btn-ghost" id="contactCall"></a>
-            <a class="btn btn-ghost" id="contactMail"></a>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><a class="btn btn-ghost" id="contactNav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg> Google Maps</a><a class="btn btn-ghost" id="contactWaze" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5"/></svg> Waze</a></div>
-          </div>
+        </form>
+        <div class="done" id="done" tabindex="-1">
+          <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24" opacity=".25"/><path class="ck" d="M15 27l7 7 15-16"/></svg>
+          <h3>Aitäh! Jääb veel üks samm.</h3>
+          <p id="doneTxt"></p>
+          <button type="button" class="linkbtn" id="doneBack">Muuda broneeringut</button>
         </div>
       </div>
-      <iframe class="map reveal" id="map" loading="lazy" title="Kaart"></iframe>
+    </div>
+  </section>
+
+  <section id="kontakt" style="padding-top:0">
+    <div class="wrap">
+      <div class="reveal"><span class="eyebrow">Kontakt</span><h2>Tule läbi või helista</h2></div>
+      <div class="panel contact reveal">
+        <div style="min-width:0">
+          <h3 id="kNimi"></h3>
+          <p class="c-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="aadress"></span></p>
+          <div class="pill" id="openPill"><span class="dot" id="dot"></span><span id="openTxt"></span></div>
+          <div class="c-actions">
+            <a class="btn btn-accent" id="contactCall"></a>
+            <a class="btn btn-ghost" id="contactNav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Google Maps</a>
+            <a class="btn btn-ghost" id="contactWaze" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5"/></svg>Waze</a>
+          </div>
+          <a class="c-mail" id="contactMail"></a>
+        </div>
+        <div style="min-width:0">
+          <h4 class="c-label">Lahtiolekuajad</h4>
+          <div class="hours" id="hours"></div>
+        </div>
+      </div>
+      <iframe class="map reveal" id="map" loading="lazy" title="Kaart" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
   <section style="padding-top:0">
     <div class="wrap">
-      <div class="reveal"><span class="eyebrow">KKK</span><h2>Korduma kippuvad küsimused</h2><p class="sub">&nbsp;</p></div>
+      <div class="reveal"><span class="eyebrow">KKK</span><h2>Korduma kippuvad küsimused</h2></div>
       <div class="faq reveal">
         <details><summary>Millal peavad talverehvid all olema?</summary><p>Eestis on talverehvid kohustuslikud 1. detsembrist 1. märtsini. Naastrehvidega võib sõita 15. oktoobrist 31. märtsini (ilmastikuolude tõttu võib see periood muutuda).</p></details>
         <details><summary>Kas pean aja ette broneerima?</summary><p>Hooajal soovitame kindlasti – nii ei pea järjekorras ootama. Vali aeg siinsamas lehel või helista.</p></details>
@@ -462,8 +531,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   const now = new Date();
   const PAEV = ['Pühapäev','Esmaspäev','Teisipäev','Kolmapäev','Neljapäev','Reede','Laupäev'];
   const PL = ['P','E','T','K','N','R','L'];
+  const PAEVAL = ['pühapäeval','esmaspäeval','teisipäeval','kolmapäeval','neljapäeval','reedel','laupäeval'];
 
-  document.title = F.nimi + ' – ' + F.linn;
+  document.title = F.pealkiri + ' | ' + F.nimi;
 
   /* ---- icons for services (keyword match) ---- */
   const I = {
@@ -509,11 +579,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   ['topCall','heroCall','contactCall','barCall'].forEach(id => $(id).href = telHref);
   $('topCall').textContent = F.telefon;
   $('heroCall').querySelector('span').textContent = F.telefon;
-  $('contactCall').innerHTML = I.phone + ' ' + esc(F.telefon);
-  $('doneCall').href = telHref; $('doneCall').textContent = F.telefon;
-  if (F.email) { $('contactMail').href = 'mailto:' + F.email; $('contactMail').innerHTML = I.mail + ' ' + esc(F.email); } else $('contactMail').remove();
-  $('contactNav').href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(F.aadress);
-  $('contactWaze').href = 'https://waze.com/ul?q=' + encodeURIComponent(F.aadress) + '&navigate=yes';
+  $('contactCall').innerHTML = I.phone + 'Helista ' + esc(F.telefon);
+  if (F.email) { $('contactMail').href = 'mailto:' + F.email; $('contactMail').innerHTML = I.mail + '<span>' + esc(F.email) + '</span>'; } else $('contactMail').remove();
+  // kaardipäring: alati riigiga, muidu võib Google lühikese aadressi valesti (või üldse mitte) leida
+  const mapQ = (q => /eesti|estonia/i.test(q) ? q : q + ', Eesti')(F.kaartOtsing || F.aadress);
+  $('contactNav').href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(mapQ);
+  $('contactWaze').href = 'https://waze.com/ul?q=' + encodeURIComponent(mapQ) + '&navigate=yes';
 
   /* ---- hero ---- */
   $('hooaeg').textContent = F.hooaeg;
@@ -533,7 +604,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     for (let i=0;i<5;i++){ s += `<circle cx="100" cy="88" r="2" fill="#2a2f37" transform="rotate(${i*72+36} 100 100)"/>`; }
     $('tyreSvg').innerHTML = s;
   })();
-  const nums = F.faktid.filter(f => /\d/.test(f[0]));
   $('chip1').innerHTML = `<b>${esc((F.faktid[0]||['',''])[0])}</b>${esc((F.faktid[0]||['',''])[1])}`;
   $('chip2').innerHTML = `<b>${esc(F.linn)}</b>${esc(F.aadress.split(',')[0])}`;
 
@@ -546,7 +616,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   /* ---- services, prices, why, reviews ---- */
   $('teenusedGrid').innerHTML = F.teenused.map((t,i) => `<div class="card reveal" style="transition-delay:${(i%3)*.08}s"><div class="ico">${iconFor(t[0])}</div><h3>${esc(t[0])}</h3><p>${esc(t[1])}</p><span class="price-tag">${esc(t[2])}</span></div>`).join('');
   $('hinnadBody').innerHTML = F.hinnad.map(h => `<div class="prow"><span>${esc(h[0])}</span><b>${esc(h[1])}</b></div>`).join('');
-  $('hinnaMarkus').textContent = F.hinnaMarkus;
+  $('hinnaMarkus').textContent = F.hinnaMarkus || '';
+  if (!F.hinnad.some(h => /\d/.test(h[1]))) { $('hinnadH').textContent = 'Küsi hinda'; $('hinnadSub').textContent = 'Helista või kirjuta – ütleme hinna enne töö algust.'; }
+  $('miks').classList.toggle('n3', F.miks.length === 3);
   $('miks').innerHTML = F.miks.map((m,i) => `<div class="card reveal" style="transition-delay:${i*.08}s"><div class="ico">${whyIcon(m[0], m[1])}</div><div><h3>${esc(m[1])}</h3><p>${esc(m[2])}</p></div></div>`).join('');
   if (F.arvustused && F.arvustused.length) {
     $('arvustused').innerHTML = F.arvustused.map(a => `<div class="card review reveal"><div class="stars">★★★★★</div><p>“${esc(a[0])}”</p><small>${esc(a[1])}</small></div>`).join('');
@@ -556,41 +628,49 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   (function(){
     const y = now.getMonth() >= 2 ? now.getFullYear() : now.getFullYear() - 1;
     const dec1 = new Date(y, 11, 1), mar1 = new Date(y + 1, 2, 1);
-    const days = Math.ceil((dec1 - now) / 864e5);
+    const today0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const days = Math.round((dec1 - today0) / 864e5);   // kalendripäevad (DST-kindel)
     const el = $('countdown');
     if (now >= dec1 && now < mar1) {
       el.innerHTML = `<div><h3>Talverehvid peavad praegu all olema</h3><p>Kohustuslik kuni 1. märtsini. Pole veel vahetanud? Broneeri kohe.</p></div><a class="btn btn-accent" href="#broneeri">Broneeri aeg</a>`;
     } else if (days > 0 && days <= 75) {
-      el.innerHTML = `<div><span class="eyebrow">Talverehvide kohustus</span><h3>1. detsembrini on jäänud</h3><p>Viimased nädalad on järjekorrad pikad – broneeri aeg varakult.</p></div><div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><div class="cd-num"><span data-count="${days}">${days}</span><small>päeva</small></div><a class="btn btn-accent" href="#broneeri">Broneeri aeg</a></div>`;
+      el.innerHTML = `<div><span class="eyebrow">Talverehvide kohustus</span><h3>1. detsembrini on jäänud</h3><p>Viimased nädalad on järjekorrad pikad – broneeri aeg varakult.</p></div><div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><div class="cd-num"><span data-count="${days}">${days}</span><small>${days === 1 ? 'päev' : 'päeva'}</small></div><a class="btn btn-accent" href="#broneeri">Broneeri aeg</a></div>`;
     } else el.closest('section').remove();
   })();
 
-  /* ---- hours / open now ---- */
+  /* ---- hours / open now (värskendatakse iga minut) ---- */
   const hm = d => d.toTimeString().slice(0,5);
-  const t = F.lahti && F.lahti[now.getDay()];
-  const open = !!(t && hm(now) >= t[0] && hm(now) < t[1]);
-  let openLabel;
-  if (!F.lahti) openLabel = 'Helista ja küsi, millal sobib tulla';
-  else if (open) openLabel = 'Praegu avatud · kuni ' + t[1];
-  else {
-    let msg = 'Praegu suletud';
-    for (let k = 0; k < 7; k++) {
-      const d = new Date(now); d.setDate(d.getDate() + k); const h = F.lahti[d.getDay()];
-      if (h && (k > 0 || hm(now) < h[0])) { msg += ' · avame ' + (k === 0 ? 'täna' : k === 1 ? 'homme' : PAEV[d.getDay()].toLowerCase()) + ' ' + h[0]; break; }
+  function renderOpen(){
+    const n = new Date(), t = F.lahti && F.lahti[n.getDay()];
+    const open = !!(t && hm(n) >= t[0] && hm(n) < t[1]);
+    let openLabel;
+    if (!F.lahti) openLabel = 'Helista ja küsi, millal sobib tulla';
+    else if (open) openLabel = 'Praegu avatud · kuni ' + t[1];
+    else {
+      let msg = 'Praegu suletud';
+      for (let k = 0; k < 7; k++) {
+        const d = new Date(n); d.setDate(d.getDate() + k); const h = F.lahti[d.getDay()];
+        if (h && (k > 0 || hm(n) < h[0])) { msg += ' · avame ' + (k === 0 ? 'täna' : k === 1 ? 'homme' : PAEVAL[d.getDay()]) + ' kell ' + h[0]; break; }
+      }
+      openLabel = msg;
     }
-    openLabel = msg;
+    ['dot','heroDot'].forEach(id => $(id).classList.toggle('on', open));
+    $('heroDot').hidden = $('dot').hidden = !F.lahti;
+    $('openPill').hidden = $('heroPill').hidden = !F.lahti;   // ajad teadmata → ära näita poolikut infot
+    $('openTxt').textContent = openLabel;
+    $('heroOpen').textContent = F.lahti ? openLabel : F.aadress;
+    $('hours').innerHTML = !F.lahti
+      ? `<p class="hours-note">Lahtiolekuajad on täpsustamisel – helista <a href="${telHref}">${esc(F.telefon)}</a> ja lepime sulle sobiva aja kokku.</p>`
+      : [1,2,3,4,5,6,0].map(d => `<div class="${d===n.getDay()?'today ':''}${F.lahti[d]?'':'closed'}"><span>${PAEV[d]}</span><span>${F.lahti[d] ? F.lahti[d].join('–') : 'suletud'}</span></div>`).join('');
   }
-  ['dot','heroDot'].forEach(id => $(id).classList.toggle('on', open));
-  $('openTxt').textContent = openLabel;
-  $('heroOpen').textContent = F.lahti ? openLabel : F.linn;
-  $('hours').innerHTML = !F.lahti
-    ? '<div><span>Lahtiolekuajad</span><span>täpsustamisel</span></div>'
-    : [1,2,3,4,5,6,0].map(d => `<div class="${d===now.getDay()?'today':''}"><span>${PAEV[d]}</span><span>${F.lahti[d] ? F.lahti[d].join('–') : 'Suletud'}</span></div>`).join('');
+  renderOpen(); setInterval(renderOpen, 60000);
   $('kNimi').textContent = F.nimi;
   $('aadress').textContent = F.aadress;
-  $('map').src = 'https://www.google.com/maps?q=' + encodeURIComponent(F.kaartOtsing || F.aadress) + '&output=embed';
+  $('map').src = 'https://www.google.com/maps?q=' + encodeURIComponent(mapQ) + '&z=16&hl=et&output=embed';
+  $('map').title = 'Kaart: ' + F.aadress;
 
   /* ---- booking ---- */
+  if (!F.lahti) { $('lblTimeTxt').textContent = 'Soovitud kellaaeg'; $('bookSub').textContent = 'Vali teenus ja sulle sobiv aeg – helistame tagasi ja kinnitame aja.'; }
   const B = { svc: F.teenused[0] && F.teenused[0][0], day: null, time: null };
   $('svcChips').innerHTML = F.teenused.map((t,i) => `<button type="button" class="chipbtn" aria-pressed="${i===0}" data-v="${esc(t[0])}">${esc(t[0])}</button>`).join('');
   $('svcChips').addEventListener('click', e => { const b = e.target.closest('.chipbtn'); if (!b) return;
@@ -599,6 +679,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   const hoursFor = d => F.lahti ? F.lahti[d.getDay()] : (d.getDay() === 0 || d.getDay() === 6 ? null : ['09:00','17:00']);
   const toMin = s => +s.slice(0,2) * 60 + +s.slice(3);
   const fmt = m => String(Math.floor(m/60)).padStart(2,'0') + ':' + String(m%60).padStart(2,'0');
+  const dayTxt = d => PAEV[d.getDay()].toLowerCase() + ', ' + d.toLocaleDateString('et-EE', { day:'numeric', month:'long' });
   const dayList = [];
   for (let k = 0; k < 14; k++) { const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + k); dayList.push(d); }
   const slotsFor = d => { const h = hoursFor(d); if (!h) return [];
@@ -607,35 +688,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     for (let m = toMin(h[0]); m + step <= toMin(h[1]); m += step) out.push({ t: fmt(m), past: isToday && m < nowM });
     return out; };
   $('days').innerHTML = dayList.map((d,i) => { const ok = slotsFor(d).some(s => !s.past);
-    return `<button type="button" class="day" data-i="${i}" aria-pressed="false" ${ok?'':'disabled'}><small>${i===0?'Täna':i===1?'Homme':PL[d.getDay()]}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('et-EE',{month:'short'}).replace('.','')}</small></button>`; }).join('');
+    return `<button type="button" class="day" data-i="${i}" aria-pressed="false" aria-label="${esc(dayTxt(d))}${ok?'':', vabu aegu pole'}" ${ok?'':'disabled'}><small>${i===0?'Täna':i===1?'Homme':PL[d.getDay()]}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('et-EE',{month:'short'}).replace('.','')}</small></button>`; }).join('');
   function renderSlots(){
     if (!B.day) { $('slots').innerHTML = '<div class="empty">Vali kõigepealt päev.</div>'; return; }
     $('slots').innerHTML = slotsFor(B.day).map((s,i) => `<button type="button" class="slot" style="animation-delay:${i*.02}s" aria-pressed="false" ${s.past?'disabled':''}>${s.t}</button>`).join('') || '<div class="empty">Sel päeval vabu aegu pole.</div>';
   }
   $('days').addEventListener('click', e => { const b = e.target.closest('.day'); if (!b || b.disabled) return;
     $('days').querySelectorAll('.day').forEach(x => x.setAttribute('aria-pressed', x === b));
-    B.day = dayList[+b.dataset.i]; B.time = null; renderSlots(); summary(); });
+    B.day = dayList[+b.dataset.i]; B.time = null; renderSlots(); summary(); clearErr(); });
   $('slots').addEventListener('click', e => { const b = e.target.closest('.slot'); if (!b || b.disabled) return;
-    $('slots').querySelectorAll('.slot').forEach(x => x.setAttribute('aria-pressed', x === b)); B.time = b.textContent; summary(); });
-  const dayTxt = d => PAEV[d.getDay()] + ', ' + d.toLocaleDateString('et-EE', { day:'numeric', month:'long' });
+    $('slots').querySelectorAll('.slot').forEach(x => x.setAttribute('aria-pressed', x === b)); B.time = b.textContent; summary(); clearErr(); });
   function summary(){
-    $('summary').innerHTML = `Teenus: <b>${esc(B.svc||'–')}</b> · Aeg: <b>${B.day ? esc(dayTxt(B.day)) : 'vali päev'}${B.time ? ' kell ' + B.time : ''}</b>`;
+    $('summary').classList.remove('warn');
+    $('summary').innerHTML = `Teenus: <b>${esc(B.svc||'–')}</b> · Aeg: <b>${B.day ? esc(dayTxt(B.day)) : 'vali päev'}${B.time ? ' kell ' + B.time : B.day ? ' (vali kellaaeg)' : ''}</b>`;
   }
+  const clearErr = () => { $('bookErr').textContent = ''; };
+  $('bookNote').textContent = F.email ? 'Avaneb valmis e-kiri – vajuta seal „Saada“.' : 'Avaneb valmis SMS – vajuta seal „Saada“.';
   // first available day preselected
   const firstBtn = $('days').querySelector('.day:not(:disabled)'); if (firstBtn) firstBtn.click(); else renderSlots();
   summary();
 
-  $('bookForm').addEventListener('submit', e => {
+  const form = $('bookForm');
+  ['nimi','tel'].forEach(n => form[n].addEventListener('input', () => { form[n].removeAttribute('aria-invalid'); clearErr(); }));
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    const f = e.target, d = Object.fromEntries(new FormData(f));
-    if (!B.day || !B.time) { $('summary').animate?.([{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'none'}],{duration:300}); $('summary').innerHTML = '<b>Palun vali päev ja kellaaeg.</b>'; return; }
-    if (!d.nimi.trim() || !d.tel.trim()) { (d.nimi.trim() ? f.tel : f.nimi).focus(); return; }
-    const body = `Broneering – ${F.nimi}\nTeenus: ${B.svc}\nAeg: ${dayTxt(B.day)} kell ${B.time}\nNimi: ${d.nimi}\nTelefon: ${d.tel}\nAuto: ${d.auto||'-'}\nLisainfo: ${d.info||'-'}`;
+    const f = form, d = Object.fromEntries(new FormData(f));
+    const err = msg => { $('bookErr').textContent = msg; };
+    if (!B.day || !B.time) { $('summary').animate?.([{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'none'}],{duration:300}); $('summary').classList.add('warn'); err(!B.day ? 'Palun vali päev ja kellaaeg.' : 'Palun vali kellaaeg.'); return; }
+    const badName = !d.nimi.trim(), badTel = (d.tel.match(/\d/g) || []).length < 5;
+    f.nimi.toggleAttribute('aria-invalid', badName); f.tel.toggleAttribute('aria-invalid', badTel);
+    if (badName || badTel) { err(badName && badTel ? 'Palun sisesta oma nimi ja telefoninumber.' : badName ? 'Palun sisesta oma nimi.' : 'Palun sisesta korrektne telefoninumber.'); (badName ? f.nimi : f.tel).focus(); return; }
+    const lines = [`Broneering – ${F.nimi}`, `Teenus: ${B.svc}`, `Aeg: ${dayTxt(B.day)} kell ${B.time}`, `Nimi: ${d.nimi.trim()}`, `Telefon: ${d.tel.trim()}`, `Auto: ${d.auto.trim()||'-'}`, `Lisainfo: ${d.info.trim()||'-'}`];
     location.href = F.email
-      ? 'mailto:' + F.email + '?subject=' + encodeURIComponent('Broneering: ' + B.svc + ', ' + dayTxt(B.day) + ' ' + B.time) + '&body=' + encodeURIComponent(body)
-      : 'sms:' + F.telefon.replace(/\s/g,'') + '?body=' + encodeURIComponent(body);
-    f.style.display = 'none'; $('done').style.display = 'block'; window.__spinBurst = 40;
+      ? 'mailto:' + F.email + '?subject=' + encodeURIComponent('Broneering: ' + B.svc + ', ' + dayTxt(B.day) + ' kell ' + B.time) + '&body=' + encodeURIComponent(lines.join('\r\n'))
+      : 'sms:' + F.telefon.replace(/\s/g,'') + '?body=' + encodeURIComponent(lines.join('\n'));
+    $('doneTxt').innerHTML = (F.email ? 'Avanes valmis e-kiri broneeringu andmetega – vajuta seal <b>„Saada“</b>.' : 'Avanes valmis SMS broneeringu andmetega – vajuta seal <b>„Saada“</b>.') +
+      ` Seejärel kinnitame aja telefoni teel. Kui midagi ei avanenud, helista: <a href="${telHref}">${esc(F.telefon)}</a>`;
+    clearErr(); f.style.display = 'none'; $('done').style.display = 'block'; $('done').focus({ preventScroll: true }); window.__spinBurst = 40;
   });
+  $('doneBack').addEventListener('click', () => { $('done').style.display = 'none'; form.style.display = ''; });
 
   /* ---- footer ---- */
   $('footer').innerHTML = `<span>© ${now.getFullYear()} ${esc(F.nimi)}</span><span>${esc(F.aadress)} · <a href="${telHref}">${esc(F.telefon)}</a></span>` +
@@ -658,7 +749,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     if (reduce) return;
     const start = fromYear ? target - 30 : 0, dur = 1400, t0 = performance.now(), suffix = el.dataset.suffix || '';
     (function tick(t){ const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(start + (target - start) * e) + suffix; if (p < 1) requestAnimationFrame(tick); })(t0);
+      el.textContent = (p < 1 ? Math.round(start + (target - start) * e) : target) + suffix; if (p < 1) requestAnimationFrame(tick); })(t0);
+    setTimeout(() => { el.textContent = target + suffix; }, dur + 200);   // lõppväärtus ka siis, kui rAF peatati
   }
   const io = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting) return;
     const el = en.target; el.classList.add('in'); io.unobserve(el);
@@ -674,7 +766,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   // tyre spins faster while scrolling
   if (!reduce) { const ty = $('tyreSvg'); let last = scrollY, rot = 0, vel = 0;
     ty.style.animation = 'none';
-    (function loop(){ const dy = scrollY - last; last = scrollY; vel = vel * .92 + dy * .08; const burst = window.__spinBurst || 0; if (burst > 0) window.__spinBurst = burst * .97 - .05; rot += .27 + vel * .6 + Math.max(0, burst); ty.style.transform = `rotate(${rot}deg)`; requestAnimationFrame(loop); })(); }
+    let visible = true, raf = 0;
+    function loop(){ const dy = scrollY - last; last = scrollY; vel = vel * .92 + dy * .08; const burst = window.__spinBurst || 0; if (burst > 0) window.__spinBurst = burst * .97 - .05; rot += .27 + vel * .6 + Math.max(0, burst); ty.style.transform = `rotate(${rot}deg)`; raf = visible ? requestAnimationFrame(loop) : 0; }
+    // rehv pöörleb ainult siis, kui hero on nähtav (säästab CPU-d)
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible && !raf) { last = scrollY; vel = 0; raf = requestAnimationFrame(loop); } }).observe(ty);
+    raf = requestAnimationFrame(loop); }
+
+  // dekoratiivsed ikoonid ekraanilugeja eest peitu
+  document.querySelectorAll('svg').forEach(s => { s.setAttribute('aria-hidden', 'true'); s.setAttribute('focusable', 'false'); });
 })();
 </script>
 </body>
