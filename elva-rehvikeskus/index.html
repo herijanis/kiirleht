@@ -31,7 +31,7 @@ const FIRMA = {
   hooaeg: "Talverehvid on kohustuslikud alates 1. detsembrist",
   pealkiri: "Talverehvid alla Elvas – broneeri aeg enne järjekordi",
   tutvustus: "Elva Rehvikeskus (Kummix OÜ) tegutseb Elvas aastast 1996. Vahetame rehvid, aitame valida uued ja hoiame su rehve järgmise hooajani. Broneeri aeg varakult – nii hoiad kokku aega ja närve.",
-  faktid: [["1996","aastast Elvas"],["E–L","avatud"],["Kirde põik 14","Elva"]],
+  faktid: [["1996","aastast Elvas"],["4,8 ★","Google'i hinne, 97 arvustust"],["E–L","avatud"]],
   teenused: [
     ["Rehvivahetus","Sõiduautode rehvivahetus. Broneeri aeg telefoni teel või tule kohale.","küsi hinda"],
     ["Uued rehvid","Talve- ja suverehvid – aitame leida sinu autole sobivad.","küsi hinda"],
@@ -754,7 +754,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   }
   const io = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting) return;
     const el = en.target; el.classList.add('in'); io.unobserve(el);
-    el.querySelectorAll('[data-n]').forEach(n => { const m = n.dataset.n.match(/^(\d+)(.*)$/); if (m) { n.dataset.suffix = m[2]; countUp(n, +m[1], +m[1] > 1900); } });
+    el.querySelectorAll('[data-n]').forEach(n => { const m = n.dataset.n.match(/^(\d+)(.*)$/); if (m && !/^[,.]\d/.test(m[2])) { n.dataset.suffix = m[2]; countUp(n, +m[1], +m[1] > 1900); } });
     el.querySelectorAll('[data-count]').forEach(n => countUp(n, +n.dataset.count, false));
   }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
