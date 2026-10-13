@@ -57,7 +57,7 @@ const FIRMA = {
   arvustused: [],
   // lahtiolekuajad teadmata – null = näita "täpsustamisel, helista"
   lahti: null,
-  kaartOtsing: "Tartu 79d, Valga, Eesti"
+  kaartOtsing: "57.787085,26.041118"   // Tartu tn 79d (Maa-ameti In-ADS); aadressiga näitas Google valesti
 };
 /* ===== andmete lõpp ===== */
 </script>
@@ -582,7 +582,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   $('contactCall').innerHTML = I.phone + 'Helista ' + esc(F.telefon);
   if (F.email) { $('contactMail').href = 'mailto:' + F.email; $('contactMail').innerHTML = I.mail + '<span>' + esc(F.email) + '</span>'; } else $('contactMail').remove();
   // kaardipäring: alati riigiga, muidu võib Google lühikese aadressi valesti (või üldse mitte) leida
-  const mapQ = (q => /eesti|estonia/i.test(q) ? q : q + ', Eesti')(F.kaartOtsing || F.aadress);
+  // koordinaadid ("57.78,26.04") lähevad muutmata – täpseim, kui Google aadressi valesti leiab
+  const mapQ = (q => /eesti|estonia|^-?[0-9.]+, *-?[0-9.]+$/i.test(q) ? q : q + ', Eesti')(F.kaartOtsing || F.aadress);
   $('contactNav').href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(mapQ);
   $('contactWaze').href = 'https://waze.com/ul?q=' + encodeURIComponent(mapQ) + '&navigate=yes';
 
