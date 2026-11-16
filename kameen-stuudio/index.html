@@ -377,6 +377,17 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .t-km .visit-card address{font-style:normal;font-family:var(--fd);font-size:clamp(30px,3.6vw,46px);line-height:1.1}
 .t-km .gift-photo .gift-card{background:linear-gradient(140deg,#D27A55,#9C4423);color:#FBF1E6}.t-km .gc-kind{color:#FBE0CF}
 
+
+:is(.ed,.t-hb) .hero:not(.hero-split){min-height:min(84svh,900px)}
+@media (max-width:760px){:is(.ed,.t-hb) .hero:not(.hero-split){min-height:80svh}}
+:is(.ed,.t-hb) main>section:is(.blk,.sec){--tA:var(--p100,var(--teal-100));--tB:var(--p200,var(--teal-200))}
+:is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n+2){background:linear-gradient(180deg,color-mix(in srgb,var(--tA) 90%,transparent),color-mix(in srgb,var(--tA) 62%,transparent))}
+:is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n){background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 75%,transparent),color-mix(in srgb,var(--surface) 55%,transparent))}
+:is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n+1){background:linear-gradient(180deg,color-mix(in srgb,var(--tB) 60%,transparent),color-mix(in srgb,var(--tB) 38%,transparent))}
+:is(.ed,.t-hb) main>section.faq{padding-top:var(--space)}
+:is(.ed,.t-hb) .hero:not(.hero-split) .hero-in{padding-top:118px}
+.ed .hero-split{padding-bottom:clamp(40px,5vw,64px)}
+
 </style>
 </head>
 <body class="t-km ed">

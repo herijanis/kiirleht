@@ -67,6 +67,8 @@ p{margin:0 0 1em}
 .lang a:hover{opacity:1}
 .lang a[aria-current=true]{background:var(--btn,var(--accent));color:var(--btn-ink,#fff);opacity:1}
 @media (max-width:560px){.top .btn{display:none}.lang a{min-width:36px}}
+.brand > span{white-space:nowrap}
+@media (max-width:420px){.t-km .brand{font-size:19px;gap:8px}.t-km .brand i{width:18px;height:24px}.t-hb .brand,.t-tm .brand{font-size:21px}}
 .langbar{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;background:var(--ink);color:var(--bg);font-size:15px;padding:8px 16px;position:relative;z-index:60}
 .langbar[hidden]{display:none}
 .langbar a{color:inherit;font-weight:700}
@@ -417,6 +419,18 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .t-fv .visit ol li{counter-increment:s;display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
 .t-fv .visit ol li::before{content:counter(s);font-family:var(--fd);color:#C20E28;min-width:22px}
 .t-fv .gift-photo .gift-card{background:#161214;color:#fff}.t-fv .gc-kind{color:#F5CFD6}
+
+
+:is(.ed,.t-hb) .hero:not(.hero-split){min-height:min(84svh,900px)}
+@media (max-width:760px){:is(.ed,.t-hb) .hero:not(.hero-split){min-height:80svh}}
+:is(.ed,.t-hb) main>section:is(.blk,.sec){--tA:var(--p100,var(--teal-100));--tB:var(--p200,var(--teal-200))}
+:is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n+2){background:linear-gradient(180deg,color-mix(in srgb,var(--tA) 90%,transparent),color-mix(in srgb,var(--tA) 62%,transparent))}
+:is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n){background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 75%,transparent),color-mix(in srgb,var(--surface) 55%,transparent))}
+:is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n+1){background:linear-gradient(180deg,color-mix(in srgb,var(--tB) 60%,transparent),color-mix(in srgb,var(--tB) 38%,transparent))}
+:is(.ed,.t-hb) main>section.faq{padding-top:var(--space)}
+:is(.ed,.t-hb) .hero:not(.hero-split) .hero-in{padding-top:118px}
+.ed .hero-split{padding-bottom:clamp(40px,5vw,64px)}
+@media (min-width:901px){.ed .hero-split .hs-media{max-height:calc(100svh - 230px);overflow:hidden}.ed .hero-split .hs-media img{width:100%;height:100%;max-height:calc(100svh - 230px);object-fit:cover}}
 
 </style>
 </head>
