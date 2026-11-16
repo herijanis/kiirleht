@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Ногтевой сервис и услуги красоты в Хааберсти | BeautyPlus</title>
+<meta name="description" content="BeautyPlus — ногтевой сервис и услуги красоты в Таллинне, в Хааберсти. Свободное время и цены уточняйте по телефону +372 5699 3991 или напишите.">
+<meta name="theme-color" content="#F6E7ED">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="et_EE">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="alternate" hreflang="et" href="../">
+<link rel="alternate" hreflang="ru" href="./">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="x-default" href="../">
+<meta property="og:site_name" content="BeautyPlus">
+<meta property="og:title" content="Ногтевой сервис и услуги красоты в Хааберсти | BeautyPlus">
+<meta property="og:description" content="BeautyPlus — ногтевой сервис и услуги красоты в Таллинне, в Хааберсти. Свободное время и цены уточняйте по телефону +372 5699 3991 или напишите.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%278%27%20fill%3D%27%23231A26%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20text-anchor%3D%27middle%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2717%27%20fill%3D%27%23E0457B%27%3E%2B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<link rel="preconnect" href="https://images.unsplash.com">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BeautySalon", "name": "BeautyPlus", "description": "BeautyPlus — ногтевой сервис и услуги красоты в Таллинне, в Хааберсти. Свободное время и цены уточняйте по телефону +372 5699 3991 или напишите.", "telephone": "+37256993991", "address": {"@type": "PostalAddress", "streetAddress": "Haabersti", "addressLocality": "Tallinn", "addressCountry": "EE"}, "email": "BeautyPlusou@gmail.com", "hasMap": "https://www.google.com/maps/search/?api=1&query=Haabersti%2C%20Tallinn", "inLanguage": "ru"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько стоит услуга?", "acceptedAnswer": {"@type": "Answer", "text": "Цену назовём при записи — позвоните или напишите."}}, {"@type": "Question", "name": "Как записаться?", "acceptedAnswer": {"@type": "Answer", "text": "Отправьте SMS прямо с этой страницы или позвоните: +372 5699 3991. Запись подтверждена, когда мы ответим."}}, {"@type": "Question", "name": "Где вы находитесь?", "acceptedAnswer": {"@type": "Answer", "text": "В Хааберсти, в Таллинне. Точный адрес сообщим при подтверждении записи."}}], "inLanguage": "ru"}</script>
+<style>
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:var(--fdw,600);line-height:1.12;margin:0 0 .5em;text-wrap:balance}
+h2{font-size:clamp(30px,4.4vw,46px)}
+h3{font-size:clamp(20px,2.2vw,24px)}
+p{margin:0 0 1em}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.sec{padding:clamp(64px,9vw,120px) 0}
+.small{font-size:14px;color:var(--muted)}
+:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;z-index:99}
+.skip:focus{left:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.7em 1.4em;border-radius:var(--rb,999px);
+  background:var(--btn,var(--accent));color:var(--btn-ink,#fff);text-decoration:none;font-weight:600;border:1.5px solid var(--btn,var(--accent));
+  transition:transform .15s,background-color .2s,color .2s;cursor:pointer;font:inherit;font-weight:600;text-align:center}
+.btn:active{transform:scale(.97)}
+.btn-ghost{background:transparent;color:var(--ghost-ink,var(--ink));border-color:var(--ghost-line,currentColor)}
+@media (hover:hover){.btn:hover{background:var(--btn-h,var(--ink));border-color:var(--btn-h,var(--ink));color:var(--btn-h-ink,var(--bg))}}
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--hdr,var(--bg));border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0;min-height:44px}
+.nav{display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.top-call{white-space:nowrap;font-weight:600;text-decoration:none}
+@media (max-width:899px){.nav{display:none}.top .btn{min-height:42px;padding:.45em 1em;font-size:15px}.top-call{display:none}}
+/* open now */
+.lang{display:inline-flex;gap:2px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:999px;padding:3px;flex:none}
+.lang a{display:inline-grid;place-items:center;min-width:40px;min-height:38px;padding:0 6px;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;opacity:.78}
+.lang a:hover{opacity:1}
+.lang a[aria-current=true]{background:var(--btn,var(--accent));color:var(--btn-ink,#fff);opacity:1}
+@media (max-width:560px){.top .btn{display:none}.lang a{min-width:36px}}
+.brand > span{white-space:nowrap}
+@media (max-width:420px){.t-km .brand{font-size:19px;gap:8px}.t-km .brand i{width:18px;height:24px}.t-hb .brand,.t-tm .brand{font-size:21px}}
+.langbar{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;background:var(--ink);color:var(--bg);font-size:15px;padding:8px 16px;position:relative;z-index:60}
+.langbar[hidden]{display:none}
+.langbar a{color:inherit;font-weight:700}
+.langbar button{background:none;border:0;color:inherit;font-size:22px;min-width:44px;min-height:40px;cursor:pointer}
+.open-now{display:inline-flex;align-items:center;gap:8px;font-size:15px;margin:0}
+.open-now::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+.open-now[data-open=true]::before{background:var(--ok,#2e9b5f);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok,#2e9b5f) 22%,transparent)}
+.hours{border-collapse:collapse;font-size:16px}
+.hours th{text-align:left;font-weight:600;padding:4px 18px 4px 0}
+.hours td{padding:4px 0}
+/* forms */
+.fld{display:grid;gap:6px;margin:0 0 14px;font-size:14px;font-weight:600}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:var(--field,var(--surface));border:1px solid var(--field-line,var(--line));
+  border-radius:var(--rf,10px);padding:12px 14px;min-height:48px;width:100%}
+.fld textarea{resize:vertical}
+.fld-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.fld-row{grid-template-columns:1fr}}
+fieldset{border:0;padding:0;margin:0 0 14px;min-width:0}
+legend{font-size:14px;font-weight:600;padding:0;margin-bottom:6px}
+.tod,.chips{display:flex;flex-wrap:wrap;gap:8px}
+.tod legend,.chips legend{width:100%}
+.tod label,.chips label{position:relative}
+.tod input,.chips input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.tod label>span,.chips label>span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--field-line,var(--line));border-radius:var(--rc,999px);font-size:15px;background:var(--field,var(--surface))}
+.tod input:checked+span,.chips input:checked+span{background:var(--chip-on,var(--ink));color:var(--chip-on-ink,var(--bg));border-color:var(--chip-on,var(--ink))}
+.tod input:focus-visible+span,.chips input:focus-visible+span{outline:2px solid var(--focus,var(--accent));outline-offset:2px}
+.bk-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn-wa{--btn:#1F7A4D;--btn-ink:#fff}
+.chk{display:flex;align-items:center;gap:10px;min-height:44px;margin:0 0 10px;font-size:15px;cursor:pointer}
+.chk input{width:20px;height:20px;accent-color:var(--accent)}
+.actionbar.ab4{grid-template-columns:1fr 1.3fr 1fr .8fr;gap:6px;padding-inline:8px}
+.actionbar.ab4 a{font-size:14px}
+.bk-sum{font-size:15px;color:var(--muted);min-height:1.2em;margin:4px 0 10px}
+.book-grid,.gift-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:start}
+@media (max-width:899px){.book-grid,.gift-grid{grid-template-columns:1fr}}
+.book-direct a{font-weight:700;white-space:nowrap}
+/* gift */
+.gv-sum{display:none}
+.gift-form:has(.gv-own input:checked) .gv-sum{display:grid}
+.no-js .gv-sum{display:grid}
+.gift-card{position:relative;aspect-ratio:1.6;max-width:520px;width:100%;padding:clamp(18px,3.5vw,30px);display:flex;flex-direction:column;overflow:hidden}
+.gc-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.gc-val{margin-top:auto;font-size:clamp(26px,4vw,40px);line-height:1.1;overflow-wrap:anywhere}
+.gc-svc{font-size:15px;min-height:1.2em}
+.gc-to{font-size:15px;margin-top:8px}
+.gc-msg{font-size:15px;font-style:italic;min-height:1.2em;overflow-wrap:anywhere}
+.gc-from{font-size:13px;opacity:.8;min-height:1.1em}
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,5vw,72px)}
+@media (max-width:899px){.faq-grid{grid-template-columns:1fr}}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;min-height:56px;display:flex;align-items:center;gap:16px;cursor:pointer;font-weight:600;padding:10px 0}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";margin-left:auto;font-size:24px;line-height:1;transition:transform .2s;color:var(--accent-t,var(--accent))}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list details p{padding:0 0 16px;margin:0;max-width:64ch}
+:root{interpolate-size:allow-keywords}
+@media (prefers-reduced-motion:no-preference){
+  .faq-list details::details-content{block-size:0;overflow:hidden;transition:block-size .3s ease,content-visibility .3s allow-discrete}
+  .faq-list details[open]::details-content{block-size:auto}
+}
+/* footer */
+.foot{padding:56px 0 28px;border-top:1px solid var(--line);font-size:15px}
+.foot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.foot p{margin:0 0 6px}
+.foot-name{font-family:var(--fd);font-size:22px}
+.naidis{text-align:center;font-size:13px;color:var(--muted);margin:36px 16px 0!important}
+@media (max-width:700px){.foot-grid{grid-template-columns:1fr}}
+/* actionbar (mobiil) */
+.actionbar{position:fixed;inset:auto 0 0;z-index:60;display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:8px;
+  padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--ab,var(--surface));border-top:1px solid var(--line);
+  transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.js .actionbar{transform:translateY(110%)}
+.js .actionbar.show{transform:none}
+.actionbar a{min-height:48px;display:grid;place-items:center;border-radius:var(--rb,999px);text-decoration:none;font-weight:600;border:1px solid var(--line);font-size:15px}
+.actionbar .ab-main{background:var(--btn,var(--accent));color:var(--btn-ink,#fff);border-color:transparent}
+@media (min-width:900px){.actionbar{display:none}}
+@media (max-width:899px){body{padding-bottom:72px}}
+/* sisenemisanimatsioon: vaikimisi NÄHTAV; JS lisab .go alles siis, kui plokk läheneb vaatele */
+@keyframes enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){.js .enter.go{animation:enter .7s cubic-bezier(.2,.8,.2,1) both}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+:root{--p50:#FBF4F6;--p100:#F7E8EE;--p200:#EFCCD9;--p300:#E39CB5;--p400:#D7658E;--p500:#C62E65;--p600:#A52754;--p700:#882045;--p800:#701A39;--p900:#53132A;--p950:#290A15;--bg:#F6E7ED;--surface:#FCF5F8;--ink:#231A26;--muted:#55485A;--line:#EBD3DD;--ov:35 26 38;--qov:120 40 80;--mesh:radial-gradient(60% 30% at 100% 12%,#E9DCFA 0,transparent 70%),radial-gradient(50% 28% at 0% 44%,#FBDCCD 0,transparent 70%),radial-gradient(60% 30% at 100% 82%,#D8F0E8 0,transparent 70%);--accent:var(--p700);--accent-d:var(--p800);--focus:var(--p600);--fd:'Bricolage Grotesque',system-ui,sans-serif;--fdw:700;--fb:'DM Sans',system-ui,sans-serif;--btn:var(--p700);--btn-ink:#fff;--btn-h:var(--p800);--btn-h-ink:#fff;--rb:999px;--rf:14px;--rc:999px;--field:color-mix(in srgb,var(--surface) 60%,#fff);--field-line:color-mix(in srgb,var(--line) 80%,var(--ink));--chip-on:var(--p700);--chip-on-ink:#fff;--ab:color-mix(in srgb,var(--surface) 95%,transparent);--ok:#3F8A62;--gut:clamp(16px,4vw,48px);--space:clamp(72px,9vw,120px);--btn:#231A26;--btn-h:#B0285A;--chip-on:#231A26;--foot-bg:#231A26;--polish:#E0457B}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+.ed{font-size:18.5px;line-height:1.65;color:var(--ink);background:var(--mesh),var(--bg)}
+@media (max-width:760px){.ed{font-size:17px}}
+.ed ::selection{background:var(--p200);color:var(--ink)}
+.ed{caret-color:var(--p700);accent-color:var(--p700);-webkit-tap-highlight-color:color-mix(in srgb,var(--p700) 15%,transparent)}
+.ed a,.ed button,.ed label{touch-action:manipulation}
+.ed .fld select{background-color:var(--field);color:var(--ink)}
+.ed p{text-wrap:pretty}
+/* üks konteiner + üks rütm */
+.ed .wrap{width:min(1200px,100% - 2*var(--gut))}
+.ed .blk{padding:var(--space) 0}
+.ed .blk + .blk{padding-top:0}
+.ed .g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,32px);row-gap:28px}
+.ed h1,.ed h2,.ed h3{font-weight:500;letter-spacing:-.012em;color:var(--ink)}
+.ed h2{font-size:clamp(38px,4.6vw,64px);line-height:1.02;margin-bottom:.4em}
+.ed p{max-width:62ch}
+.ed .eyebrow{font-size:15px;font-weight:600;color:var(--accent);margin:0 0 16px;display:flex;align-items:center;gap:12px}
+.ed .eyebrow::before{content:"";width:32px;height:1px;background:currentColor}
+.ed .lead{font-size:19px;color:var(--muted)}
+/* header */
+.ed .top{position:fixed;inset:0 0 auto;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb,var(--ink) 8%,transparent);transition:background .4s,color .4s,border-color .4s}
+.ed .top .wrap{min-height:74px}
+.ed .top.over{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-color:transparent;color:#fff}
+.ed .top.over .btn{--btn:var(--surface);--btn-ink:var(--ink)}
+.ed .nav{gap:30px;font-size:16px}
+.ed .top-call{font-size:16px}
+.ed .brand{font-family:var(--fd);font-size:28px;font-weight:600;gap:10px}
+.ed .brand svg{width:28px;height:28px}
+.ed .btn{font-size:16px;min-height:50px;padding:.75em 1.5em}
+/* HERO: üks veerg all vasakul */
+.ed .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate}
+.ed .hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.ed .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform-origin:50% 60%;filter:saturate(.85)}
+.ed .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(var(--ov) / .42) 0%,rgb(var(--ov) / .06) 28%,rgb(var(--ov) / .3) 55%,rgb(var(--ov) / .84) 100%),linear-gradient(90deg,rgb(var(--ov) / .45),transparent 60%)}
+.ed .hero-in{padding:150px 0 clamp(40px,6vw,80px)}
+.ed .hero-col{max-width:760px}
+.ed .hero .who{font-size:15px;font-weight:600;opacity:.92;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+@media (min-width:700px){.ed .hero .who span+span::before{content:"·";margin-right:18px;opacity:.6}}
+.ed .hero h1{font-size:clamp(50px,6.8vw,96px);line-height:.92;letter-spacing:-.02em;margin:0 0 28px;color:#fff}
+.ed .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.ed .hero h1 .ln > span{display:inline-block}
+.ed .hero h1 em{font-style:italic;color:var(--hero-em,#F3EEE8)}
+.ed .hero .sub{font-size:clamp(17px,1.4vw,19px);opacity:.94;margin:0 0 26px;max-width:46ch}
+.ed .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.ed .hero .btn-ghost{--ghost-ink:#fff;--ghost-line:rgba(255,255,255,.55)}
+.ed .camp{display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;background:rgb(var(--ov) / .45);border:1px solid rgba(255,255,255,.22)}
+.ed .camp::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,#E8C9A1)}
+/* INTRO: väide vasakul, lühihinnad paremal */
+.ed .intro .big{grid-column:1/8;font-family:var(--fd);font-size:clamp(30px,3.6vw,50px);line-height:1.12;letter-spacing:-.01em;margin:0;max-width:none;color:var(--ink)}
+.ed .intro .glance{grid-column:9/13;align-self:end;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 28px}
+.ed .glance h3,.ed .glance h2{font-family:var(--fb);font-size:15px;font-weight:700;color:var(--accent);margin:0 0 6px}
+.ed .glance ul{list-style:none;margin:0 0 18px;padding:0}
+.ed .glance li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px}
+.ed .glance li b{font-weight:700;white-space:nowrap}
+.ed .glance a{font-weight:700;color:var(--accent-d);min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:900px){.ed .intro .big,.ed .intro .glance{grid-column:1/-1}}
+/* sektsiooni pea: pealkiri + selgitus kõrvuti */
+.ed .shead{align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.ed .shead > div:first-child{grid-column:1/8}
+.ed .shead > p{grid-column:9/13;margin:0;font-size:18px;color:var(--muted)}
+@media (max-width:900px){.ed .shead > div:first-child,.ed .shead > p{grid-column:1/-1}}
+/* TEENUSED: 12-veeruline rida, võrdsed pildid, tekst vertikaalselt keskel */
+.ed .tr{align-items:center;padding:clamp(28px,4vw,48px) 0}
+.ed .tr-media{grid-column:1/7;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:5/6;background:var(--line)}
+.ed .tr-text{grid-column:8/13}
+.ed .tr.rev .tr-media{grid-column:7/13;grid-row:1}
+.ed .tr.rev .tr-text{grid-column:1/6;grid-row:1}
+@media (max-width:900px){.ed .tr-media,.ed .tr.rev .tr-media{grid-column:1/-1;grid-row:auto}.ed .tr-text,.ed .tr.rev .tr-text{grid-column:1/-1;grid-row:auto}}
+.ed .tr-media img{width:100%;height:112%;object-fit:cover;display:block}
+.ed .tr-media .tag{position:absolute;left:16px;bottom:16px;font-size:14px;font-weight:600;color:#fff;background:rgb(var(--ov) / .62);padding:7px 14px;border-radius:999px}
+.ed .tr h3{font-size:clamp(40px,4.4vw,64px);line-height:1;margin:0 0 .35em}
+.ed .tr p{font-size:19px;color:var(--muted)}
+.ed .dur{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 16px;border:0;padding:0}
+.ed .dur label{position:relative}
+.ed .dur input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.ed .dur span{display:inline-flex;align-items:center;min-height:48px;padding:6px 22px;border-radius:999px;border:1px solid var(--line);font-size:16px;font-weight:600;background:var(--surface);transition:background .25s,color .25s,border-color .25s}
+.ed .dur input:checked+span{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ed .dur input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.ed .price{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+.ed .price .val{font-variant-numeric:tabular-nums lining-nums;font-family:var(--fd);font-size:clamp(54px,5.4vw,80px);line-height:.9;color:var(--ink)}
+.ed .price .val b{display:none;font-weight:500}
+.ed .tr:has(.d0:checked) .p0,.ed .tr:has(.d1:checked) .p1,.ed .tr:has(.d2:checked) .p2{display:inline}
+.js .ed .price .val b{display:none!important}
+.js .ed .price .val .live{display:inline!important}
+.ed .price .val .live{display:none}
+.ed .price small{font-size:16px;color:var(--muted)}
+.ed .price .ask{font-family:var(--fd);font-size:clamp(38px,4vw,54px)}
+.ed .note{color:var(--muted);font-size:16px;margin-top:24px}
+/* TSITAAT: rahulik teal-kiht */
+.ed .quote{position:relative;min-height:min(72vh,680px);display:grid;place-items:center;text-align:center;color:#F7F3EE;overflow:hidden;isolation:isolate}
+.ed .quote-media{position:absolute;inset:-12% 0;z-index:-2}
+.ed .quote-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.45) blur(1px)}
+.ed .quote::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(var(--qov) / .74),rgb(var(--qov) / .84))}
+.ed .quote blockquote{margin:0;padding:0 16px;font-family:var(--fd);font-style:italic;font-size:clamp(44px,6.4vw,96px);line-height:1;letter-spacing:-.015em}
+.ed .quote cite{display:block;margin-top:22px;font-style:normal;font-family:var(--fb);font-size:16px;font-weight:600;opacity:.9}
+/* LUGU: pealkiri + tekst vasakul, numbrid paremal, ülemine joondus */
+.ed .story{align-items:start}
+.ed .story .s-text{grid-column:1/7}
+.ed .story .s-facts{grid-column:8/13;padding-top:8px}
+@media (max-width:900px){.ed .story .s-text,.ed .story .s-facts{grid-column:1/-1}}
+.ed .story h2{margin-bottom:28px}
+.ed .story p{font-size:19px;color:var(--muted)}
+.ed .story .sig{font-family:var(--fd);font-size:30px;color:var(--ink);font-style:italic;margin-top:8px}
+.ed .facts{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.ed .facts li{display:grid;grid-template-columns:minmax(110px,.45fr) 1fr;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.ed .facts b{font-variant-numeric:lining-nums;font-family:var(--fd);font-weight:500;font-size:clamp(48px,4.6vw,68px);line-height:.9;color:var(--accent)}
+.ed .facts span{font-size:18px}
+/* ASUKOHAD */
+.ed .places{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.ed .place-main{grid-column:1/8;position:relative;border-radius:16px;overflow:hidden;min-height:520px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
+.ed .place-side{grid-column:8/13;display:grid;gap:clamp(16px,2.4vw,32px)}
+@media (max-width:900px){.ed .place-main,.ed .place-side{grid-column:1/-1}.ed .place-main{min-height:440px}}
+.ed .place-main img{position:absolute;inset:0;width:100%;height:112%;object-fit:cover;z-index:-2;filter:saturate(.85)}
+.ed .place-main::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgb(var(--ov) / .85))}
+.ed .place-main .in{padding:clamp(24px,4vw,40px)}
+.ed .place-main .tag{font-size:15px;font-weight:700;opacity:.9;margin:0 0 6px}
+.ed .place-main h3{font-size:clamp(52px,6vw,84px);line-height:.9;margin:0 0 .15em;color:#fff}
+.ed .place-main p{opacity:.94;margin-bottom:18px}
+.ed .place-main .btn{--btn:var(--surface);--btn-ink:var(--ink)}
+.ed .place{border-radius:16px;padding:28px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+.ed .place .tag{font-size:14px;font-weight:700;color:var(--accent)}
+.ed .place h3{font-size:clamp(44px,4vw,56px);line-height:.95;margin:.15em 0}
+.ed .place p{color:var(--muted);font-size:17px;margin-bottom:10px}
+.ed .place a{font-weight:700;color:var(--accent-d);min-height:44px;display:inline-flex;align-items:center;gap:8px}
+/* KINK */
+.ed .gift-wrap{align-items:stretch}
+.ed .gift-photo{grid-column:1/6;position:relative;border-radius:16px;overflow:hidden;min-height:560px;isolation:isolate}
+.ed .gift-grid{grid-column:7/13;display:block}
+@media (max-width:900px){.ed .gift-photo,.ed .gift-grid{grid-column:1/-1}.ed .gift-photo{min-height:420px}}
+.ed .gift-photo img{position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;object-position:50% 30%;filter:saturate(.8)}
+.ed .gift-photo .gift-card{z-index:1;box-shadow:0 20px 40px -24px rgba(0,0,0,.5)}
+.ed .gift-photo .gift-card{position:absolute;left:7%;right:7%;bottom:7%;width:auto;aspect-ratio:1.6;max-width:none;background:var(--card,linear-gradient(135deg,rgba(255,255,255,.94),rgba(240,236,232,.92)));color:var(--ink);border-radius:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.55)}
+.ed .gc-brand{font-family:var(--fd);font-size:26px;font-weight:600}
+.ed .gc-kind{font-size:14px;font-weight:600;color:var(--accent-d)}
+.ed .gc-val{font-family:var(--fd);font-weight:600}
+.ed .gc-svc,.ed .gc-to{font-size:16px}
+.ed .gift-form h2,.ed .book-intro h2,.ed .faq h2{font-size:clamp(40px,4.6vw,64px)}
+.ed .gift-form > p:not(.small),.ed .book-intro p{font-size:18px;color:var(--muted)}
+/* vormid: suuremad sildid ja kiibid */
+.ed .fld{font-size:15px}
+.ed .fld input,.ed .fld select,.ed .fld textarea{font-size:17px;min-height:52px}
+.ed legend{font-size:15px}
+.ed .tod label>span,.ed .chips label>span{font-size:15px;min-height:46px;padding:8px 18px}
+.ed .bk-sum,.ed .small{font-size:15px}
+.ed .book{padding:var(--space) 0}
+.ed .book-form,.ed .gift-form{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,36px)}
+.ed .book-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+@media (max-width:899px){.ed .book-grid{grid-template-columns:1fr}}
+.ed .faq{padding:0 0 var(--space)}
+.ed .faq-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+@media (max-width:899px){.ed .faq-grid{grid-template-columns:1fr}}
+.ed .faq-list summary{font-size:18px}
+.ed .faq-list details p{font-size:17px;color:var(--muted)}
+.ed .foot{background:var(--foot-bg,var(--p900));color:var(--foot-ink,#E6E2DE);border-top:0;padding-top:72px;font-size:16px}
+.ed .foot a{color:#fff}
+.ed .foot-name{font-size:30px}
+.ed .naidis{color:var(--foot-mute,#C3BDB8);font-size:14px;margin-top:40px!important}
+.ed .credit{font-size:14px;color:var(--foot-mute,#C3BDB8);margin:8px auto 0}
+.ed .naidis,.ed .credit{text-align:left!important;width:min(1200px,100% - 2*var(--gut));max-width:none;margin-inline:auto!important}
+.ed .actionbar a{font-size:15px}
+.ed .magnetic{will-change:transform}
+@media (prefers-reduced-motion:reduce){.ed .hero-media img,.ed .tr-media img,.ed .quote-media,.ed .place-main img{transform:none!important}}
+/* --- mootori lisad --- */
+.ed .hero-split{min-height:auto;display:block;color:var(--ink);padding:120px 0 var(--space);overflow:visible}
+.ed .hero-split::after{display:none}
+.ed .hero-split .g12{align-items:center}
+.ed .hs-text{grid-column:1/7}
+.ed .hs-media{grid-column:7/13;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--line)}
+.ed .hs-media > img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.ed .hs-text,.ed .hs-media{grid-column:1/-1}.ed .hs-media{aspect-ratio:4/3}}
+.ed .hero-split h1{color:var(--ink)}
+.ed .hero-split h1 em{color:var(--p700)}
+.ed .hero-split .who{color:var(--accent);opacity:1}
+.ed .hero-split .sub{color:var(--muted);opacity:1}
+.ed .hero-split .btn-ghost{--ghost-ink:var(--ink);--ghost-line:color-mix(in srgb,var(--ink) 35%,transparent)}
+.ed .hero-split .camp{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.ed.split-hero .top{color:var(--ink)}
+.ed .cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px);list-style:none;margin:0;padding:0}
+@media (max-width:900px){.ed .cards3{grid-template-columns:1fr}}
+.ed .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.ed .card .cm{aspect-ratio:4/3;overflow:hidden;background:var(--line)}
+.ed .card .cm img{width:100%;height:112%;object-fit:cover}
+.ed .card .cb{padding:24px 26px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ed .card h3{font-size:clamp(28px,2.6vw,36px);line-height:1.05;margin:0}
+.ed .card p{color:var(--muted);font-size:17px;margin:0}
+.ed .card .pr{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700}
+.ed .card .pr a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--btn);color:#fff;text-decoration:none;font-size:15px}
+.ed .steps3{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px);counter-reset:s}
+@media (max-width:900px){.ed .steps3{grid-template-columns:1fr}}
+.ed .steps3 li{counter-increment:s;border-top:1px solid var(--line);padding-top:20px}
+.ed .steps3 li::before{content:counter(s);font-family:var(--fd);font-size:44px;line-height:1;color:var(--accent);display:block;margin-bottom:10px}
+.ed .steps3 b{display:block;font-size:20px;margin-bottom:4px}
+.ed .steps3 span{color:var(--muted)}
+.ed .band{position:relative;border-radius:16px;overflow:hidden;min-height:420px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
+.ed .band > img{position:absolute;inset:0;width:100%;height:112%;object-fit:cover;z-index:-2}
+.ed .band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 25%,rgb(var(--ov) / .85))}
+.ed .band .in{padding:clamp(24px,4vw,44px)}
+.ed .band h3{color:#fff;font-size:clamp(40px,4.6vw,64px);line-height:1;margin:0 0 .2em}
+.ed .band p{color:rgba(255,255,255,.92)}
+.ed .band .btn{--btn:var(--surface);--btn-ink:var(--ink)}
+.ed .tr-text > p.small{margin-top:-6px}
+.ed .credit a{color:inherit}
+.ed .partners{padding:0 0 0}
+.ed .chipline{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.ed .chipline li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:10px 18px;font-size:16px;font-weight:600}
+.ed .top .brand img{transition:filter .4s}
+.ed .top.over .brand img{filter:invert(1) brightness(2)}
+@media (max-width:899px){.ed .hero-split{padding-top:100px}}
+
+.t-bp h1,.t-bp h2,.t-bp h3{letter-spacing:-.03em}
+.t-bp .brand{font-family:var(--fd);font-weight:800;font-size:24px;letter-spacing:-.03em;gap:2px}
+.t-bp .brand b{color:#B0285A}
+.t-bp .hero-split h1{font-size:clamp(64px,8.6vw,120px);line-height:.9}
+.t-bp .hero-split h1 em{font-style:normal;color:var(--polish);transition:color .4s}
+.t-bp .hs-media .plus{position:absolute;right:6%;bottom:6%;width:34%;max-width:190px;filter:drop-shadow(0 18px 24px rgba(35,26,38,.35))}
+.t-bp .plus .pl{fill:var(--polish);transition:fill .45s cubic-bezier(.2,.8,.2,1)}
+.t-bp .sw{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.t-bp .sw button{width:44px;height:44px;border-radius:50% 50% 46% 46% / 60% 60% 40% 40%;background:var(--c);border:3px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer}
+.t-bp .sw button[aria-checked=true]{box-shadow:0 0 0 3px var(--ink)}
+.t-bp .sw-name{font-weight:700;margin:8px 0 0;font-size:16px}
+.no-js .t-bp .sw,.no-js .t-bp .sw-name{display:none}
+.t-bp .marquee{overflow:hidden;background:#231A26;color:#FCF5F8;padding:16px 0;font-family:var(--fd);font-weight:700;font-size:clamp(22px,2.6vw,32px)}
+.t-bp .track{display:flex;gap:2.2rem;width:max-content}
+.t-bp .track span{display:flex;gap:2.2rem;white-space:nowrap}
+.t-bp .track i{font-style:normal;color:#9EE6C9}
+/* WCAG 2.2.2: liikumine peatub 5 s jooksul */
+@media (prefers-reduced-motion:no-preference){.t-bp .track{animation:mq 4.5s cubic-bezier(.22,1,.36,1) .6s both}}
+@keyframes mq{from{transform:translateX(-14%)}to{transform:none}}
+.t-bp .contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+@media (max-width:760px){.t-bp .contact{grid-template-columns:1fr}}
+.t-bp .contact a{display:block;padding:26px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;overflow-wrap:anywhere;font-size:17px}
+.t-bp .contact b{display:block;font-family:var(--fd);font-weight:700;font-size:24px;margin-bottom:4px}
+.t-bp .gift-photo .gift-card{background:#231A26;color:#FCF5F8}.t-bp .gc-kind{color:#9EE6C9}
+
+html[lang="ru"]{--fd:'Unbounded',system-ui,sans-serif;--fb:'Manrope',system-ui,sans-serif}
+html[lang="ru"] .t-bp .hero-split h1{font-size:clamp(52px,7vw,96px)}html[lang="ru"] .t-bp .shead h2,html[lang="ru"] .t-bp section > .wrap > h2{font-size:clamp(32px,4vw,52px)}
+</style>
+</head>
+<body class="t-bp ed split-hero">
+<script>document.documentElement.classList.add("no-js");window.__L={"openUntil": "Сегодня открыто до {t}", "opensAt": "Сегодня открываемся в {t}", "closed": "Сейчас закрыто — оставьте сообщение, ответим в рабочее время", "tod": {"h": "утром", "p": "днём", "o": "вечером", "u": "в любое время"}, "sTod": {"h": "утром", "p": "днём", "o": "вечером", "u": "время по договорённости"}, "mHello": "Здравствуйте! Хочу записаться: {s}.", "mFirst": "Я у Вас впервые.", "mStudio": "Студия: {s}.", "mDate": "Удобная дата: {d}, {t}.", "mTime": "Удобное время: {t}.", "mAsk": "Подскажите, пожалуйста, когда у Вас есть свободное время?", "mName": "{n}", "mSubj": "Запись: {s}", "sum": "Мы отправим:", "sFirst": "первое посещение", "q1": "«", "q2": "»", "gFromCard": "От: {n}", "gHello": "Здравствуйте! Хочу заказать подарочный сертификат.", "gVal": "Номинал: {v}", "gTo": "Кому: {n}", "gFrom": "От кого: {n}", "gMsg": "Текст: {m}", "gSubj": "Подарочный сертификат", "gHint": "Знаешь, что я хочу в подарок? Сертификат в {f}: {u}", "per": "за {d}"}</script>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="top"><div class="wrap">
+  <a class="brand" translate="no" href="#main" aria-label="BeautyPlus">Beauty<b>Plus</b></a>
+  <nav class="nav" aria-label="Меню"><a href="#teenused">Услуги</a><a href="#kuidas">Как записаться</a><a href="#kinkekaart">Подарочный сертификат</a><a href="#kontakt">Контакты</a></nav>
+  <nav class="lang" aria-label="Keel / Язык / Language"><a href="../" hreflang="et" lang="et" data-lang="et">ET</a><a href="./" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">RU</a><a href="../en/" hreflang="en" lang="en" data-lang="en">EN</a></nav>
+  <a class="top-call" href="tel:+37256993991">+372 5699 3991</a>
+  <a class="btn" href="#broneeri">Записаться</a>
+</div></header>
+<main id="main">
+<section class="hero hero-split" id="hero"><div class="wrap g12">
+  <div class="hs-text">
+    <p class="who"><span>Ногтевой сервис и услуги красоты</span><span>Хааберсти, Таллинн</span></p>
+    <h1><span class="ln"><span>Beauty</span></span><span class="ln"><span><em>Plus</em></span></span></h1>
+    <p class="sub">Свободное время и цену уточняйте по телефону или SMS. Напишите, что хотите, — подберём удобное время.</p>
+    <div class="hero-cta"><a class="btn magnetic" href="#broneeri">Записаться</a><a class="btn btn-ghost magnetic" href="tel:+37256993991">+372 5699 3991</a></div>
+    <div class="after"><div class="sw" role="radiogroup" aria-label="Примерьте цвет"><button type="button" role="radio" aria-checked="true" style="--c:#E0457B" data-c="#E0457B" data-n="Фуксия" aria-label="Фуксия"></button><button type="button" role="radio" aria-checked="false" style="--c:#9E1B32" data-c="#9E1B32" data-n="Вишня" aria-label="Вишня"></button><button type="button" role="radio" aria-checked="false" style="--c:#E9C7C0" data-c="#E9C7C0" data-n="Молочно-розовый" aria-label="Молочно-розовый"></button><button type="button" role="radio" aria-checked="false" style="--c:#2FB3A0" data-c="#2FB3A0" data-n="Мята" aria-label="Мята"></button><button type="button" role="radio" aria-checked="false" style="--c:#9C8CE8" data-c="#9C8CE8" data-n="Лаванда" aria-label="Лаванда"></button><button type="button" role="radio" aria-checked="false" style="--c:#231A26" data-c="#231A26" data-n="Ночь" aria-label="Ночь"></button></div><p class="sw-name" id="swName" aria-live="polite">Фуксия</p></div>
+  </div>
+  <div class="hs-media"><img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=1200&h=1500&q=70&auto=format&fit=crop&crop=entropy" srcset="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=800&h=1000&q=70&auto=format&fit=crop&crop=entropy 800w, https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=1800&h=2250&q=70&auto=format&fit=crop&crop=entropy 1800w" sizes="(max-width: 900px) 100vw, 45vw" width="1200" height="1500" alt="Розовые ногти на розовом фоне" loading="eager" fetchpriority="high" decoding="async"><svg class="plus" viewBox="0 0 400 400" aria-hidden="true"><rect class="pl" x="140" y="20" width="120" height="360" rx="60"/><rect class="pl" x="20" y="140" width="360" height="120" rx="60"/></svg></div>
+</div></section>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Маникюр <i>+</i> Геллак <i>+</i> Гелевые ногти <i>+</i> Педикюр <i>+</i> Маникюр <i>+</i> Геллак <i>+</i> Гелевые ногти <i>+</i> Педикюр <i>+</i> </span><span>Маникюр <i>+</i> Геллак <i>+</i> Гелевые ногти <i>+</i> Педикюр <i>+</i> Маникюр <i>+</i> Геллак <i>+</i> Гелевые ногти <i>+</i> Педикюр <i>+</i> </span></div></div>
+<section class="intro blk"><div class="wrap g12">
+  <p class="big">Ухоженные ногти без долгого ожидания — в Хааберсти, рядом с Вяйке-Ыйсмяэ и Тискре. Цену назовём при записи.</p>
+  <aside class="glance"><h2>Услуги</h2><ul><li>Маникюр <b>цену уточняйте</b></li><li>Геллак <b>цену уточняйте</b></li><li>Гелевые ногти <b>цену уточняйте</b></li><li>Педикюр <b>цену уточняйте</b></li></ul><a href="#broneeri">Записаться</a></aside>
+</div></section>
+
+<section id="teenused" class="blk"><div class="wrap">
+  <div class="g12 shead"><div><h2>Услуги</h2></div><p>Выберите услугу, отправьте сообщение — ответим и согласуем время и цену.</p></div>
+  <article class="tr g12">
+  <div class="tr-media reveal-clip"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=1200&h=1440&q=70&auto=format&fit=crop&crop=entropy" srcset="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&h=960&q=70&auto=format&fit=crop&crop=entropy 800w, https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=1800&h=2160&q=70&auto=format&fit=crop&crop=entropy 1800w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="1440" alt="Серый, белый и блестящий маникюр" loading="lazy" decoding="async"><span class="tag">Для рук</span></div>
+  <div class="tr-text"><h3>Маникюр и геллак</h3><p>Уход за ногтями и кутикулой. Стойкое и глянцевое покрытие.</p><div class="price"><span class="ask">цену уточняйте</span></div><a class="btn magnetic" href="#broneeri" data-svc="Геллак">Записаться</a></div>
+</article><article class="tr g12 rev">
+  <div class="tr-media reveal-clip"><img src="https://images.unsplash.com/photo-1769687209448-025548dfca8b?w=1200&h=1440&q=70&auto=format&fit=crop&crop=entropy" srcset="https://images.unsplash.com/photo-1769687209448-025548dfca8b?w=800&h=960&q=70&auto=format&fit=crop&crop=entropy 800w, https://images.unsplash.com/photo-1769687209448-025548dfca8b?w=1800&h=2160&q=70&auto=format&fit=crop&crop=entropy 1800w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="1440" alt="Ногти с дизайном и эвкалипт" loading="lazy" decoding="async"><span class="tag">Наращивание и уход</span></div>
+  <div class="tr-text"><h3>Гелевые ногти и педикюр</h3><p>Наращивание или укрепление. Уход за стопами и ногтями.</p><div class="price"><span class="ask">цену уточняйте</span></div><a class="btn magnetic" href="#broneeri" data-svc="Гелевые ногти">Записаться</a></div>
+</article>
+</div></section>
+
+<section id="kuidas" class="blk"><div class="wrap">
+  <div class="g12 shead"><div><h2>Запись в три шага</h2></div><p>Без звонка, если так удобнее.</p></div>
+  <ol class="steps3"><li><b>Выберите услугу</b><span>В форме ниже или в карточке услуги.</span></li><li><b>Отправить SMS</b><span>Сообщение откроется с готовым текстом — добавьте только дату.</span></li><li><b>Получите подтверждение</b><span>Ответим и согласуем точное время и цену.</span></li></ol>
+</div></section>
+
+<section id="kinkekaart" class="blk"><div class="wrap g12 gift-wrap">
+  <div class="gift-photo reveal-clip"><img src="https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?w=1200&h=1600&q=70&auto=format&fit=crop&crop=entropy" srcset="https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?w=800&h=1067&q=70&auto=format&fit=crop&crop=entropy 800w, https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?w=1800&h=2400&q=70&auto=format&fit=crop&crop=entropy 1800w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="1600" alt="Французский маникюр и цветок" loading="lazy" decoding="async"><div class="gift-card" aria-hidden="true">
+      <div class="gc-top"><span class="gc-brand">Beauty<b style="color:#E0457B">Plus</b></span><span class="gc-kind">Подарочный сертификат</span></div>
+      
+      <div class="gc-val" id="gcVal">Маникюр</div>
+      <div class="gc-svc" id="gcSvc"></div>
+      <div class="gc-to"><span>Кому</span> <b id="gcTo">…</b></div>
+      <div class="gc-msg" id="gcMsg"></div>
+      <div class="gc-from" id="gcFrom"></div>
+    </div></div>
+  <div class="gift-grid">
+    <form class="gift-form" id="gf" onsubmit="return false" data-sms="+37256993991" data-mail="BeautyPlusou@gmail.com">
+      <h2>Подарочный сертификат</h2>
+      <p>Подарите подруге свежий маникюр. Напишите имя получателя — сертификат сразу обновится.</p>
+      <fieldset class="chips"><legend>Номинал</legend><label><input type="radio" name="gv" value="Маникюр" checked><span>Маникюр</span></label><label><input type="radio" name="gv" value="Педикюр"><span>Педикюр</span></label><label class="gv-own"><input type="radio" name="gv" value=""><span>Другая сумма</span></label></fieldset>
+      <label class="fld gv-sum"><span>Сумма в евро</span><input name="sum" inputmode="numeric" placeholder="например, 50"></label>
+      <div class="fld-row">
+        <label class="fld"><span>Кому</span><input name="to" maxlength="40" placeholder="Имя получателя"></label>
+        <label class="fld"><span>От кого</span><input name="from" maxlength="40" placeholder="Ваше имя"></label>
+      </div>
+      <label class="fld"><span>Пожелание</span><input name="msg" maxlength="70" placeholder="Хорошего отдыха!"></label>
+      <div class="bk-actions"><a class="btn" id="gSms" href="sms:+37256993991">Заказать по SMS</a><a class="btn btn-ghost" id="gMail" href="mailto:BeautyPlusou@gmail.com">Заказать по почте</a></div>
+      <p class="small">Номинал и способ передачи сертификата согласуем в сообщении.</p>
+    </form>
+  </div>
+</div></section>
+<section id="broneeri" class="sec book">
+  <div class="wrap book-grid">
+    <div class="book-intro">
+      <h2>Записаться</h2>
+      <p>Выберите услугу и удобное время. Сообщение откроется в телефоне или почте с готовым текстом — запись подтверждена, когда мы ответим.</p>
+      <p class="book-direct">Быстрее по телефону: <a href="tel:+37256993991">+372 5699 3991</a></p>
+    </div>
+    <form class="book-form" id="bk" onsubmit="return false" data-sms="+37256993991" data-mail="BeautyPlusou@gmail.com" data-firm="BeautyPlus">
+      <label class="fld"><span>Услуга</span><select name="svc"><option>Маникюр</option><option>Геллак</option><option>Гелевые ногти</option><option>Педикюр</option></select></label>
+      
+      <div class="fld-row">
+        <label class="fld"><span>Удобная дата</span><input type="date" name="date"></label>
+        <label class="fld"><span>Ваше имя</span><input name="name" autocomplete="name" placeholder="Имя"></label>
+      </div>
+      <fieldset class="tod"><legend>Удобное время</legend><label><input type="radio" name="tod" value="h"><span>Утро</span></label><label><input type="radio" name="tod" value="p"><span>День</span></label><label><input type="radio" name="tod" value="o"><span>Вечер</span></label><label><input type="radio" name="tod" value="u" checked><span>Любое</span></label></fieldset>
+      <label class="fld"><span>Комментарий (необязательно)</span><textarea name="note" rows="2" placeholder="Пожелания, вопросы…"></textarea></label>
+      <p class="bk-sum" id="bkSum" aria-live="polite"></p>
+      <div class="bk-actions"><a class="btn" id="bkSms" href="sms:+37256993991">Отправить SMS</a><a class="btn btn-ghost" id="bkMail" href="mailto:BeautyPlusou@gmail.com">Написать письмо</a></div>
+    </form>
+  </div>
+</section>
+<section id="kkk" class="sec faq">
+  <div class="wrap faq-grid"><h2>Частые вопросы</h2><div class="faq-list"><details><summary>Сколько стоит услуга?</summary><p>Цену назовём при записи — позвоните или напишите.</p></details><details><summary>Как записаться?</summary><p>Отправьте SMS прямо с этой страницы или позвоните: +372 5699 3991. Запись подтверждена, когда мы ответим.</p></details><details><summary>Где вы находитесь?</summary><p>В Хааберсти, в Таллинне. Точный адрес сообщим при подтверждении записи.</p></details></div></div>
+</section>
+<section id="kontakt" class="blk" style="padding-top:0"><div class="wrap">
+  <h2>Контакты</h2>
+  <div class="contact">
+    <a href="tel:+37256993991"><b>+372 5699 3991</b>Позвоните или отправьте SMS</a>
+    <a href="mailto:BeautyPlusou@gmail.com"><b>Эл. почта</b>BeautyPlusou@gmail.com</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Haabersti%2C%20Tallinn" rel="noopener"><b>Хааберсти</b>Точный адрес сообщим при подтверждении записи</a>
+  </div>
+</div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><p class="foot-name">BeautyPlus</p><p>Хааберсти, Таллинн</p></div>
+    <div><p><a href="tel:+37256993991">+372 5699 3991</a></p><p><a href="mailto:BeautyPlusou@gmail.com">BeautyPlusou@gmail.com</a></p></div>
+    <div></div>
+  </div>
+  <p class="naidis">Демо-страница — подготовлена как предложение (Näidisleht – koostatud pakkumiseks)</p>
+<p class="credit">Фото: Unsplash (демо) — заменим вашими фотографиями.</p>
+</footer><nav class="actionbar" aria-label="Быстрые действия"><a href="tel:+37256993991">Позвонить</a><a href="#broneeri" class="ab-main">Записаться</a><a href="sms:+37256993991">SMS</a></nav>
+<script>
+(function(){
+var d=document,root=d.documentElement;root.classList.remove('no-js');root.classList.add('js');
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+window.__RM=RM;
+var $=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
+var IO='IntersectionObserver' in window;
+// sisenemine (ainult plokid, mis on laadimisel vaatest allpool)
+if(IO&&!RM){var eio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('go');eio.unobserve(e.target)}})},{rootMargin:'0px 0px 25% 0px'});
+  $$('.enter').forEach(function(el){if(el.getBoundingClientRect().top>innerHeight*1.3)eio.observe(el)});}
+// kleepuv mobiiliriba
+var bar=$('.actionbar'),hero=$('.hero'),bk=$('#broneeri');
+if(bar&&IO&&hero){var hOut=false,bIn=false,up=function(){bar.classList.toggle('show',hOut&&!bIn)};
+  new IntersectionObserver(function(e){hOut=!e[0].isIntersecting;up()}).observe(hero);
+  if(bk)new IntersectionObserver(function(e){bIn=e[0].isIntersecting;up()}).observe(bk);}
+else if(bar)bar.classList.add('show');
+// keelevalik: meelde ainult kliki järel; automaatset suunamist pole
+var L=window.__L||{};var tpl=function(k,o){var t=L[k]||'';for(var x in o)t=t.split('{'+x+'}').join(o[x]);return t};
+$$('.lang a[data-lang]').forEach(function(a){a.addEventListener('click',function(){
+  try{localStorage.setItem('lang',a.dataset.lang)}catch(e){}
+  var h=a.getAttribute('href');if(location.protocol==='file:'&&/\/$/.test(h))h+='index.html';a.setAttribute('href',h+location.hash);});});
+var lb=$('#langbar');if(lb){var pref=null;try{pref=localStorage.getItem('lang')}catch(e){}
+  if(pref&&pref!=='et'&&lb.getAttribute('data-'+pref)){lb.querySelector('span').textContent=lb.getAttribute('data-'+pref);var la=lb.querySelector('a');la.textContent=lb.getAttribute('data-'+pref+'-go');la.setAttribute('href',pref+'/');la.setAttribute('lang',pref);lb.hidden=false;}
+  lb.querySelector('button').addEventListener('click',function(){lb.hidden=true;try{localStorage.setItem('lang','et')}catch(e){}});}
+// täna avatud (Europe/Tallinn)
+$$('[data-h]').forEach(function(el){try{var H=JSON.parse(el.getAttribute('data-h'));
+  var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Tallinn',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+  var di=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),h=(+p.hour%24)+p.minute/60,t=H[di];
+  var f=function(s){return +s.split(':')[0]+(+s.split(':')[1])/60},fmt=function(s){return s.replace(/^0/,'').replace(':00','')};
+  var open=t&&h>=f(t[0])&&h<f(t[1]);
+  el.textContent=open?tpl('openUntil',{t:fmt(t[1])}):(t&&h<f(t[0])?tpl('opensAt',{t:fmt(t[0])}):L.closed);
+  el.setAttribute('data-open',open?'true':'false');}catch(e){}});
+// broneerimine: SMS/WhatsApp/mailto valmis tekstiga (lehe keeles)
+var bf=$('#bk');
+if(bf){var dt=bf.elements.date;try{dt.min=new Date().toISOString().slice(0,10)}catch(e){}
+  var bkUpd=function(){var v=function(n){return (bf.elements[n]&&bf.elements[n].value||'').trim()};
+    var tod=(bf.querySelector('[name=tod]:checked')||{}).value||'u';var todTxt=(L.tod||{})[tod]||'';
+    var svc=bf.elements.svc.options[bf.elements.svc.selectedIndex].text;
+    var st=bf.elements.studio,stOpt=st?st.options[st.selectedIndex]:null,stName=st&&st.value?st.value:'';
+    var num=(stOpt&&stOpt.getAttribute('data-tel')||bf.dataset.sms).replace(/[^0-9+]/g,'');
+    var first=bf.elements.first&&bf.elements.first.checked;
+    var date=v('date');if(date){var pd=date.split('-');date=pd[2]+'.'+pd[1]+'.'+pd[0]}
+    var lines=[tpl('mHello',{s:svc}),first?L.mFirst:'',stName?tpl('mStudio',{s:stName}):'',date?tpl('mDate',{d:date,t:todTxt}):tpl('mTime',{t:todTxt}),v('note'),L.mAsk||'',v('name')?tpl('mName',{n:v('name')}):''];
+    var body=lines.filter(Boolean).join('\n');
+    $('#bkSms').href='sms:'+num+'?&body='+encodeURIComponent(body);
+    var w=$('#bkWa');if(w)w.href='https://wa.me/'+num.replace(/\D/g,'')+'?text='+encodeURIComponent(body);
+    var m=$('#bkMail');if(m)m.href='mailto:'+bf.dataset.mail+'?subject='+encodeURIComponent(tpl('mSubj',{s:svc}))+'&body='+encodeURIComponent(body);
+    $('#bkSum').textContent=L.sum+' '+svc+(first?', '+L.sFirst:'')+(stName?', '+stName:'')+(date?', '+date:'')+', '+((L.sTod||{})[tod]||todTxt);};
+  bf.addEventListener('input',bkUpd);bf.addEventListener('change',bkUpd);bkUpd();
+  // "Broneeri see" nupud
+  d.addEventListener('click',function(e){var a=e.target.closest('[data-svc]');if(!a)return;var s=a.getAttribute('data-svc');
+    $$('option',bf.elements.svc).forEach(function(o,i){if(o.text===s)bf.elements.svc.selectedIndex=i});bkUpd();});
+}
+// kinkekaart: elav eelvaade
+var gf=$('#gf');
+if(gf){var gUpd=function(){var g=function(n){return (gf.elements[n].value||'').trim()};
+    var r=gf.querySelector('[name=gv]:checked');var val=r&&r.value?r.value:(g('sum')?g('sum').replace(/[^0-9]/g,'')+' €':'');
+    var vp=val.split('|');$('#gcVal').textContent=vp[0]||'… €';$('#gcSvc').textContent=vp[1]||'';val=vp.filter(Boolean).join(' – ');$('#gcTo').textContent=g('to')||'…';$('#gcMsg').textContent=g('msg')?L.q1+g('msg')+L.q2:'';
+    $('#gcFrom').textContent=g('from')?tpl('gFromCard',{n:g('from')}):'';
+    var body=[L.gHello,tpl('gVal',{v:val||'-'}),tpl('gTo',{n:g('to')||'-'}),g('from')?tpl('gFrom',{n:g('from')}):'',g('msg')?tpl('gMsg',{m:g('msg')}):''].filter(Boolean).join('\n');
+    $('#gSms').href='sms:'+gf.dataset.sms+'?&body='+encodeURIComponent(body);
+    var m=$('#gMail');if(m)m.href='mailto:'+gf.dataset.mail+'?subject='+encodeURIComponent(L.gSubj)+'&body='+encodeURIComponent(body);
+    var hn=$('#gHint');if(hn){var url=location.href.split('#')[0]+'#kinkekaart',fn=hn.getAttribute('data-firm');
+      hn.href='https://wa.me/?text='+encodeURIComponent(tpl('gHint',{f:fn,u:url}));}};
+  gf.addEventListener('input',gUpd);gf.addEventListener('change',gUpd);gUpd();}
+})();
+
+(function(){
+var d=document,root=d.documentElement,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
+var top=$('.top'),hero=$('#hero.hero:not(.hero-split)');
+function hdr(){if(!hero||!top)return;var r=hero.getBoundingClientRect();top.classList.toggle('over',r.bottom>90);}
+hdr();addEventListener('scroll',hdr,{passive:true});
+$$('.tr').forEach(function(tr){var live=$('.price .live',tr),small=$('.price small',tr);if(!live)return;
+  tr.addEventListener('change',function(e){var r=e.target;if(!r.matches('input[type=radio]'))return;
+    var to=+r.getAttribute('data-p'),from=parseInt(live.textContent,10)||to;small.textContent=((window.__L&&__L.per)||'{d} kohta').replace('{d}',r.value);
+    if(RM||!window.gsap||isNaN(to)){live.textContent=r.getAttribute('data-p')+' €';return;}
+    var o={v:from};gsap.to(o,{v:to,duration:.7,ease:'power3.out',onUpdate:function(){live.textContent=Math.round(o.v)+' €'}});
+    gsap.fromTo(live,{yPercent:12,opacity:.4},{yPercent:0,opacity:1,duration:.5,ease:'power3.out'});});});
+function motion(){
+  if(RM||!window.gsap||!window.ScrollTrigger)return;
+  gsap.registerPlugin(ScrollTrigger);
+  if(window.Lenis&&matchMedia('(hover:hover)').matches){var lenis=new Lenis({lerp:.09,smoothWheel:true});root.classList.add('lenis');
+    lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0);
+    $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=$(id);if(!t)return;e.preventDefault();lenis.scrollTo(t,{offset:-80});});});}
+  var tl=gsap.timeline({defaults:{ease:'expo.out'}});
+  if($('.hero h1 .ln'))tl.from('.hero h1 .ln > span',{yPercent:110,duration:1.4,stagger:.11});
+  tl.from('.hero .who, .hero .sub, .hero .hero-cta, .hero .camp, .hero .after',{y:24,opacity:0,duration:1,stagger:.08},'-=1.0');
+  if($('.hero-media img')){tl.from('.hero-media img',{scale:1.16,duration:2.4,ease:'power2.out'},0);
+    gsap.to('.hero-media img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});}
+  if($('.hs-media'))tl.fromTo('.hs-media',{clipPath:'inset(10% 8% 10% 8% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.6},0);
+  $$('.reveal-clip').forEach(function(m){gsap.fromTo(m,{clipPath:'inset(14% 10% 14% 10% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.5,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:m,start:'top bottom+=60',once:true}});
+    var img=$('img',m);if(img)gsap.fromTo(img,{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:true}});});
+  if($('.quote'))gsap.fromTo('.quote-media',{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.quote',start:'top bottom',end:'bottom top',scrub:true}});
+  if(matchMedia('(hover:hover) and (pointer:fine)').matches){$$('.magnetic').forEach(function(b){
+    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.28,y:(e.clientY-r.top-r.height/2)*.38,duration:.4,ease:'power3.out'})});
+    b.addEventListener('pointerleave',function(){gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'})});});}
+}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',motion);else motion();
+})();
+
+(function(){var d=document,g=d.querySelector('.t-bp .sw');if(!g)return;
+g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+  g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-checked',x===b)});
+  d.documentElement.style.setProperty('--polish',b.dataset.c);d.getElementById('swName').textContent=b.dataset.n;});})();
+</script>
+</body>
+</html>

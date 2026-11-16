@@ -9,6 +9,12 @@
 <meta name="theme-color" content="#EEE8DE">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="et_EE">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="alternate" hreflang="et" href="./">
+<link rel="alternate" hreflang="ru" href="ru/">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="x-default" href="./">
 <meta property="og:site_name" content="TMassaaž">
 <meta property="og:title" content="Massaaž Haabneemes, Tiina käte all | TMassaaž">
 <meta property="og:description" content="TMassaaž – Tiina M.-M. Rihkrandi massaažid Haabneemes, Viimsi vallas. Klassikaline ja ravimassaaž, spordi-, jala- ja näomassaaž, kupu- ja…">
@@ -20,7 +26,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <link rel="preconnect" href="https://images.unsplash.com">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "TMassaaž", "description": "TMassaaž – Tiina M.-M. Rihkrandi massaažid Haabneemes, Viimsi vallas. Klassikaline ja ravimassaaž, spordi-, jala- ja näomassaaž, kupu- ja…", "telephone": "+3725260275", "address": {"@type": "PostalAddress", "streetAddress": "Haabneeme", "addressLocality": "Haabneeme", "addressCountry": "EE"}, "email": "tiina.maria.magdalena@gmail.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "TMassaaž", "description": "TMassaaž – Tiina M.-M. Rihkrandi massaažid Haabneemes, Viimsi vallas. Klassikaline ja ravimassaaž, spordi-, jala- ja näomassaaž, kupu- ja…", "telephone": "+3725260275", "address": {"@type": "PostalAddress", "streetAddress": "Haabneeme", "addressLocality": "Haabneeme", "addressCountry": "EE"}, "email": "tiina.maria.magdalena@gmail.com", "hasMap": "https://www.google.com/maps/search/?api=1&query=Haabneeme%2C%20Viimsi%20vald"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kus massaaž toimub?", "acceptedAnswer": {"@type": "Answer", "text": "Haabneemes, Viimsi vallas. Täpse aadressi saad aja kinnitamisel."}}, {"@type": "Question", "name": "Kui palju massaaž maksab?", "acceptedAnswer": {"@type": "Answer", "text": "Hinna ütlen aja kokkuleppimisel – see sõltub massaažist ja kestusest."}}, {"@type": "Question", "name": "Millist massaaži valida?", "acceptedAnswer": {"@type": "Answer", "text": "Kirjuta, mis muret teeb või mida soovid – koos leiame sobiva. Teen klassikalist ja ravimassaaži, spordi-, jala-, näo-, kupu- ja tselluliidimassaaži."}}, {"@type": "Question", "name": "Kas saab kinkekaardi?", "acceptedAnswer": {"@type": "Answer", "text": "Jah – telli siitsamast lehelt, väärtuse ja kättetoimetamise lepime kokku."}}]}</script>
 <style>
 
@@ -49,13 +55,24 @@ p{margin:0 0 1em}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:var(--hdr,var(--bg));border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0;min-height:44px}
 .nav{display:flex;gap:22px;font-size:15px}
 .nav a{text-decoration:none;opacity:.85}
 .nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
 .top-call{white-space:nowrap;font-weight:600;text-decoration:none}
 @media (max-width:899px){.nav{display:none}.top .btn{min-height:42px;padding:.45em 1em;font-size:15px}.top-call{display:none}}
 /* open now */
+.lang{display:inline-flex;gap:2px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:999px;padding:3px;flex:none}
+.lang a{display:inline-grid;place-items:center;min-width:40px;min-height:38px;padding:0 6px;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;opacity:.78}
+.lang a:hover{opacity:1}
+.lang a[aria-current=true]{background:var(--btn,var(--accent));color:var(--btn-ink,#fff);opacity:1}
+@media (max-width:560px){.top .btn{display:none}.lang a{min-width:36px}}
+.brand > span{white-space:nowrap}
+@media (max-width:420px){.t-km .brand{font-size:19px;gap:8px}.t-km .brand i{width:18px;height:24px}.t-hb .brand,.t-tm .brand{font-size:21px}}
+.langbar{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;background:var(--ink);color:var(--bg);font-size:15px;padding:8px 16px;position:relative;z-index:60}
+.langbar[hidden]{display:none}
+.langbar a{color:inherit;font-weight:700}
+.langbar button{background:none;border:0;color:inherit;font-size:22px;min-width:44px;min-height:40px;cursor:pointer}
 .open-now{display:inline-flex;align-items:center;gap:8px;font-size:15px;margin:0}
 .open-now::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
 .open-now[data-open=true]::before{background:var(--ok,#2e9b5f);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok,#2e9b5f) 22%,transparent)}
@@ -186,7 +203,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 /* INTRO: väide vasakul, lühihinnad paremal */
 .ed .intro .big{grid-column:1/8;font-family:var(--fd);font-size:clamp(30px,3.6vw,50px);line-height:1.12;letter-spacing:-.01em;margin:0;max-width:none;color:var(--ink)}
 .ed .intro .glance{grid-column:9/13;align-self:end;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 28px}
-.ed .glance h3{font-family:var(--fb);font-size:15px;font-weight:700;color:var(--accent);margin:0 0 6px}
+.ed .glance h3,.ed .glance h2{font-family:var(--fb);font-size:15px;font-weight:700;color:var(--accent);margin:0 0 6px}
 .ed .glance ul{list-style:none;margin:0 0 18px;padding:0}
 .ed .glance li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px}
 .ed .glance li b{font-weight:700;white-space:nowrap}
@@ -358,11 +375,13 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 </style>
 </head>
 <body class="t-tm ed">
-<script>document.documentElement.classList.add("no-js")</script>
+<script>document.documentElement.classList.add("no-js");window.__L={"openUntil": "Täna avatud kuni {t}", "opensAt": "Täna avame kell {t}", "closed": "Praegu suletud – jäta sõnum, vastame tööajal", "tod": {"h": "hommikul", "p": "päeval", "o": "õhtul", "u": "ükskõik millal"}, "sTod": {"h": "hommikul", "p": "päeval", "o": "õhtul", "u": "aeg kokkuleppel"}, "mHello": "Tere! Soovin aega: {s}.", "mFirst": "Olen Teil esimest korda.", "mStudio": "Stuudio: {s}.", "mDate": "Päev: {d}, {t}.", "mTime": "Aeg: {t}.", "mAsk": "", "mName": "Nimi: {n}", "mSubj": "Broneering: {s}", "sum": "Saadame:", "sFirst": "esmakülastus", "q1": "„", "q2": "“", "gFromCard": "Kellelt: {n}", "gHello": "Tere! Soovin tellida kinkekaardi.", "gVal": "Väärtus: {v}", "gTo": "Kellele: {n}", "gFrom": "Kellelt: {n}", "gMsg": "Soov kaardil: {m}", "gSubj": "Kinkekaart", "gHint": "Tead, mida ma kingiks tahaksin? Kinkekaarti – {f}: {u}", "per": "{d} kohta"}</script>
 <a class="skip" href="#main">Liigu sisu juurde</a>
+<div class="langbar" id="langbar" hidden data-ru="Эта страница есть на русском." data-ru-go="Перейти" data-en="This page is also available in English." data-en-go="Open in English"><span></span> <a href="ru/">→</a><button type="button" aria-label="Sulge / Закрыть / Close">×</button></div>
 <header class="top"><div class="wrap">
   <a class="brand" translate="no" href="#main" aria-label="TMassaaž"><span class="seal">T</span><span>TMassaaž</span></a>
   <nav class="nav" aria-label="Menüü"><a href="#minust">Minust</a><a href="#massaazid">Massaažid</a><a href="#kinkekaart">Kinkekaart</a><a href="#kkk">Küsimused</a></nav>
+  <nav class="lang" aria-label="Keel / Язык / Language"><a href="./" hreflang="et" lang="et" data-lang="et" aria-current="true">ET</a><a href="ru/" hreflang="ru" lang="ru" data-lang="ru">RU</a><a href="en/" hreflang="en" lang="en" data-lang="en">EN</a></nav>
   <a class="top-call" href="tel:+3725260275">+372 526 0275</a>
   <a class="btn" href="#broneeri">Küsi aega</a>
 </div></header>
@@ -379,7 +398,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 </section>
 <section class="intro blk"><div class="wrap g12">
   <p class="big">Õppinud AVICENNA massaaži erakoolis, töötanud haiglas, spaas ja salongis – nüüd võtan sind vastu kodu lähedal, Viimsis.</p>
-  <aside class="glance"><h3>Massaažid</h3><ul><li>Klassikaline ja ravimassaaž <b>küsi hinda</b></li><li>Spordimassaaž <b>küsi hinda</b></li><li>Jala- ja näomassaaž <b>küsi hinda</b></li><li>Kupu- ja tselluliidimassaaž <b>küsi hinda</b></li></ul><a href="#broneeri">Küsi aega</a></aside>
+  <aside class="glance"><h2>Massaažid</h2><ul><li>Klassikaline ja ravimassaaž <b>küsi hinda</b></li><li>Spordimassaaž <b>küsi hinda</b></li><li>Jala- ja näomassaaž <b>küsi hinda</b></li><li>Kupu- ja tselluliidimassaaž <b>küsi hinda</b></li></ul><a href="#broneeri">Küsi aega</a></aside>
 </div></section>
 
 <section id="massaazid" class="blk"><div class="wrap">
@@ -444,7 +463,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
         <label class="fld"><span>Soovitud päev</span><input type="date" name="date"></label>
         <label class="fld"><span>Sinu nimi</span><input name="name" autocomplete="name" placeholder="Eesnimi"></label>
       </div>
-      <fieldset class="tod"><legend>Kellaaeg</legend><label><input type="radio" name="tod" value="Hommikul"><span>Hommikul</span></label><label><input type="radio" name="tod" value="Päeval"><span>Päeval</span></label><label><input type="radio" name="tod" value="Õhtul"><span>Õhtul</span></label><label><input type="radio" name="tod" value="Ükskõik" checked><span>Ükskõik</span></label></fieldset>
+      <fieldset class="tod"><legend>Kellaaeg</legend><label><input type="radio" name="tod" value="h"><span>Hommikul</span></label><label><input type="radio" name="tod" value="p"><span>Päeval</span></label><label><input type="radio" name="tod" value="o"><span>Õhtul</span></label><label><input type="radio" name="tod" value="u" checked><span>Ükskõik</span></label></fieldset>
       <label class="fld"><span>Lisainfo</span><textarea name="note" rows="2" placeholder="Soovid, küsimused…"></textarea></label>
       <p class="bk-sum" id="bkSum" aria-live="polite"></p>
       <div class="bk-actions"><a class="btn" id="bkSms" href="sms:+3725260275">Saada SMS</a><a class="btn btn-ghost" id="bkMail" href="mailto:tiina.maria.magdalena@gmail.com">Saada e-kiri</a></div>
@@ -480,52 +499,55 @@ if(bar&&IO&&hero){var hOut=false,bIn=false,up=function(){bar.classList.toggle('s
   new IntersectionObserver(function(e){hOut=!e[0].isIntersecting;up()}).observe(hero);
   if(bk)new IntersectionObserver(function(e){bIn=e[0].isIntersecting;up()}).observe(bk);}
 else if(bar)bar.classList.add('show');
+// keelevalik: meelde ainult kliki järel; automaatset suunamist pole
+var L=window.__L||{};var tpl=function(k,o){var t=L[k]||'';for(var x in o)t=t.split('{'+x+'}').join(o[x]);return t};
+$$('.lang a[data-lang]').forEach(function(a){a.addEventListener('click',function(){
+  try{localStorage.setItem('lang',a.dataset.lang)}catch(e){}
+  var h=a.getAttribute('href');if(location.protocol==='file:'&&/\/$/.test(h))h+='index.html';a.setAttribute('href',h+location.hash);});});
+var lb=$('#langbar');if(lb){var pref=null;try{pref=localStorage.getItem('lang')}catch(e){}
+  if(pref&&pref!=='et'&&lb.getAttribute('data-'+pref)){lb.querySelector('span').textContent=lb.getAttribute('data-'+pref);var la=lb.querySelector('a');la.textContent=lb.getAttribute('data-'+pref+'-go');la.setAttribute('href',pref+'/');la.setAttribute('lang',pref);lb.hidden=false;}
+  lb.querySelector('button').addEventListener('click',function(){lb.hidden=true;try{localStorage.setItem('lang','et')}catch(e){}});}
 // täna avatud (Europe/Tallinn)
 $$('[data-h]').forEach(function(el){try{var H=JSON.parse(el.getAttribute('data-h'));
   var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Tallinn',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
   var di=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),h=(+p.hour%24)+p.minute/60,t=H[di];
   var f=function(s){return +s.split(':')[0]+(+s.split(':')[1])/60},fmt=function(s){return s.replace(/^0/,'').replace(':00','')};
-  var L=window.__L||{};var open=t&&h>=f(t[0])&&h<f(t[1]);
-  el.textContent=open?(L.openUntil||'Täna avatud kuni ')+fmt(t[1]):(t&&h<f(t[0])?(L.opensAt||'Täna avame kell ')+fmt(t[0]):(L.closed||'Praegu suletud – jäta sõnum, vastame tööajal'));
+  var open=t&&h>=f(t[0])&&h<f(t[1]);
+  el.textContent=open?tpl('openUntil',{t:fmt(t[1])}):(t&&h<f(t[0])?tpl('opensAt',{t:fmt(t[0])}):L.closed);
   el.setAttribute('data-open',open?'true':'false');}catch(e){}});
-// broneerimine: SMS/mailto valmis tekstiga
+// broneerimine: SMS/WhatsApp/mailto valmis tekstiga (lehe keeles)
 var bf=$('#bk');
 if(bf){var dt=bf.elements.date;try{dt.min=new Date().toISOString().slice(0,10)}catch(e){}
-  var ru=function(){return root.lang==='ru'};
   var bkUpd=function(){var v=function(n){return (bf.elements[n]&&bf.elements[n].value||'').trim()};
-    var tod=(bf.querySelector('[name=tod]:checked')||{}).value||'';
+    var tod=(bf.querySelector('[name=tod]:checked')||{}).value||'u';var todTxt=(L.tod||{})[tod]||'';
     var svc=bf.elements.svc.options[bf.elements.svc.selectedIndex].text;
     var st=bf.elements.studio,stOpt=st?st.options[st.selectedIndex]:null,stName=st&&st.value?st.value:'';
     var num=(stOpt&&stOpt.getAttribute('data-tel')||bf.dataset.sms).replace(/[^0-9+]/g,'');
     var first=bf.elements.first&&bf.elements.first.checked;
     var date=v('date');if(date){var pd=date.split('-');date=pd[2]+'.'+pd[1]+'.'+pd[0]}
-    var todTxt=tod; if(ru()){todTxt={'Hommikul':'утром','Päeval':'днём','Õhtul':'вечером','Ükskõik':'в любое время'}[tod]||tod}
-    var lines=ru()?['Здравствуйте! Хочу записаться: '+svc+'.',first?'Я у Вас впервые.':'',stName?'Студия: '+stName+'.':'',(date?'Удобная дата: '+date+', ':'Удобное время: ')+todTxt+'.',v('note'),'Подскажите, пожалуйста, есть ли у Вас свободное время?',v('name')?v('name'):'']
-      :['Tere! Soovin aega: '+svc+'.',first?'Olen Teil esimest korda.':'',stName?'Stuudio: '+stName+'.':'',(date?'Päev: '+date+', ':'Aeg: ')+(tod==='Ükskõik'?'ükskõik millal':tod.toLowerCase())+'.',v('note'),v('name')?'Nimi: '+v('name'):''];
+    var lines=[tpl('mHello',{s:svc}),first?L.mFirst:'',stName?tpl('mStudio',{s:stName}):'',date?tpl('mDate',{d:date,t:todTxt}):tpl('mTime',{t:todTxt}),v('note'),L.mAsk||'',v('name')?tpl('mName',{n:v('name')}):''];
     var body=lines.filter(Boolean).join('\n');
     $('#bkSms').href='sms:'+num+'?&body='+encodeURIComponent(body);
     var w=$('#bkWa');if(w)w.href='https://wa.me/'+num.replace(/\D/g,'')+'?text='+encodeURIComponent(body);
-    var m=$('#bkMail');if(m)m.href='mailto:'+bf.dataset.mail+'?subject='+encodeURIComponent((ru()?'Запись: ':'Broneering: ')+svc)+'&body='+encodeURIComponent(body);
-    $('#bkSum').textContent=(ru()?'Мы отправим: ':'Saadame: ')+svc+(first?(ru()?', первое посещение':', esmakülastus'):'')+(stName?', '+stName:'')+(date?', '+date:'')+', '+(ru()?todTxt:(tod==='Ükskõik'?'aeg kokkuleppel':tod.toLowerCase()));};
-  bf.addEventListener('input',bkUpd);bf.addEventListener('change',bkUpd);d.addEventListener('langchange',bkUpd);bkUpd();
+    var m=$('#bkMail');if(m)m.href='mailto:'+bf.dataset.mail+'?subject='+encodeURIComponent(tpl('mSubj',{s:svc}))+'&body='+encodeURIComponent(body);
+    $('#bkSum').textContent=L.sum+' '+svc+(first?', '+L.sFirst:'')+(stName?', '+stName:'')+(date?', '+date:'')+', '+((L.sTod||{})[tod]||todTxt);};
+  bf.addEventListener('input',bkUpd);bf.addEventListener('change',bkUpd);bkUpd();
   // "Broneeri see" nupud
   d.addEventListener('click',function(e){var a=e.target.closest('[data-svc]');if(!a)return;var s=a.getAttribute('data-svc');
     $$('option',bf.elements.svc).forEach(function(o,i){if(o.text===s)bf.elements.svc.selectedIndex=i});bkUpd();});
 }
 // kinkekaart: elav eelvaade
 var gf=$('#gf');
-if(gf){var gUpd=function(){var ruL=root.lang==='ru';var g=function(n){return (gf.elements[n].value||'').trim()};
-    var r=gf.querySelector('[name=gv]:checked');var val=r&&r.value?(ruL&&r.getAttribute('data-ru-v')||r.value):(g('sum')?g('sum').replace(/[^0-9]/g,'')+' €':'');
-    var vp=val.split('|');$('#gcVal').textContent=vp[0]||'… €';$('#gcSvc').textContent=vp[1]||'';val=vp.filter(Boolean).join(' – ');$('#gcTo').textContent=g('to')||'…';$('#gcMsg').textContent=g('msg')?'„'+g('msg')+'“':'';
-    $('#gcFrom').textContent=g('from')?((ruL?'От: ':'Kellelt: ')+g('from')):'';
-    var body=ruL?['Здравствуйте! Хочу заказать подарочный сертификат.','Номинал: '+(val||'-'),'Кому: '+(g('to')||'-'),g('from')?'От: '+g('from'):'',g('msg')?'Текст: '+g('msg'):'']
-      :['Tere! Soovin tellida kinkekaardi.','Väärtus: '+(val||'-'),'Kellele: '+(g('to')||'-'),g('from')?'Kellelt: '+g('from'):'',g('msg')?'Soov kaardil: '+g('msg'):''];
-    body=body.filter(Boolean).join('\n');
+if(gf){var gUpd=function(){var g=function(n){return (gf.elements[n].value||'').trim()};
+    var r=gf.querySelector('[name=gv]:checked');var val=r&&r.value?r.value:(g('sum')?g('sum').replace(/[^0-9]/g,'')+' €':'');
+    var vp=val.split('|');$('#gcVal').textContent=vp[0]||'… €';$('#gcSvc').textContent=vp[1]||'';val=vp.filter(Boolean).join(' – ');$('#gcTo').textContent=g('to')||'…';$('#gcMsg').textContent=g('msg')?L.q1+g('msg')+L.q2:'';
+    $('#gcFrom').textContent=g('from')?tpl('gFromCard',{n:g('from')}):'';
+    var body=[L.gHello,tpl('gVal',{v:val||'-'}),tpl('gTo',{n:g('to')||'-'}),g('from')?tpl('gFrom',{n:g('from')}):'',g('msg')?tpl('gMsg',{m:g('msg')}):''].filter(Boolean).join('\n');
     $('#gSms').href='sms:'+gf.dataset.sms+'?&body='+encodeURIComponent(body);
-    var m=$('#gMail');if(m)m.href='mailto:'+gf.dataset.mail+'?subject='+encodeURIComponent(ruL?'Подарочный сертификат':'Kinkekaart')+'&body='+encodeURIComponent(body);
-    var hn=$('#gHint');if(hn){var url=location.href.split('#')[0]+'#kinkekaart',f=hn.getAttribute('data-firm');
-      hn.href='https://wa.me/?text='+encodeURIComponent(ruL?'Знаешь, что я хочу в подарок? Сертификат в '+f+': '+url:'Tead, mida ma kingiks tahaksin? Kinkekaarti – '+f+': '+url);}};
-  gf.addEventListener('input',gUpd);gf.addEventListener('change',gUpd);d.addEventListener('langchange',gUpd);gUpd();}
+    var m=$('#gMail');if(m)m.href='mailto:'+gf.dataset.mail+'?subject='+encodeURIComponent(L.gSubj)+'&body='+encodeURIComponent(body);
+    var hn=$('#gHint');if(hn){var url=location.href.split('#')[0]+'#kinkekaart',fn=hn.getAttribute('data-firm');
+      hn.href='https://wa.me/?text='+encodeURIComponent(tpl('gHint',{f:fn,u:url}));}};
+  gf.addEventListener('input',gUpd);gf.addEventListener('change',gUpd);gUpd();}
 })();
 
 (function(){
@@ -536,7 +558,7 @@ function hdr(){if(!hero||!top)return;var r=hero.getBoundingClientRect();top.clas
 hdr();addEventListener('scroll',hdr,{passive:true});
 $$('.tr').forEach(function(tr){var live=$('.price .live',tr),small=$('.price small',tr);if(!live)return;
   tr.addEventListener('change',function(e){var r=e.target;if(!r.matches('input[type=radio]'))return;
-    var to=+r.getAttribute('data-p'),from=parseInt(live.textContent,10)||to;small.textContent=r.value+(root.lang==='ru'?'':' kohta');
+    var to=+r.getAttribute('data-p'),from=parseInt(live.textContent,10)||to;small.textContent=((window.__L&&__L.per)||'{d} kohta').replace('{d}',r.value);
     if(RM||!window.gsap||isNaN(to)){live.textContent=r.getAttribute('data-p')+' €';return;}
     var o={v:from};gsap.to(o,{v:to,duration:.7,ease:'power3.out',onUpdate:function(){live.textContent=Math.round(o.v)+' €'}});
     gsap.fromTo(live,{yPercent:12,opacity:.4},{yPercent:0,opacity:1,duration:.5,ease:'power3.out'});});});
