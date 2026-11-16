@@ -380,8 +380,21 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 :is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n){background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 75%,transparent),color-mix(in srgb,var(--surface) 55%,transparent))}
 :is(.ed,.t-hb) main>section:is(.blk,.sec):nth-of-type(3n+1){background:linear-gradient(180deg,color-mix(in srgb,var(--tB) 60%,transparent),color-mix(in srgb,var(--tB) 38%,transparent))}
 :is(.ed,.t-hb) main>section.faq{padding-top:var(--space)}
+:is(.ed,.t-hb) main>section.blk{padding-block:clamp(64px,8vw,104px)}
+:is(.ed,.t-hb) main>section.blk + section.blk{padding-top:clamp(64px,8vw,104px)}
+/* pealkiri + selgitus koos, vasakul – mitte laiali */
+:is(.ed,.t-hb) .shead{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+:is(.ed,.t-hb) .shead > p{max-width:58ch;margin:0}
+/* teenuse read: madalam pilt, tekst pildi kõrval tihedamalt */
+@media (min-width:901px){:is(.ed,.t-hb) .tr-media{aspect-ratio:4/3}:is(.ed,.t-hb) .tr:not(.rev) .tr-text{grid-column:7/13;padding-left:clamp(8px,2.5vw,40px)}:is(.ed,.t-hb) .tr.rev .tr-text{grid-column:1/7;padding-right:clamp(8px,2.5vw,40px)}}
+:is(.ed,.t-hb) .tr{padding-block:clamp(20px,3vw,36px)}
+/* "küsi hinda" – vaikne silt, mitte suur hind */
+:is(.ed,.t-hb) .price .ask{font-family:var(--fb);font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--muted);background:color-mix(in srgb,var(--muted) 10%,transparent);padding:6px 14px;border-radius:999px}
+.t-fv .svc-list .pr{font-size:14px;font-weight:600;opacity:.75}
+
 :is(.ed,.t-hb) .hero:not(.hero-split) .hero-in{padding-top:118px}
 .ed .hero-split{padding-bottom:clamp(40px,5vw,64px)}
+@media (min-width:901px){.ed .hero-split .hs-media{max-height:calc(100svh - 230px);overflow:hidden}.ed .hero-split .hs-media img{width:100%;height:100%;max-height:calc(100svh - 230px);object-fit:cover}}
 
 html[lang="ru"]{--fd:'Literata',Georgia,serif}
 </style>
