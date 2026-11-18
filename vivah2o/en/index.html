@@ -18,6 +18,10 @@
 <meta property="og:site_name" content="VIVAH2O">
 <meta property="og:title" content="Massage in Tartu | VIVAH2O">
 <meta property="og:description" content="VIVAH2O – massage in Tartu. Ask about free times and prices on +372 552 1780, or write to us.">
+<meta property="og:image" content="https://herijanis.github.io/kiirleht/vivah2o/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%278%27%20fill%3D%27%230B7A66%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20text-anchor%3D%27middle%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2717%27%20fill%3D%27%23FFFFFF%27%3EV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +202,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .ed .hero .sub{font-size:clamp(17px,1.4vw,19px);opacity:.94;margin:0 0 26px;max-width:46ch}
 .ed .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .ed .hero .btn-ghost{--ghost-ink:#fff;--ghost-line:rgba(255,255,255,.55)}
+.ed .hero:not(.hero-split) .hero-cta .btn:not(.btn-ghost){--btn:#fffaf3;background:#fffaf3;color:var(--ink);border-color:#fffaf3;box-shadow:0 16px 34px -12px rgba(0,0,0,.6)}
 .ed .camp{display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;background:rgb(var(--ov) / .45);border:1px solid rgba(255,255,255,.22)}
 .ed .camp::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,#E8C9A1)}
 /* INTRO: väide vasakul, lühihinnad paremal */
@@ -395,10 +400,41 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .ed .hero-split{padding-bottom:clamp(40px,5vw,64px)}
 @media (min-width:901px){.ed .hero-split .hs-media{max-height:calc(100svh - 230px);overflow:hidden}.ed .hero-split .hs-media img{width:100%;height:100%;max-height:calc(100svh - 230px);object-fit:cover}}
 
+
+/* avakaadri eelseis: ainult siis, kui JS + liikumine lubatud */
+.wow-pre :is(.ed,.t-hb) .hero :is(h1,.who,.sub,.hero-cta,.camp,.after){opacity:0}
+/* poolitatud avakaadri pilt joondub päise nupu parema servaga */
+@media (min-width:901px){.ed .hero-split .hs-media{justify-self:end}}
+/* sõnamaskid pealkirjades */
+:is(.ed,.t-hb) .wm{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .16em;margin:0 -.06em -.16em}
+:is(.ed,.t-hb) .wm>wow-i{display:inline-block}
+:is(.ed,.t-hb) .wm.done{overflow:visible}
+/* päis: kerimisel kerge vari + õhuke edenemisjoon */
+:is(.ed,.t-hb) .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--p300,var(--accent)),var(--accent));transform:scaleX(var(--sp,0));transform-origin:0 50%;opacity:0;transition:opacity .4s;pointer-events:none}
+:is(.ed,.t-hb) .top.scrolled:not(.over)::after{opacity:.85}
+:is(.ed,.t-hb) .top.scrolled:not(.over){box-shadow:0 12px 32px -24px rgb(20 12 8 / .45)}
+@media (min-width:900px){:is(.ed,.t-hb) .top .wrap{transition:min-height .45s cubic-bezier(.2,.8,.2,1)}:is(.ed,.t-hb) .top.scrolled:not(.over) .wrap{min-height:64px}}
+/* mikrointeraktsioonid */
+:is(.ed,.t-hb) .btn{transition:transform .15s,translate .45s cubic-bezier(.2,.8,.2,1),scale .2s,box-shadow .45s cubic-bezier(.2,.8,.2,1),background-color .25s,border-color .25s,color .25s}
+:is(.ed,.t-hb) .btn:active{scale:.97}
+:is(.ed,.t-hb) .dur span,:is(.ed,.t-hb) :is(.chips,.tod) label>span{transition:background .25s,color .25s,border-color .25s,scale .2s,box-shadow .35s}
+:is(.ed,.t-hb) .dur label:active span,:is(.ed,.t-hb) :is(.chips,.tod) label:active>span{scale:.95}
+:is(.ed,.t-hb) .dur input:checked+span{box-shadow:0 8px 18px -10px color-mix(in srgb,var(--accent) 80%,transparent)}
+:is(.ed,.t-hb) .card,:is(.ed,.t-hb) .place,:is(.ed,.t-hb) .glance{transition:translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1),border-color .4s}
+:is(.ed,.t-hb) :is(.card .cm,.tr-media,.place-main,.band) img{transition:scale 1.2s cubic-bezier(.2,.8,.2,1)}
+@media (hover:hover) and (pointer:fine){
+  :is(.ed,.t-hb) .btn:hover{translate:0 -2px;box-shadow:0 16px 30px -18px color-mix(in srgb,var(--btn,var(--accent)) 85%,transparent)}
+  :is(.ed,.t-hb) .btn:active{translate:0 0}
+  :is(.ed,.t-hb) .dur label:hover input:not(:checked)+span,:is(.ed,.t-hb) :is(.chips,.tod) label:hover>span{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+  :is(.ed,.t-hb) .card:hover,:is(.ed,.t-hb) .place:hover{translate:0 -4px;box-shadow:0 26px 50px -34px rgb(30 18 12 / .45);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
+  :is(.ed,.t-hb) .card:hover .cm img,:is(.ed,.t-hb) .tr:hover .tr-media img,:is(.ed,.t-hb) .place-main:hover img{scale:1.045}
+}
+@media (prefers-reduced-motion:reduce){:is(.ed,.t-hb) .btn:hover,:is(.ed,.t-hb) .card:hover,:is(.ed,.t-hb) .place:hover{translate:none}:is(.ed,.t-hb) :is(.card .cm,.tr-media,.place-main,.band) img{scale:none!important}}
+
 </style>
 </head>
 <body class="t-vv ed">
-<script>document.documentElement.classList.add("no-js");window.__L={"openUntil": "Open today until {t}", "opensAt": "Opens today at {t}", "closed": "Closed now – leave a message and we will reply during opening hours", "tod": {"h": "in the morning", "p": "in the afternoon", "o": "in the evening", "u": "any time"}, "sTod": {"h": "morning", "p": "afternoon", "o": "evening", "u": "time to be agreed"}, "mHello": "Hello! I would like to book: {s}.", "mFirst": "It is my first visit.", "mStudio": "Studio: {s}.", "mDate": "Preferred day: {d}, {t}.", "mTime": "Preferred time: {t}.", "mAsk": "Could you let me know when you have a free slot?", "mName": "Name: {n}", "mSubj": "Booking: {s}", "sum": "We will send:", "sFirst": "first visit", "q1": "“", "q2": "”", "gFromCard": "From: {n}", "gHello": "Hello! I would like to order a gift card.", "gVal": "Value: {v}", "gTo": "For: {n}", "gFrom": "From: {n}", "gMsg": "Message: {m}", "gSubj": "Gift card", "gHint": "Guess what I would love as a gift? A gift card for {f}: {u}", "per": "per {d}"}</script>
+<script>document.documentElement.classList.add("no-js");window.__L={"openUntil": "Open today until {t}", "opensAt": "Opens today at {t}", "closed": "Closed now – leave a message and we will reply during opening hours", "tod": {"h": "in the morning", "p": "in the afternoon", "o": "in the evening", "u": "any time"}, "sTod": {"h": "morning", "p": "afternoon", "o": "evening", "u": "time to be agreed"}, "mHello": "Hello! I would like to book: {s}.", "mFirst": "It is my first visit.", "mStudio": "Studio: {s}.", "mDate": "Preferred day: {d}, {t}.", "mTime": "Preferred time: {t}.", "mAsk": "Could you let me know when you have a free slot?", "mName": "Name: {n}", "mSubj": "Booking: {s}", "sum": "We will send:", "sFirst": "first visit", "q1": "“", "q2": "”", "gFromCard": "From: {n}", "gHello": "Hello! I would like to order a gift card.", "gVal": "Value: {v}", "gTo": "For: {n}", "gFrom": "From: {n}", "gMsg": "Message: {m}", "gSubj": "Gift card", "gHint": "Guess what I would love as a gift? A gift card for {f}: {u}", "per": "per {d}"};if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)){var _r=document.documentElement;_r.classList.add("wow-pre");setTimeout(function(){if(_r.classList.contains("wow-pre")){_r.classList.remove("wow-pre");_r.classList.add("wow-late")}},2600)}</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" translate="no" href="#main" aria-label="VIVAH2O"><span>VIVA H<sub>2</sub>O</span></a>
@@ -560,20 +596,92 @@ function motion(){
   if(window.Lenis&&matchMedia('(hover:hover)').matches){var lenis=new Lenis({lerp:.09,smoothWheel:true});root.classList.add('lenis');
     lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0);
     $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=$(id);if(!t)return;e.preventDefault();lenis.scrollTo(t,{offset:-80});});});}
-  var tl=gsap.timeline({defaults:{ease:'expo.out'}});
-  if($('.hero h1 .ln'))tl.from('.hero h1 .ln > span',{yPercent:110,duration:1.4,stagger:.11});
-  tl.from('.hero .who, .hero .sub, .hero .hero-cta, .hero .camp, .hero .after',{y:24,opacity:0,duration:1,stagger:.08},'-=1.0');
-  if($('.hero-media img')){tl.from('.hero-media img',{scale:1.16,duration:2.4,ease:'power2.out'},0);
-    gsap.to('.hero-media img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});}
-  if($('.hs-media'))tl.fromTo('.hs-media',{clipPath:'inset(10% 8% 10% 8% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.6},0);
+
+  if(window.__wowGo?__wowGo():true){var tl=gsap.timeline({defaults:{ease:'expo.out'}}),H=$('.hero h1');
+    if($('.hero .who'))tl.from('.hero .who',{y:16,opacity:0,duration:1},.1);
+    if(H){var lines=$$('.ln > span',H);
+      if(lines.length)tl.from(lines,{yPercent:112,duration:1.35,stagger:.11},.2);
+      else if(H.querySelector('*:not(em):not(br)')||H.classList.contains('word'))tl.from(H,{y:26,opacity:0,duration:1.3,clearProps:'transform,opacity'},.2);
+      else if(window.__wowSplit){var hw=__wowSplit(H);if(hw.length)tl.from(hw,{yPercent:118,duration:1.25,stagger:.05,onComplete:function(){$$('.wm',H).forEach(function(m){m.classList.add('done')})}},.2);}}
+    if($('.hero .sub'))tl.from('.hero .sub',{y:20,opacity:0,duration:1.05},'-=1.0');
+    var cta=$$('.hero .hero-cta > *, .hero .camp, .hero .after');if(cta.length)tl.from(cta,{y:18,opacity:0,duration:.95,stagger:.08,clearProps:'transform,opacity'},'-=.8');
+    if($('.hero-media img'))tl.from('.hero-media img',{scale:1.14,duration:2.6,ease:'power2.out'},0);
+    if($('.hs-media')){tl.fromTo('.hs-media',{clipPath:'inset(12% 10% 12% 10% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.7},0);
+      if($('.hs-media > img:first-child'))tl.from('.hs-media > img:first-child',{scale:1.16,duration:2.4,ease:'power2.out'},0);}}
+
+  if($('.hero-media img'))gsap.to('.hero-media img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
   $$('.reveal-clip').forEach(function(m){gsap.fromTo(m,{clipPath:'inset(14% 10% 14% 10% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.5,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:m,start:'top bottom+=60',once:true}});
     var img=$('img',m);if(img)gsap.fromTo(img,{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:true}});});
   if($('.quote'))gsap.fromTo('.quote-media',{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.quote',start:'top bottom',end:'bottom top',scrub:true}});
+
   if(matchMedia('(hover:hover) and (pointer:fine)').matches){$$('.magnetic').forEach(function(b){
-    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.28,y:(e.clientY-r.top-r.height/2)*.38,duration:.4,ease:'power3.out'})});
-    b.addEventListener('pointerleave',function(){gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'})});});}
+    var xT=gsap.quickTo(b,'x',{duration:.5,ease:'power3.out'}),yT=gsap.quickTo(b,'y',{duration:.5,ease:'power3.out'});
+    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();xT((e.clientX-r.left-r.width/2)*.22);yT((e.clientY-r.top-r.height/2)*.3)});
+    b.addEventListener('pointerleave',function(){xT(0);yT(0)});});}
+
 }
 if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',motion);else motion();
+})();
+
+(function(){
+var d=document,root=d.documentElement,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
+// sõnadeks jagamine: säilitab <em>/<b>, jagab ainult tavalise tühiku kohalt (nbsp jääb kokku)
+function split(el){if(el.__w)return el.__w;var out=[];
+  (function walk(n){Array.prototype.slice.call(n.childNodes).forEach(function(c){
+    if(c.nodeType===3){if(!c.nodeValue.trim())return;var f=d.createDocumentFragment();
+      c.nodeValue.split(/([ \t\n\r]+)/).forEach(function(p){if(!p)return;if(!p.trim()){f.appendChild(d.createTextNode(p));return;}
+        var m=d.createElement('wow-w');m.className='wm';var i=d.createElement('wow-i');i.textContent=p;m.appendChild(i);f.appendChild(m);out.push(i);});
+      n.replaceChild(f,c);}
+    else if(c.nodeType===1&&!/^(BR|SVG|IMG|PICTURE|INPUT|SELECT|TEXTAREA|BUTTON)$/i.test(c.tagName))walk(c);});})(el);
+  el.__w=out;return out;}
+window.__wowSplit=split;
+window.__wowGo=function(){var late=root.classList.contains('wow-late');root.classList.remove('wow-pre');return !late;};
+// päis: vari + edenemisjoon (töötab ka ilma GSAP-ita)
+var top=$('.top'),tick=false;
+function hdr(){tick=false;if(!top)return;var y=window.scrollY||0,h=root.scrollHeight-innerHeight;top.classList.toggle('scrolled',y>24);top.style.setProperty('--sp',h>0?Math.min(1,y/h).toFixed(4):0);}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(hdr)}},{passive:true});hdr();
+function run(){
+  root.classList.remove('wow-pre');
+  if(RM||!window.gsap||!window.ScrollTrigger)return;
+  gsap.registerPlugin(ScrollTrigger);
+  var vis=function(el){return el.offsetParent!==null&&!el.closest('.skip,[aria-hidden=true],.hero,.top,.foot')};
+  // 1) pealkirjad: sõnad tõusevad maskist
+  $$('main h2, main .tr h3, main .place-main h3, main .band h3').filter(function(h){return vis(h)&&parseFloat(getComputedStyle(h).fontSize)>=28&&!h.querySelector('*:not(em):not(br):not(b):not(i):not(strong)')}).forEach(function(h){
+    var w=split(h);if(!w.length)return;
+    gsap.from(w,{yPercent:118,duration:1.15,ease:'expo.out',stagger:Math.min(.06,.5/w.length),
+      scrollTrigger:{trigger:h,start:'top 90%',once:true},onComplete:function(){$$('.wm',h).forEach(function(m){m.classList.add('done')})}});});
+  // 2) toetav tekst, nupud ja kaardid: kerge tõus järjest
+  [['.shead',':scope > p',.18],['.tr-text',':scope > :not(h3)',.12],['.story .s-text',':scope > p',.1],['.s-facts','.facts > li',0],['.intro','.glance',.1],
+   ['.steps3',':scope > li',0],['.cards3',':scope > *',0],['.place-side',':scope > *',0],['.faq-list',':scope > *',0],['.chipline',':scope > li',0],['.book-intro',':scope > :not(h2)',.12]
+  ].forEach(function(g){$$('main '+g[0]).forEach(function(box){if(!vis(box))return;
+    var items=$$(g[1],box).filter(function(x){return x.offsetParent!==null});if(!items.length)return;
+    gsap.from(items,{y:26,opacity:0,duration:.95,ease:'power3.out',stagger:.075,delay:g[2],clearProps:'transform,opacity',
+      scrollTrigger:{trigger:box,start:'top 86%',once:true}});});});
+  // 3) allkirjahetk: suur väide / tsitaat "süttib" sõna-sõnalt kerimise järgi
+  $$('main .intro .big, main .quote blockquote').forEach(function(q){if(q.offsetParent===null)return;
+    var w=split(q).filter(function(s){return !s.closest('cite')});if(w.length<3)return;
+    $$('.wm',q).forEach(function(m){m.classList.add('done')});
+    gsap.fromTo(w,{opacity:q.closest('.quote')?.5:.42},{opacity:1,ease:'none',stagger:.12,scrollTrigger:{trigger:q,start:'top 92%',end:'bottom 70%',scrub:.6}});});
+  // 4) pildid: clip-avanemisele lisaks väike sissesuum; kaartidel ja suurtel piltidel sama keel
+  $$('main .reveal-clip img, main .card .cm img').forEach(function(img){
+    gsap.fromTo(img,{scale:1.14},{scale:1,duration:1.9,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:img.parentNode,start:'top bottom+=40',once:true}});});
+  $$('main .card .cm').forEach(function(m){gsap.fromTo(m,{clipPath:'inset(10% 8% 10% 8% round 14px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:1.4,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:m,start:'top bottom+=40',once:true}});});
+  $$('main .place-main > img, main .band > img').forEach(function(img){
+    gsap.fromTo(img,{yPercent:-5},{yPercent:5,ease:'none',scrollTrigger:{trigger:img.parentNode,start:'top bottom',end:'bottom top',scrub:true}});});
+  // 5) kinkekaart pildil: hõljub kerimisel veidi üles; hiirega kerge 3D-kalle (puuteekraanil mitte)
+  $$('main .gift-photo .gift-card').forEach(function(c){var ph=c.parentNode;
+    gsap.fromTo(c,{y:20},{y:-10,ease:'none',scrollTrigger:{trigger:ph,start:'top bottom',end:'bottom 30%',scrub:1}});
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches){gsap.set(c,{transformPerspective:900});
+      var rx=gsap.quickTo(c,'rotationX',{duration:.6,ease:'power3.out'}),ry=gsap.quickTo(c,'rotationY',{duration:.6,ease:'power3.out'});
+      ph.addEventListener('pointermove',function(e){var r=ph.getBoundingClientRect();ry(((e.clientX-r.left)/r.width-.5)*7);rx(-((e.clientY-r.top)/r.height-.5)*5);});
+      ph.addEventListener('pointerleave',function(){rx(0);ry(0)});}});
+  // 6) värskendus pärast fonte ja pilte
+  var rf=function(){ScrollTrigger.refresh()};
+  if(d.fonts&&d.fonts.ready)d.fonts.ready.then(rf);
+  if(d.readyState==='complete')setTimeout(rf,60);else addEventListener('load',rf);
+}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){setTimeout(run,0)});else setTimeout(run,0);
 })();
 </script>
 </body>

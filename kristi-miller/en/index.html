@@ -18,6 +18,10 @@
 <meta property="og:site_name" content="KristiTiina Massaaž">
 <meta property="og:title" content="Massage in Paide | KristiTiina Massaaž">
 <meta property="og:description" content="KristiTiina Massaaž – Kristi Miller, Lai 12, Paide. Classic massage and Shindo stretching therapy in a cosy wooden house in central Paide. Times by agreement, Mon–Sun.">
+<meta property="og:image" content="https://herijanis.github.io/kiirleht/kristi-miller/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%278%27%20fill%3D%27%2347104D%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20text-anchor%3D%27middle%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2717%27%20fill%3D%27%23F5C2DA%27%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +202,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .ed .hero .sub{font-size:clamp(17px,1.4vw,19px);opacity:.94;margin:0 0 26px;max-width:46ch}
 .ed .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .ed .hero .btn-ghost{--ghost-ink:#fff;--ghost-line:rgba(255,255,255,.55)}
+.ed .hero:not(.hero-split) .hero-cta .btn:not(.btn-ghost){--btn:#fffaf3;background:#fffaf3;color:var(--ink);border-color:#fffaf3;box-shadow:0 16px 34px -12px rgba(0,0,0,.6)}
 .ed .camp{display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;background:rgb(var(--ov) / .45);border:1px solid rgba(255,255,255,.22)}
 .ed .camp::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,#E8C9A1)}
 /* INTRO: väide vasakul, lühihinnad paremal */
@@ -786,6 +791,27 @@ if(!dt.value){var n=new Date();dt.value=iso(n);if(slots(dt.value,+bf.elements.du
 bf.addEventListener('input',upd);bf.addEventListener('change',upd);
 d.addEventListener('click',function(e){if(e.target.closest('[data-svc]'))setTimeout(upd,0)});
 upd();
+/* Päris broneering (data-cal): vabad ajad Kristi kalendrist, broneering läheb lukuga kalendrisse – topelt ei saa. */
+var CAL=bf.getAttribute('data-cal'),SITE=bf.getAttribute('data-site'),T0=Date.now();
+if(CAL){
+  var load=function(){return fetch(CAL+'?busy=1&site='+encodeURIComponent(SITE)).then(function(r){return r.json()}).then(function(j){
+    if(j&&j.ok){K=j.kinni||{};if(j.paus)P=+j.paus;lastKey='';upd()}}).catch(function(){})};
+  load();
+  var bb=d.getElementById('bkBook');
+  bb.addEventListener('click',function(){
+    var v=function(n){return (bf.elements[n]&&bf.elements[n].value||'').trim()},s=bf.querySelector('[name=slot]:checked');
+    if(!v('name')||(v('tel').match(/\d/g)||[]).length<5){info.textContent=T.need;(v('name')?bf.elements.tel:bf.elements.name).focus();return}
+    if(!s||!v('date')){info.textContent=T.pick;return}
+    var t=+s.value,dur=+bf.elements.dur.value,svc=bf.elements.svc.options[bf.elements.svc.selectedIndex].text,pd=v('date').split('-');
+    bb.disabled=true;info.textContent=T.wait;
+    fetch(CAL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({site:SITE,teenus:svc+' '+dur+' min',
+      aeg:pd[2]+'.'+pd[1]+'.'+pd[0]+' kell '+hm(t),algus:v('date')+'T'+('0'+hm(t)).slice(-5),kestus:dur,nimi:v('name'),tel:v('tel'),info:v('note'),website:v('website'),t:Date.now()-T0})})
+    .then(function(r){return r.json()}).then(function(j){
+      if(j&&j.ok){info.textContent=tpl(T.ok,{t:pd[2]+'.'+pd[1]+' '+hm(t)});(K[v('date')]=K[v('date')]||[]).push([hm(t),dur]);bb.style.display='none';return}
+      bb.disabled=false;if(j&&j.err==='kinni'){load().then(function(){info.textContent=T.taken})}else info.textContent=T.fail;
+    }).catch(function(){bb.disabled=false;info.textContent=T.fail});
+  });
+}
 })();
 
 (function(){

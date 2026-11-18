@@ -18,6 +18,10 @@
 <meta property="og:site_name" content="Beauty Body">
 <meta property="og:title" content="Body shaping in Tallinn – ICOONE Laser, cavitation, RF lifting | Beauty Body">
 <meta property="og:description" content="Device-based body and face correction in Kristiine and Nõmme, Tallinn. First visit at a special price, ESTO instalments. Book by phone, SMS or WhatsApp.">
+<meta property="og:image" content="https://herijanis.github.io/kiirleht/osdarlli/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%278%27%20fill%3D%27%23754827%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20text-anchor%3D%27middle%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2717%27%20fill%3D%27%23FBF7F3%27%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +202,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .ed .hero .sub{font-size:clamp(17px,1.4vw,19px);opacity:.94;margin:0 0 26px;max-width:46ch}
 .ed .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .ed .hero .btn-ghost{--ghost-ink:#fff;--ghost-line:rgba(255,255,255,.55)}
+.ed .hero:not(.hero-split) .hero-cta .btn:not(.btn-ghost){--btn:#fffaf3;background:#fffaf3;color:var(--ink);border-color:#fffaf3;box-shadow:0 16px 34px -12px rgba(0,0,0,.6)}
 .ed .camp{display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;background:rgb(var(--ov) / .45);border:1px solid rgba(255,255,255,.22)}
 .ed .camp::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,#E8C9A1)}
 /* INTRO: väide vasakul, lühihinnad paremal */
@@ -462,10 +467,41 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .ed .hero-split{padding-bottom:clamp(40px,5vw,64px)}
 @media (min-width:901px){.ed .hero-split .hs-media{max-height:calc(100svh - 230px);overflow:hidden}.ed .hero-split .hs-media img{width:100%;height:100%;max-height:calc(100svh - 230px);object-fit:cover}}
 
+
+/* avakaadri eelseis: ainult siis, kui JS + liikumine lubatud */
+.wow-pre :is(.ed,.t-hb) .hero :is(h1,.who,.sub,.hero-cta,.camp,.after){opacity:0}
+/* poolitatud avakaadri pilt joondub päise nupu parema servaga */
+@media (min-width:901px){.ed .hero-split .hs-media{justify-self:end}}
+/* sõnamaskid pealkirjades */
+:is(.ed,.t-hb) .wm{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .16em;margin:0 -.06em -.16em}
+:is(.ed,.t-hb) .wm>wow-i{display:inline-block}
+:is(.ed,.t-hb) .wm.done{overflow:visible}
+/* päis: kerimisel kerge vari + õhuke edenemisjoon */
+:is(.ed,.t-hb) .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--p300,var(--accent)),var(--accent));transform:scaleX(var(--sp,0));transform-origin:0 50%;opacity:0;transition:opacity .4s;pointer-events:none}
+:is(.ed,.t-hb) .top.scrolled:not(.over)::after{opacity:.85}
+:is(.ed,.t-hb) .top.scrolled:not(.over){box-shadow:0 12px 32px -24px rgb(20 12 8 / .45)}
+@media (min-width:900px){:is(.ed,.t-hb) .top .wrap{transition:min-height .45s cubic-bezier(.2,.8,.2,1)}:is(.ed,.t-hb) .top.scrolled:not(.over) .wrap{min-height:64px}}
+/* mikrointeraktsioonid */
+:is(.ed,.t-hb) .btn{transition:transform .15s,translate .45s cubic-bezier(.2,.8,.2,1),scale .2s,box-shadow .45s cubic-bezier(.2,.8,.2,1),background-color .25s,border-color .25s,color .25s}
+:is(.ed,.t-hb) .btn:active{scale:.97}
+:is(.ed,.t-hb) .dur span,:is(.ed,.t-hb) :is(.chips,.tod) label>span{transition:background .25s,color .25s,border-color .25s,scale .2s,box-shadow .35s}
+:is(.ed,.t-hb) .dur label:active span,:is(.ed,.t-hb) :is(.chips,.tod) label:active>span{scale:.95}
+:is(.ed,.t-hb) .dur input:checked+span{box-shadow:0 8px 18px -10px color-mix(in srgb,var(--accent) 80%,transparent)}
+:is(.ed,.t-hb) .card,:is(.ed,.t-hb) .place,:is(.ed,.t-hb) .glance{transition:translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1),border-color .4s}
+:is(.ed,.t-hb) :is(.card .cm,.tr-media,.place-main,.band) img{transition:scale 1.2s cubic-bezier(.2,.8,.2,1)}
+@media (hover:hover) and (pointer:fine){
+  :is(.ed,.t-hb) .btn:hover{translate:0 -2px;box-shadow:0 16px 30px -18px color-mix(in srgb,var(--btn,var(--accent)) 85%,transparent)}
+  :is(.ed,.t-hb) .btn:active{translate:0 0}
+  :is(.ed,.t-hb) .dur label:hover input:not(:checked)+span,:is(.ed,.t-hb) :is(.chips,.tod) label:hover>span{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+  :is(.ed,.t-hb) .card:hover,:is(.ed,.t-hb) .place:hover{translate:0 -4px;box-shadow:0 26px 50px -34px rgb(30 18 12 / .45);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
+  :is(.ed,.t-hb) .card:hover .cm img,:is(.ed,.t-hb) .tr:hover .tr-media img,:is(.ed,.t-hb) .place-main:hover img{scale:1.045}
+}
+@media (prefers-reduced-motion:reduce){:is(.ed,.t-hb) .btn:hover,:is(.ed,.t-hb) .card:hover,:is(.ed,.t-hb) .place:hover{translate:none}:is(.ed,.t-hb) :is(.card .cm,.tr-media,.place-main,.band) img{scale:none!important}}
+
 </style>
 </head>
 <body class="t-bb ed split-hero">
-<script>document.documentElement.classList.add("no-js");window.__L={"openUntil": "Open today until {t}", "opensAt": "Opens today at {t}", "closed": "Closed now – leave a message and we will reply during opening hours", "tod": {"h": "in the morning", "p": "in the afternoon", "o": "in the evening", "u": "any time"}, "sTod": {"h": "morning", "p": "afternoon", "o": "evening", "u": "time to be agreed"}, "mHello": "Hello! I would like to book: {s}.", "mFirst": "It is my first visit.", "mStudio": "Studio: {s}.", "mDate": "Preferred day: {d}, {t}.", "mTime": "Preferred time: {t}.", "mAsk": "Could you let me know when you have a free slot?", "mName": "Name: {n}", "mSubj": "Booking: {s}", "sum": "We will send:", "sFirst": "first visit", "q1": "“", "q2": "”", "gFromCard": "From: {n}", "gHello": "Hello! I would like to order a gift card.", "gVal": "Value: {v}", "gTo": "For: {n}", "gFrom": "From: {n}", "gMsg": "Message: {m}", "gSubj": "Gift card", "gHint": "Guess what I would love as a gift? A gift card for {f}: {u}", "per": "per {d}"}</script>
+<script>document.documentElement.classList.add("no-js");window.__L={"openUntil": "Open today until {t}", "opensAt": "Opens today at {t}", "closed": "Closed now – leave a message and we will reply during opening hours", "tod": {"h": "in the morning", "p": "in the afternoon", "o": "in the evening", "u": "any time"}, "sTod": {"h": "morning", "p": "afternoon", "o": "evening", "u": "time to be agreed"}, "mHello": "Hello! I would like to book: {s}.", "mFirst": "It is my first visit.", "mStudio": "Studio: {s}.", "mDate": "Preferred day: {d}, {t}.", "mTime": "Preferred time: {t}.", "mAsk": "Could you let me know when you have a free slot?", "mName": "Name: {n}", "mSubj": "Booking: {s}", "sum": "We will send:", "sFirst": "first visit", "q1": "“", "q2": "”", "gFromCard": "From: {n}", "gHello": "Hello! I would like to order a gift card.", "gVal": "Value: {v}", "gTo": "For: {n}", "gFrom": "From: {n}", "gMsg": "Message: {m}", "gSubj": "Gift card", "gHint": "Guess what I would love as a gift? A gift card for {f}: {u}", "per": "per {d}"};if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)){var _r=document.documentElement;_r.classList.add("wow-pre");setTimeout(function(){if(_r.classList.contains("wow-pre")){_r.classList.remove("wow-pre");_r.classList.add("wow-late")}},2600)}</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" translate="no" href="#main" aria-label="Beauty Body"> <svg role="img" aria-label="Beauty Body" xmlns="http://www.w3.org/2000/svg" width="1069" height="254" viewBox="0 0 1069 254" fill="none"> <path d="M74.9731 14.9212C68.2838 16.246 61.8828 19.7597 56.4621 25.1742C47.2354 34.3904 42.6221 45.8531 41.9878 61.0023C41.5841 69.6425 42.3338 75.921 44.5251 82.8332C49.4268 98.3855 59.5184 108.927 73.2431 112.901C76.4724 113.823 83.5078 113.938 168.105 114.226L259.506 114.514L263.658 116.012C274.211 119.871 281.881 127.071 287.359 138.13C291.973 147.404 293.818 155.411 294.222 167.565C294.683 180.352 293.068 189.972 288.743 199.937C284.303 210.247 277.441 218.139 269.252 222.344C260.66 226.837 261.928 226.721 219.024 226.952L180.791 227.182L180.676 174.707L180.503 122.175L178.6 120.504C176.409 118.546 172.718 118.2 170.469 119.756C167.47 121.887 167.528 120.159 167.528 182.196V239.797H212.508C261.871 239.797 261.64 239.797 270.751 236.283C280.151 232.712 290.473 223.726 296.24 214.107C310.368 190.721 311.406 156.736 298.835 131.794C291.165 116.53 279.863 106.853 264.696 102.59L260.083 101.266L168.97 100.978C105.075 100.747 77.3374 100.459 76.1264 100.056C66.4384 96.5423 60.3834 89.5725 56.6928 77.9371C55.5394 74.1354 55.3664 72.4649 55.3664 64.1127C55.3664 53.6869 56.0008 50.2884 59.1148 43.7219C62.5748 36.5793 67.7071 31.3952 74.1081 28.8031C77.2221 27.5359 77.6258 27.5359 109.458 27.3631L141.578 27.1903V59.5622V91.8766L143.539 93.835C145.153 95.4479 145.903 95.7935 148.037 95.7935C149.421 95.7935 151.151 95.3903 151.9 94.8719C154.841 92.7982 154.841 92.9134 154.841 52.0165V13.9996L116.954 14.0572C87.1984 14.1148 78.1448 14.2876 74.9731 14.9212Z" fill="#754827"></path> <path d="M167.528 52.0133C167.528 92.9103 167.528 92.7951 170.469 94.8687C172.718 96.4239 176.409 96.0783 178.6 94.1199L180.503 92.4494L180.676 59.8471L180.792 27.2447H211.816C245.378 27.2447 245.897 27.3023 251.722 30.4704C257.661 33.6961 263.428 41.8755 265.85 50.5733C266.427 52.7045 266.946 57.1398 267.119 62.0935C267.465 71.2521 266.773 75.6299 263.889 82.83C262.909 85.2493 262.102 87.8989 262.102 88.6478C262.102 91.0094 263.659 93.2559 265.965 94.3503C267.868 95.2719 268.33 95.2719 270.406 94.5807C273.923 93.3711 276.115 89.4542 278.998 79.0859C279.978 75.457 280.209 73.0378 280.209 64.3976C280.267 51.7829 279.286 47.1748 274.385 37.0945C271.559 31.2192 270.636 29.8944 266.196 25.4591C262.159 21.427 260.256 20.0445 256.335 18.1437C247.743 14.054 247.339 13.9964 205.012 13.9964H167.528V52.0133Z" fill="#754827"></path> <path d="M38.701 113.131C33.5687 114.514 23.9383 128.626 19.3827 141.414C16.1533 150.688 15.0577 158.061 15 170.387C15 183.175 15.865 188.589 19.3827 199.188C26.591 220.788 41.2383 234.901 60.4413 238.875C64.2473 239.682 71.052 239.797 109.862 239.797H154.842V182.196C154.842 134.847 154.726 124.249 154.034 122.693C152.362 118.604 147.114 117.509 143.77 120.504L141.867 122.175L141.694 174.707L141.578 227.182L103.345 226.952C69.668 226.779 64.7087 226.606 61.4793 225.742C45.3903 221.537 34.1453 207.771 29.359 186.516C27.9173 180.064 27.629 165.088 28.84 157.945C31.089 144.236 35.7023 134.271 43.718 125.285C46.4283 122.348 47.005 121.311 47.005 119.64C47.005 114.917 43.199 111.922 38.701 113.131Z" fill="#754827"></path> <path d="M500.216 89.7228C499.764 90.0614 499.425 91.303 499.425 92.4316C499.425 94.5761 501.233 95.1405 512.194 96.382C515.696 96.7206 518.634 97.5107 518.634 97.9622C518.634 98.4136 512.081 112.748 503.945 129.791C495.922 146.834 489.255 161.168 489.255 161.62C489.255 162.071 490.837 162.297 492.758 162.071C496.261 161.733 496.713 160.942 508.578 135.886L520.781 110.039L526.77 122.906C530.047 130.017 535.584 141.755 538.974 148.978C544.962 161.958 545.301 162.297 548.804 162.297H552.42L547.561 151.8C544.962 146.157 538.296 131.935 532.985 120.423C527.561 108.91 523.154 99.0908 523.154 98.6394C523.154 98.1879 527.222 98.1879 532.194 98.6394L541.233 99.4294V96.4949C541.233 93.1088 541.911 93.3346 520.329 90.6257C505.414 88.707 501.346 88.5941 500.216 89.7228Z" fill="#754827"></path> <path d="M860.447 96.4993C852.424 99.2082 842.819 108.915 839.995 117.154C837.17 125.394 837.396 136.455 840.447 143.34C851.294 167.832 885.419 171.669 901.125 149.999C905.871 143.452 907.679 137.583 907.566 128.328C907.566 115.461 900.447 104.174 888.809 98.3052C881.351 94.4677 868.695 93.6776 860.447 96.4993ZM887.679 105.303C895.701 110.269 899.769 117.493 900.334 127.538C901.125 140.179 895.701 149.773 884.854 155.191C879.43 157.899 865.306 157.899 860.334 155.191C850.842 150.112 845.079 140.744 844.966 130.247C844.966 118.396 850.277 109.253 860.108 104.174C865.306 101.578 867.227 101.24 874.119 101.578C880.673 101.917 883.159 102.594 887.679 105.303Z" fill="#754827"></path> <path d="M374 129.122V162.531L387.898 162.08C401.232 161.741 402.023 161.628 405.978 158.581C411.402 154.518 413.549 150.116 413.549 143.457C413.549 136.797 410.611 131.493 405.413 128.897C403.379 127.881 401.571 126.865 401.345 126.752C401.119 126.526 402.249 125.172 403.831 123.592C407.56 119.867 409.255 113.208 407.899 108.016C405.526 99.4381 397.842 95.8263 382.249 95.7134H374V129.122ZM395.356 103.727C397.277 104.404 399.424 105.872 399.989 107C401.458 109.822 401.458 115.578 399.876 118.513C398.294 121.56 392.079 123.93 385.865 123.93H380.78V113.208V102.486H386.317C389.254 102.486 393.322 103.05 395.356 103.727ZM398.859 132.508C405.865 135.33 408.577 142.328 405.413 149.326C403.492 153.502 399.085 155.421 389.254 156.324L380.78 157.001V143.795V130.702H387.56C391.288 130.702 396.373 131.493 398.859 132.508Z" fill="#754827"></path> <path d="M436.148 129.001V162.297H454.792H473.437V159.475V156.653H458.182H442.928V143.109V129.565H458.182H473.437V126.743V123.922H458.182H442.928V113.199V102.477H458.86H474.68L474.341 99.3166L474.002 96.2691L455.131 95.9305L436.148 95.7048V129.001Z" fill="#754827"></path> <path d="M571.742 120.205C571.742 134.653 572.307 146.617 572.985 149.325C575.358 157.678 584.963 164.562 594.341 164.562C603.268 164.562 612.308 157.79 614.568 149.325C615.246 146.729 615.811 134.314 615.811 120.205V95.6002L612.76 95.9388L609.596 96.2774L609.031 122.463C608.466 146.729 608.353 148.874 606.093 151.808C604.85 153.501 602.477 155.646 601.008 156.323C596.94 158.468 589.709 158.129 585.528 155.533C579.2 151.583 578.522 148.422 578.522 120.544V95.7131H575.132H571.742V120.205Z" fill="#754827"></path> <path d="M635.021 99.0908V102.477H642.365H649.71V132.387V162.297H653.1H656.49V132.387V102.477H663.834H671.179V99.0908V95.7048H653.1H635.021V99.0908Z" fill="#754827"></path> <path d="M685.078 97.1721C685.417 97.9622 690.05 105.637 695.36 114.328L705.078 130.017V146.157V162.297H708.468H711.858V146.947V131.484L722.254 114.441C727.903 105.073 732.762 97.0592 732.988 96.4949C733.214 96.0434 731.745 95.7048 729.711 95.7048C726.095 95.7048 725.643 96.2691 717.508 109.813L709.146 123.922L703.383 114.892C700.332 110.039 696.377 103.606 694.683 100.784C692.084 96.4949 691.067 95.7048 688.016 95.7048C685.643 95.7048 684.626 96.1563 685.078 97.1721Z" fill="#754827"></path> <path d="M778.525 129.001V162.297H790.955C799.091 162.297 804.74 161.733 807.113 160.717C815.475 157.105 820.221 147.624 817.961 139.159C816.605 134.418 810.39 127.308 807.452 127.308C804.966 127.308 805.192 126.292 808.469 123.696C812.424 120.649 814.232 113.764 812.65 108.233C809.825 99.2037 802.594 95.7048 786.435 95.7048H778.525V129.001ZM803.271 105.186C808.695 110.039 806.548 119.294 799.43 122.342C797.283 123.245 793.215 123.922 790.39 123.922H785.305V113.086V102.251L793.102 102.703C798.639 102.928 801.577 103.718 803.271 105.186ZM801.012 131.371C802.933 131.823 806.096 133.516 807.904 135.209C810.616 137.692 811.294 139.272 811.294 143.109C811.294 152.139 807.226 155.073 793.78 156.315L785.305 156.992V143.787V130.694H791.407C794.684 130.694 799.091 131.032 801.012 131.371Z" fill="#754827"></path> <path d="M929.94 129.122V162.531L947.793 162.08C963.387 161.741 966.099 161.403 970.166 159.258C975.816 156.324 980.336 151.132 983.5 144.247C986.777 136.91 986.664 123.14 983.274 115.465C976.607 100.792 965.647 95.8263 939.884 95.7134H929.94V129.122ZM965.647 106.436C984.178 115.465 983.613 146.278 964.743 153.728C962.031 154.856 955.138 155.985 948.358 156.324L936.72 157.001V129.574V102.147L948.132 102.824C957.285 103.276 960.562 103.953 965.647 106.436Z" fill="#754827"></path> <path d="M1003.84 97.5107C1004.18 98.4136 1008.81 106.202 1014.12 114.779L1023.73 130.242V146.27V162.297H1027.12H1030.51V146.721V131.145L1039.09 117.15C1043.84 109.362 1048.7 101.348 1049.94 99.3166L1052.2 95.7048H1048.36C1044.74 95.7048 1044.29 96.2691 1036.38 109.249C1031.75 116.698 1027.68 122.793 1027.34 122.793C1026.89 122.793 1022.82 116.698 1018.3 109.249C1010.62 96.7206 1009.71 95.7048 1006.55 95.7048C1003.95 95.7048 1003.27 96.1563 1003.84 97.5107Z" fill="#754827"></path> </svg> </a>
@@ -705,18 +741,29 @@ function motion(){
   if(window.Lenis&&matchMedia('(hover:hover)').matches){var lenis=new Lenis({lerp:.09,smoothWheel:true});root.classList.add('lenis');
     lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0);
     $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=$(id);if(!t)return;e.preventDefault();lenis.scrollTo(t,{offset:-80});});});}
-  var tl=gsap.timeline({defaults:{ease:'expo.out'}});
-  if($('.hero h1 .ln'))tl.from('.hero h1 .ln > span',{yPercent:110,duration:1.4,stagger:.11});
-  tl.from('.hero .who, .hero .sub, .hero .hero-cta, .hero .camp, .hero .after',{y:24,opacity:0,duration:1,stagger:.08},'-=1.0');
-  if($('.hero-media img')){tl.from('.hero-media img',{scale:1.16,duration:2.4,ease:'power2.out'},0);
-    gsap.to('.hero-media img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});}
-  if($('.hs-media'))tl.fromTo('.hs-media',{clipPath:'inset(10% 8% 10% 8% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.6},0);
+
+  if(window.__wowGo?__wowGo():true){var tl=gsap.timeline({defaults:{ease:'expo.out'}}),H=$('.hero h1');
+    if($('.hero .who'))tl.from('.hero .who',{y:16,opacity:0,duration:1},.1);
+    if(H){var lines=$$('.ln > span',H);
+      if(lines.length)tl.from(lines,{yPercent:112,duration:1.35,stagger:.11},.2);
+      else if(H.querySelector('*:not(em):not(br)')||H.classList.contains('word'))tl.from(H,{y:26,opacity:0,duration:1.3,clearProps:'transform,opacity'},.2);
+      else if(window.__wowSplit){var hw=__wowSplit(H);if(hw.length)tl.from(hw,{yPercent:118,duration:1.25,stagger:.05,onComplete:function(){$$('.wm',H).forEach(function(m){m.classList.add('done')})}},.2);}}
+    if($('.hero .sub'))tl.from('.hero .sub',{y:20,opacity:0,duration:1.05},'-=1.0');
+    var cta=$$('.hero .hero-cta > *, .hero .camp, .hero .after');if(cta.length)tl.from(cta,{y:18,opacity:0,duration:.95,stagger:.08,clearProps:'transform,opacity'},'-=.8');
+    if($('.hero-media img'))tl.from('.hero-media img',{scale:1.14,duration:2.6,ease:'power2.out'},0);
+    if($('.hs-media')){tl.fromTo('.hs-media',{clipPath:'inset(12% 10% 12% 10% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.7},0);
+      if($('.hs-media > img:first-child'))tl.from('.hs-media > img:first-child',{scale:1.16,duration:2.4,ease:'power2.out'},0);}}
+
+  if($('.hero-media img'))gsap.to('.hero-media img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
   $$('.reveal-clip').forEach(function(m){gsap.fromTo(m,{clipPath:'inset(14% 10% 14% 10% round 16px)'},{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.5,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:m,start:'top bottom+=60',once:true}});
     var img=$('img',m);if(img)gsap.fromTo(img,{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:true}});});
   if($('.quote'))gsap.fromTo('.quote-media',{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.quote',start:'top bottom',end:'bottom top',scrub:true}});
+
   if(matchMedia('(hover:hover) and (pointer:fine)').matches){$$('.magnetic').forEach(function(b){
-    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.28,y:(e.clientY-r.top-r.height/2)*.38,duration:.4,ease:'power3.out'})});
-    b.addEventListener('pointerleave',function(){gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'})});});}
+    var xT=gsap.quickTo(b,'x',{duration:.5,ease:'power3.out'}),yT=gsap.quickTo(b,'y',{duration:.5,ease:'power3.out'});
+    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();xT((e.clientX-r.left-r.width/2)*.22);yT((e.clientY-r.top-r.height/2)*.3)});
+    b.addEventListener('pointerleave',function(){xT(0);yT(0)});});}
+
 }
 if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',motion);else motion();
 })();
@@ -744,6 +791,67 @@ function calc(){if(!calcEl)return;var pi=+((calcEl.querySelector('[name=kp]:chec
   $('#coSave').textContent=save>0?save+' €':'–';$('#coGift').textContent=o[2]?(GL[o[2]]||o[2]):'–';
   $('#coBook').setAttribute('data-svc',k[0]);}
 if(calcEl){calcEl.addEventListener('change',calc);calc();}
+})();
+
+(function(){
+var d=document,root=d.documentElement,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
+// sõnadeks jagamine: säilitab <em>/<b>, jagab ainult tavalise tühiku kohalt (nbsp jääb kokku)
+function split(el){if(el.__w)return el.__w;var out=[];
+  (function walk(n){Array.prototype.slice.call(n.childNodes).forEach(function(c){
+    if(c.nodeType===3){if(!c.nodeValue.trim())return;var f=d.createDocumentFragment();
+      c.nodeValue.split(/([ \t\n\r]+)/).forEach(function(p){if(!p)return;if(!p.trim()){f.appendChild(d.createTextNode(p));return;}
+        var m=d.createElement('wow-w');m.className='wm';var i=d.createElement('wow-i');i.textContent=p;m.appendChild(i);f.appendChild(m);out.push(i);});
+      n.replaceChild(f,c);}
+    else if(c.nodeType===1&&!/^(BR|SVG|IMG|PICTURE|INPUT|SELECT|TEXTAREA|BUTTON)$/i.test(c.tagName))walk(c);});})(el);
+  el.__w=out;return out;}
+window.__wowSplit=split;
+window.__wowGo=function(){var late=root.classList.contains('wow-late');root.classList.remove('wow-pre');return !late;};
+// päis: vari + edenemisjoon (töötab ka ilma GSAP-ita)
+var top=$('.top'),tick=false;
+function hdr(){tick=false;if(!top)return;var y=window.scrollY||0,h=root.scrollHeight-innerHeight;top.classList.toggle('scrolled',y>24);top.style.setProperty('--sp',h>0?Math.min(1,y/h).toFixed(4):0);}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(hdr)}},{passive:true});hdr();
+function run(){
+  root.classList.remove('wow-pre');
+  if(RM||!window.gsap||!window.ScrollTrigger)return;
+  gsap.registerPlugin(ScrollTrigger);
+  var vis=function(el){return el.offsetParent!==null&&!el.closest('.skip,[aria-hidden=true],.hero,.top,.foot')};
+  // 1) pealkirjad: sõnad tõusevad maskist
+  $$('main h2, main .tr h3, main .place-main h3, main .band h3').filter(function(h){return vis(h)&&parseFloat(getComputedStyle(h).fontSize)>=28&&!h.querySelector('*:not(em):not(br):not(b):not(i):not(strong)')}).forEach(function(h){
+    var w=split(h);if(!w.length)return;
+    gsap.from(w,{yPercent:118,duration:1.15,ease:'expo.out',stagger:Math.min(.06,.5/w.length),
+      scrollTrigger:{trigger:h,start:'top 90%',once:true},onComplete:function(){$$('.wm',h).forEach(function(m){m.classList.add('done')})}});});
+  // 2) toetav tekst, nupud ja kaardid: kerge tõus järjest
+  [['.shead',':scope > p',.18],['.tr-text',':scope > :not(h3)',.12],['.story .s-text',':scope > p',.1],['.s-facts','.facts > li',0],['.intro','.glance',.1],
+   ['.steps3',':scope > li',0],['.cards3',':scope > *',0],['.place-side',':scope > *',0],['.faq-list',':scope > *',0],['.chipline',':scope > li',0],['.book-intro',':scope > :not(h2)',.12]
+  ].forEach(function(g){$$('main '+g[0]).forEach(function(box){if(!vis(box))return;
+    var items=$$(g[1],box).filter(function(x){return x.offsetParent!==null});if(!items.length)return;
+    gsap.from(items,{y:26,opacity:0,duration:.95,ease:'power3.out',stagger:.075,delay:g[2],clearProps:'transform,opacity',
+      scrollTrigger:{trigger:box,start:'top 86%',once:true}});});});
+  // 3) allkirjahetk: suur väide / tsitaat "süttib" sõna-sõnalt kerimise järgi
+  $$('main .intro .big, main .quote blockquote').forEach(function(q){if(q.offsetParent===null)return;
+    var w=split(q).filter(function(s){return !s.closest('cite')});if(w.length<3)return;
+    $$('.wm',q).forEach(function(m){m.classList.add('done')});
+    gsap.fromTo(w,{opacity:q.closest('.quote')?.5:.42},{opacity:1,ease:'none',stagger:.12,scrollTrigger:{trigger:q,start:'top 92%',end:'bottom 70%',scrub:.6}});});
+  // 4) pildid: clip-avanemisele lisaks väike sissesuum; kaartidel ja suurtel piltidel sama keel
+  $$('main .reveal-clip img, main .card .cm img').forEach(function(img){
+    gsap.fromTo(img,{scale:1.14},{scale:1,duration:1.9,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:img.parentNode,start:'top bottom+=40',once:true}});});
+  $$('main .card .cm').forEach(function(m){gsap.fromTo(m,{clipPath:'inset(10% 8% 10% 8% round 14px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:1.4,ease:'expo.out',immediateRender:false,scrollTrigger:{trigger:m,start:'top bottom+=40',once:true}});});
+  $$('main .place-main > img, main .band > img').forEach(function(img){
+    gsap.fromTo(img,{yPercent:-5},{yPercent:5,ease:'none',scrollTrigger:{trigger:img.parentNode,start:'top bottom',end:'bottom top',scrub:true}});});
+  // 5) kinkekaart pildil: hõljub kerimisel veidi üles; hiirega kerge 3D-kalle (puuteekraanil mitte)
+  $$('main .gift-photo .gift-card').forEach(function(c){var ph=c.parentNode;
+    gsap.fromTo(c,{y:20},{y:-10,ease:'none',scrollTrigger:{trigger:ph,start:'top bottom',end:'bottom 30%',scrub:1}});
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches){gsap.set(c,{transformPerspective:900});
+      var rx=gsap.quickTo(c,'rotationX',{duration:.6,ease:'power3.out'}),ry=gsap.quickTo(c,'rotationY',{duration:.6,ease:'power3.out'});
+      ph.addEventListener('pointermove',function(e){var r=ph.getBoundingClientRect();ry(((e.clientX-r.left)/r.width-.5)*7);rx(-((e.clientY-r.top)/r.height-.5)*5);});
+      ph.addEventListener('pointerleave',function(){rx(0);ry(0)});}});
+  // 6) värskendus pärast fonte ja pilte
+  var rf=function(){ScrollTrigger.refresh()};
+  if(d.fonts&&d.fonts.ready)d.fonts.ready.then(rf);
+  if(d.readyState==='complete')setTimeout(rf,60);else addEventListener('load',rf);
+}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){setTimeout(run,0)});else setTimeout(run,0);
 })();
 </script>
 </body>
