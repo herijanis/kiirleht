@@ -397,6 +397,10 @@ body.t-ag main>section:is(.blk,.sec){--tA:#CFC0D9;--tB:#E6DCEA}
 .t-ag .pz-text h2{font-size:clamp(36px,4vw,56px);color:#fff}
 .t-ag .pz-text h2 em{font-style:normal;color:#EBC1D3}
 .t-ag .pz-text p{color:#E2D7E8;font-size:18px}
+/* QA 19.11: logo ei tohi menüü alla kokku suruda (900–1280px, RU pikemad sõnad) */
+.t-ag .top .brand{flex:none}
+@media (max-width:1239px){.t-ag .top-call{display:none}}
+@media (max-width:1079px){.t-ag .top .nav{display:none}}
 .t-ag .day{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:8px}
 .t-ag .day li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;font-size:16px}
 .t-ag .day time{font-variant-numeric:tabular-nums;font-weight:700}
@@ -587,7 +591,7 @@ body.t-ag main>section:is(.blk,.sec){--tA:#CFC0D9;--tB:#E6DCEA}
 <section id="kkk" class="sec faq">
   <div class="wrap faq-grid"><h2>Частые вопросы</h2><div class="faq-list"><details><summary>Где проходит массаж?</summary><p>В Тарту. Точный адрес сообщим при подтверждении записи.</p></details><details><summary>Сколько стоит массаж?</summary><p>Цену скажем, когда договоримся о времени, — она зависит от массажа и длительности.</p></details><details><summary>Сколько может длиться массаж?</summary><p>Можно выбрать 30, 60 или 90 минут. Если не знаете, что подойдёт, — просто спросите.</p></details><details><summary>Почему между сеансами перерыв?</summary><p>После каждого массажа есть перерыв — чтобы ваше время не сокращалось и следующему клиенту не приходилось ждать. Сеансы никогда не ставятся вплотную друг к другу.</p></details><details><summary>Когда можно прийти?</summary><p>Выберите в форме удобный день и время или позвоните +372 5685 6773.</p></details><details><summary>Можно ли подарить сертификат?</summary><p>Да — закажите прямо здесь, на сайте, через SMS или позвоните.</p></details></div></div>
 </section>
-<section id="kontakt" class="blk" style="padding-top:0"><div class="wrap">
+<section id="kontakt" class="blk"><div class="wrap">
   <div class="g12 shead"><div><h2>Контакты</h2></div><p>Позвоните, отправьте SMS или напишите — договоримся о времени.</p></div>
   <article class="band city reveal-clip"><img src="../img/tartu-1800.jpg" srcset="../img/tartu-900.jpg 900w, ../img/tartu-1800.jpg 1800w" sizes="100vw" width="1800" height="788" alt="Осень в парке Холми, вдали мост Каарсилд и ратуша, Тарту" loading="lazy" decoding="async"><div class="in"><h3>Тарту</h3><p>Точный адрес сообщим при подтверждении записи.</p></div></article>
   <div class="contact">
@@ -766,7 +770,7 @@ function upd(){
   var day=v('date'),dd='';if(day){var pd=day.split('-');dd=pd[2]+'.'+pd[1]+'.'+pd[0]}
   var at=(s&&day)?tpl(T.at,{t:hm(cur)}):((L.tod||{}).u||'');
   if(s&&day)info.textContent=tpl(T.rng,{a:hm(cur),b:hm(cur+dur),c:hm(cur+dur+P)});
-  var lines=[tpl(L.mHello,{s:sd}),dd?tpl(L.mDate,{d:dd,t:at}):tpl(L.mTime,{t:at}),v('note'),L.mAsk||'',v('name')?tpl(L.mName,{n:v('name')}):''];
+  var lines=[tpl(L.mHello,{s:sd}),dd?tpl(L.mDate,{d:dd,t:at}):tpl(L.mTime,{t:at}),v('note'),(s&&day)?'':(L.mAsk||''),v('name')?tpl(L.mName,{n:v('name')}):''];
   var body=lines.filter(Boolean).join('\n'),num=bf.dataset.sms.replace(/[^0-9+]/g,'');
   d.getElementById('bkSms').href='sms:'+num+'?&body='+encodeURIComponent(body);
   var w=d.getElementById('bkWa');if(w)w.href='https://wa.me/'+num.replace(/\D/g,'')+'?text='+encodeURIComponent(body);

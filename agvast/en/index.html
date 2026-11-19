@@ -397,6 +397,10 @@ body.t-ag main>section:is(.blk,.sec){--tA:#CFC0D9;--tB:#E6DCEA}
 .t-ag .pz-text h2{font-size:clamp(36px,4vw,56px);color:#fff}
 .t-ag .pz-text h2 em{font-style:normal;color:#EBC1D3}
 .t-ag .pz-text p{color:#E2D7E8;font-size:18px}
+/* QA 19.11: logo ei tohi menüü alla kokku suruda (900–1280px, RU pikemad sõnad) */
+.t-ag .top .brand{flex:none}
+@media (max-width:1239px){.t-ag .top-call{display:none}}
+@media (max-width:1079px){.t-ag .top .nav{display:none}}
 .t-ag .day{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:8px}
 .t-ag .day li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;font-size:16px}
 .t-ag .day time{font-variant-numeric:tabular-nums;font-weight:700}
@@ -510,7 +514,7 @@ body.t-ag main>section:is(.blk,.sec){--tA:#CFC0D9;--tB:#E6DCEA}
 <section class="hero hero-split" id="hero"><div class="wrap g12">
   <div class="hs-text">
     <p class="who"><span>Agvast</span><span>Tartu</span></p>
-    <h1><span class="ln"><span>Massage in Tartu,</span></span><span class="ln"><span><em>tension off</em></span></span></h1>
+    <h1><span class="ln"><span>Massage in Tartu,</span></span><span class="ln"><span><em>let the tension go</em></span></span></h1>
     <p class="sub">Classic massage, back and neck massage and relaxing massage. Pick a free time right here – there&#x27;s a break after every appointment, so your time is yours alone.</p>
     <div class="hero-cta"><a class="btn magnetic" href="#broneeri">Pick a free time</a><a class="btn btn-ghost magnetic" href="tel:+37256856773">+372 5685 6773</a></div>
     <p class="camp">30, 60 or 90 minutes</p>
@@ -519,7 +523,7 @@ body.t-ag main>section:is(.blk,.sec){--tA:#CFC0D9;--tB:#E6DCEA}
 </div></section>
 <section class="intro blk"><div class="wrap g12">
   <p class="big">After a long day at the computer or behind the wheel, your shoulders and neck need attention. Find a time that suits you – the message is ready in one tap.</p>
-  <aside class="glance"><h2>Lengths</h2><ul><li>30 min <b>price on request</b></li><li>60 min <b>price on request</b></li><li>90 min <b>price on request</b></li></ul><a href="#broneeri">Pick a free time</a></aside>
+  <aside class="glance"><h2>Session lengths</h2><ul><li>30 min <b>price on request</b></li><li>60 min <b>price on request</b></li><li>90 min <b>price on request</b></li></ul><a href="#broneeri">Pick a free time</a></aside>
 </div></section>
 
 <section id="teenused" class="blk"><div class="wrap">
@@ -587,7 +591,7 @@ body.t-ag main>section:is(.blk,.sec){--tA:#CFC0D9;--tB:#E6DCEA}
 <section id="kkk" class="sec faq">
   <div class="wrap faq-grid"><h2>Frequently asked questions</h2><div class="faq-list"><details><summary>Where does the massage take place?</summary><p>In Tartu. You&#x27;ll get the exact address when your time is confirmed.</p></details><details><summary>How much does a massage cost?</summary><p>We&#x27;ll tell you the price when we agree on a time – it depends on the massage and its length.</p></details><details><summary>How long can a massage be?</summary><p>You can choose 30, 60 or 90 minutes. Not sure what suits you? Just ask.</p></details><details><summary>Why is there a break between appointments?</summary><p>There is a break after every massage, so your time is never cut short and the next client never has to wait. Appointments are never booked back to back.</p></details><details><summary>When can I come?</summary><p>Pick a day and start time in the form or call +372 5685 6773.</p></details><details><summary>Do you offer gift cards?</summary><p>Yes – order one right here by text message, or give us a call.</p></details></div></div>
 </section>
-<section id="kontakt" class="blk" style="padding-top:0"><div class="wrap">
+<section id="kontakt" class="blk"><div class="wrap">
   <div class="g12 shead"><div><h2>Contact</h2></div><p>Call, text or write – we&#x27;ll agree on a time.</p></div>
   <article class="band city reveal-clip"><img src="../img/tartu-1800.jpg" srcset="../img/tartu-900.jpg 900w, ../img/tartu-1800.jpg 1800w" sizes="100vw" width="1800" height="788" alt="Autumn in Holm Park with the Arch Bridge and Town Hall behind, Tartu" loading="lazy" decoding="async"><div class="in"><h3>Tartu</h3><p>You&#x27;ll get the exact address when your time is confirmed.</p></div></article>
   <div class="contact">
@@ -766,7 +770,7 @@ function upd(){
   var day=v('date'),dd='';if(day){var pd=day.split('-');dd=pd[2]+'.'+pd[1]+'.'+pd[0]}
   var at=(s&&day)?tpl(T.at,{t:hm(cur)}):((L.tod||{}).u||'');
   if(s&&day)info.textContent=tpl(T.rng,{a:hm(cur),b:hm(cur+dur),c:hm(cur+dur+P)});
-  var lines=[tpl(L.mHello,{s:sd}),dd?tpl(L.mDate,{d:dd,t:at}):tpl(L.mTime,{t:at}),v('note'),L.mAsk||'',v('name')?tpl(L.mName,{n:v('name')}):''];
+  var lines=[tpl(L.mHello,{s:sd}),dd?tpl(L.mDate,{d:dd,t:at}):tpl(L.mTime,{t:at}),v('note'),(s&&day)?'':(L.mAsk||''),v('name')?tpl(L.mName,{n:v('name')}):''];
   var body=lines.filter(Boolean).join('\n'),num=bf.dataset.sms.replace(/[^0-9+]/g,'');
   d.getElementById('bkSms').href='sms:'+num+'?&body='+encodeURIComponent(body);
   var w=d.getElementById('bkWa');if(w)w.href='https://wa.me/'+num.replace(/\D/g,'')+'?text='+encodeURIComponent(body);

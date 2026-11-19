@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
 <title>Massaaž Põlvamaal | HamsaVi</title>
-<meta name="description" content="HamsaVi – massaaž Põlvamaal, Põlva vallas. Klassikaline massaaž, selja- ja kaelamassaaž ning lõõgastav massaaž rahulikus maakohas. Aeg kokkuleppel, helista…">
+<meta name="description" content="HamsaVi – massaaž Põlvamaal. Klassikaline massaaž, selja- ja kaelamassaaž ning lõõgastav massaaž rahulikus maakohas. Aeg kokkuleppel: +372 504 9979.">
 <meta name="theme-color" content="#DCE1C9">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="et_EE">
@@ -17,7 +17,7 @@
 <link rel="alternate" hreflang="x-default" href="./">
 <meta property="og:site_name" content="HamsaVi">
 <meta property="og:title" content="Massaaž Põlvamaal | HamsaVi">
-<meta property="og:description" content="HamsaVi – massaaž Põlvamaal, Põlva vallas. Klassikaline massaaž, selja- ja kaelamassaaž ning lõõgastav massaaž rahulikus maakohas. Aeg kokkuleppel, helista…">
+<meta property="og:description" content="HamsaVi – massaaž Põlvamaal. Klassikaline massaaž, selja- ja kaelamassaaž ning lõõgastav massaaž rahulikus maakohas. Aeg kokkuleppel: +372 504 9979.">
 <meta property="og:image" content="https://herijanis.github.io/kiirleht/hamsavi/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -30,7 +30,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <link rel="preconnect" href="https://images.unsplash.com">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "HamsaVi", "description": "HamsaVi – massaaž Põlvamaal, Põlva vallas. Klassikaline massaaž, selja- ja kaelamassaaž ning lõõgastav massaaž rahulikus maakohas. Aeg kokkuleppel, helista…", "telephone": "+3725049979", "address": {"@type": "PostalAddress", "streetAddress": "Põlva vald", "addressLocality": "Põlva vald", "addressCountry": "EE"}, "email": "Hamsaviou@gmail.com", "hasMap": "https://www.google.com/maps/search/?api=1&query=P%C3%B5lva%20vald"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "HamsaVi", "description": "HamsaVi – massaaž Põlvamaal. Klassikaline massaaž, selja- ja kaelamassaaž ning lõõgastav massaaž rahulikus maakohas. Aeg kokkuleppel: +372 504 9979.", "telephone": "+3725049979", "address": {"@type": "PostalAddress", "streetAddress": "Põlva vald", "addressLocality": "Põlva vald", "addressCountry": "EE"}, "email": "Hamsaviou@gmail.com", "hasMap": "https://www.google.com/maps/search/?api=1&query=P%C3%B5lva%20vald"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kus massaaž toimub?", "acceptedAnswer": {"@type": "Answer", "text": "Põlvamaal, Põlva vallas. Täpse asukoha ja teejuhise saad aja kinnitamisel."}}, {"@type": "Question", "name": "Kui palju massaaž maksab?", "acceptedAnswer": {"@type": "Answer", "text": "Hinna ütleme aja kokkuleppimisel – see sõltub massaažist ja kestusest."}}, {"@type": "Question", "name": "Kui pikk massaaž olla võib?", "acceptedAnswer": {"@type": "Answer", "text": "Valida saab 30, 60 või 90 minutit. Kui sa ei tea, mis sobib, küsi julgelt."}}, {"@type": "Question", "name": "Miks on aegade vahel paus?", "acceptedAnswer": {"@type": "Answer", "text": "Iga massaaži järel on paus, et sinu aeg ei jääks lühemaks ja järgmine klient ei peaks ootama. Aegu ei panda kunagi üksteise otsa."}}, {"@type": "Question", "name": "Millal saab tulla?", "acceptedAnswer": {"@type": "Answer", "text": "Aeg on kokkuleppel. Vali vormis sobiv päev ja algusaeg või helista +372 504 9979."}}, {"@type": "Question", "name": "Kas saab kinkekaardi?", "acceptedAnswer": {"@type": "Answer", "text": "Jah – telli see siitsamast lehelt SMS-iga või helista."}}]}</script>
 <style>
 
@@ -400,6 +400,10 @@ body.t-hv main>section:is(.blk,.sec){--tA:#CFD7B8;--tB:#E3E7D1}
 @media (max-width:900px){.t-hv .pause .pz-text,.t-hv .pause .pz-photo{grid-column:1/-1}.t-hv .pause .pz-photo{min-height:300px}}
 .t-hv .pz-text h2{font-size:clamp(36px,4vw,56px)}
 .t-hv .pz-text p{color:var(--muted);font-size:18px}
+/* QA 19.11: logo ei tohi menüü alla kokku suruda (900–1280px, RU pikemad sõnad) */
+.t-hv .top .brand{flex:none}
+@media (max-width:1239px){.t-hv .top-call{display:none}}
+@media (max-width:1079px){.t-hv .top .nav{display:none}}
 .t-hv .day{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:8px}
 .t-hv .day li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;font-size:16px}
 .t-hv .day time{font-variant-numeric:tabular-nums;font-weight:700}
@@ -501,7 +505,7 @@ body.t-hv main>section:is(.blk,.sec){--tA:#CFD7B8;--tB:#E3E7D1}
 <div class="langbar" id="langbar" hidden data-ru="Эта страница есть на русском." data-ru-go="Перейти" data-en="This page is also available in English." data-en-go="Open in English"><span></span> <a href="ru/">→</a><button type="button" aria-label="Sulge / Закрыть / Close">×</button></div>
 <header class="top"><div class="wrap">
   <a class="brand" translate="no" href="#main" aria-label="HamsaVi"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M12 15V7.5M16 15V5M20 15V7.5M9.6 21.5 5.8 17.6M22.4 21.5l3.8-3.9"/></g><rect x="8.5" y="13.5" width="15" height="15.5" rx="7.5" fill="currentColor"/><circle class="eye" cx="16" cy="21.5" r="2.6"/></svg><span>Hamsa<b>Vi</b></span></a>
-  <nav class="nav" aria-label="Menüü"><a href="#massaazid">Massaažid</a><a href="#paus">Paus</a><a href="#broneeri">Broneeri aeg</a><a href="#kinkekaart">Kinkekaart</a><a href="#kontakt">Kontakt</a></nav>
+  <nav class="nav" aria-label="Menüü"><a href="#massaazid">Massaažid</a><a href="#paus">Paus</a><a href="#kinkekaart">Kinkekaart</a><a href="#kontakt">Kontakt</a></nav>
   <nav class="lang" aria-label="Keel / Язык / Language"><a href="./" hreflang="et" lang="et" data-lang="et" aria-current="true">ET</a><a href="ru/" hreflang="ru" lang="ru" data-lang="ru">RU</a><a href="en/" hreflang="en" lang="en" data-lang="en">EN</a></nav>
   <a class="top-call" href="tel:+3725049979">+372 504 9979</a>
   <a class="btn" href="#broneeri">Broneeri</a>
@@ -601,7 +605,7 @@ body.t-hv main>section:is(.blk,.sec){--tA:#CFD7B8;--tB:#E3E7D1}
 <section id="kkk" class="sec faq">
   <div class="wrap faq-grid"><h2>Korduma kippuvad küsimused</h2><div class="faq-list"><details><summary>Kus massaaž toimub?</summary><p>Põlvamaal, Põlva vallas. Täpse asukoha ja teejuhise saad aja kinnitamisel.</p></details><details><summary>Kui palju massaaž maksab?</summary><p>Hinna ütleme aja kokkuleppimisel – see sõltub massaažist ja kestusest.</p></details><details><summary>Kui pikk massaaž olla võib?</summary><p>Valida saab 30, 60 või 90 minutit. Kui sa ei tea, mis sobib, küsi julgelt.</p></details><details><summary>Miks on aegade vahel paus?</summary><p>Iga massaaži järel on paus, et sinu aeg ei jääks lühemaks ja järgmine klient ei peaks ootama. Aegu ei panda kunagi üksteise otsa.</p></details><details><summary>Millal saab tulla?</summary><p>Aeg on kokkuleppel. Vali vormis sobiv päev ja algusaeg või helista +372 504 9979.</p></details><details><summary>Kas saab kinkekaardi?</summary><p>Jah – telli see siitsamast lehelt SMS-iga või helista.</p></details></div></div>
 </section>
-<section id="kontakt" class="blk" style="padding-top:0"><div class="wrap">
+<section id="kontakt" class="blk"><div class="wrap">
   <div class="g12 shead"><div><h2>Kontakt</h2></div><p>Helista, saada SMS või kirjuta – lepime aja kokku.</p></div>
   <article class="band city reveal-clip"><img src="https://images.unsplash.com/photo-1592859600972-1b0834d83747?w=1200&h=525&q=70&auto=format&fit=crop&crop=entropy" srcset="https://images.unsplash.com/photo-1592859600972-1b0834d83747?w=800&h=350&q=70&auto=format&fit=crop&crop=entropy 800w, https://images.unsplash.com/photo-1592859600972-1b0834d83747?w=1800&h=788&q=70&auto=format&fit=crop&crop=entropy 1800w" sizes="100vw" width="1200" height="525" alt="Metsarada männikus" loading="lazy" decoding="async"><div class="in"><h3>Põlvamaa</h3><p>Põlva vald. Täpse asukoha ja teejuhise saad aja kinnitamisel.</p></div></article>
   <div class="contact">
@@ -780,7 +784,7 @@ function upd(){
   var day=v('date'),dd='';if(day){var pd=day.split('-');dd=pd[2]+'.'+pd[1]+'.'+pd[0]}
   var at=(s&&day)?tpl(T.at,{t:hm(cur)}):((L.tod||{}).u||'');
   if(s&&day)info.textContent=tpl(T.rng,{a:hm(cur),b:hm(cur+dur),c:hm(cur+dur+P)});
-  var lines=[tpl(L.mHello,{s:sd}),dd?tpl(L.mDate,{d:dd,t:at}):tpl(L.mTime,{t:at}),v('note'),L.mAsk||'',v('name')?tpl(L.mName,{n:v('name')}):''];
+  var lines=[tpl(L.mHello,{s:sd}),dd?tpl(L.mDate,{d:dd,t:at}):tpl(L.mTime,{t:at}),v('note'),(s&&day)?'':(L.mAsk||''),v('name')?tpl(L.mName,{n:v('name')}):''];
   var body=lines.filter(Boolean).join('\n'),num=bf.dataset.sms.replace(/[^0-9+]/g,'');
   d.getElementById('bkSms').href='sms:'+num+'?&body='+encodeURIComponent(body);
   var w=d.getElementById('bkWa');if(w)w.href='https://wa.me/'+num.replace(/\D/g,'')+'?text='+encodeURIComponent(body);
