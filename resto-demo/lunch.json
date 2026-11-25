@@ -1,0 +1,59 @@
+{
+ "kuupaev": "2026-11-25",
+ "kell": "11:00–15:00",
+ "road": [
+  {
+   "liik": "supp",
+   "nimi": {
+    "et": "Kõrvitsa-ingverisupp",
+    "ru": "Тыквенный суп с имбирём",
+    "en": "Pumpkin and ginger soup"
+   },
+   "hind": 4.5,
+   "diet": "VG"
+  },
+  {
+   "liik": "praad",
+   "nimi": {
+    "et": "Hakklihakotletid kartulipüree, pohlade ja kurgisalatiga",
+    "ru": "Котлеты с картофельным пюре, брусникой и огуречным салатом",
+    "en": "Meat patties with mash, lingonberries and cucumber salad"
+   },
+   "hind": 7.9,
+   "diet": ""
+  },
+  {
+   "liik": "taimne",
+   "nimi": {
+    "et": "Metsaseenerisoto",
+    "ru": "Ризотто с лесными грибами",
+    "en": "Wild mushroom risotto"
+   },
+   "hind": 7.5,
+   "diet": "VG"
+  },
+  {
+   "liik": "magus",
+   "nimi": {
+    "et": "Kama vahukoorega",
+    "ru": "Кама со сливками",
+    "en": "Kama with whipped cream"
+   },
+   "hind": 2.5,
+   "diet": "V"
+  }
+ ],
+ "komplekt": {
+  "nimi": {
+   "et": "Supp + praad + kohv",
+   "ru": "Суп + горячее + кофе",
+   "en": "Soup + main + coffee"
+  },
+  "hind": 10.9
+ },
+ "markus": {
+  "et": "Kaasa sama hinnaga – helista või saada sõnum.",
+  "ru": "Навынос по той же цене – позвоните или напишите.",
+  "en": "Same price for takeaway – call or text us."
+ }
+}
