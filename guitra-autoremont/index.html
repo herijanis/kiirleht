@@ -754,7 +754,20 @@ footer{background:var(--night);color:#a6b0be;padding:80px 0 120px;font-size:14px
 
   /* ---- fotod (Unsplash, tasuta litsents; illustreerivad) ---- */
   const PH = {
-    hands:  { id:'1645445522156-9ac06bc7a767', pos:'50% 50%', alt:'Kindadega käed paigaldavad ratast' },
+    /* remondi- ja keretööde fotod (rehvita töökojad ei saa rehvipilte) */
+    engine: { id:'1625047509248-ec889cbff17f', pos:'50% 50%', alt:'Mehaanik kontrollib mootorit' },
+    shop:   { id:'1771340012319-0b4fca008b54', pos:'50% 50%', alt:'Auto töökojas, kapott lahti' },
+    hall:   { id:'1727893119356-1702fe921cf9', pos:'62% 50%', alt:'Autoremonditöökoda' },
+    torque: { id:'1775590766345-c117265f0c1b', pos:'50% 50%', alt:'Mootori remont mutrivõtmega' },
+    belts:  { id:'1486262715619-67b85e0b08d3', pos:'50% 50%', alt:'Mootori rihmaülekanne lähedalt' },
+    elec:   { id:'1632733711679-529326f6db12', pos:'50% 50%', alt:'Auto elektrisüsteemi kontroll' },
+    brakes: { id:'1760317890314-e964ffd7e6a6', pos:'50% 50%', alt:'Piduriketas ja pidurisadul' },
+    grease: { id:'1619642751034-765dfdf7c58e', pos:'50% 50%', alt:'Mutrivõti mehaaniku käes' },
+    paint:  { id:'1632605185825-fd583793fa73', pos:'50% 40%', alt:'Auto värvikambris' },
+    polish: { id:'1780558852670-3f49298ecc1f', pos:'50% 50%', alt:'Auto poleerimine' },
+    sand:   { id:'1632823469901-5d2cfff5ba50', pos:'50% 50%', alt:'Kere lihvimine' },
+    body:   { id:'1632605170384-c3f4d89162a3', pos:'50% 55%', alt:'Auto keretöökojas' },
+    hands: { id:'1645445522156-9ac06bc7a767', pos:'50% 50%', alt:'Kindadega käed paigaldavad ratast' },
     changer:{ id:'1792792944402-5e94ce198dce', pos:'50% 60%', alt:'Rehvi paigaldamine montaažipingil' },
     balance:{ id:'1792792956964-560bf9bb5867', pos:'50% 50%', alt:'Ratta tasakaalustamine pingil' },
     stacks: { id:'1578844251758-2f71da64c96f', pos:'50% 50%', alt:'Virnad talverehve' },
@@ -764,7 +777,7 @@ footer{background:var(--night);color:#a6b0be;padding:80px 0 120px;font-size:14px
     tread:  { id:'1730514782439-cd0e4b763483', pos:'50% 50%', alt:'Talverehvi turvisemuster lähedalt' }
   };
   // avakaadri fookus: tekst on vasakul, ese paremal; telefonis kitsas kärbe
-  const HERO_POS = { hands:['78% 50%','72% 50%'], changer:['62% 70%','58% 60%'], balance:['58% 50%','52% 50%'], stacks:['70% 50%','40% 50%'], wrench:['72% 50%','76% 50%'], tread:['50% 50%','50% 50%'], lift:['50% 40%','50% 40%'] };
+  const HERO_POS = { hands:['78% 50%','72% 50%'], changer:['62% 70%','58% 60%'], balance:['58% 50%','52% 50%'], stacks:['70% 50%','40% 50%'], wrench:['72% 50%','76% 50%'], tread:['50% 50%','50% 50%'], lift:['50% 40%','50% 40%'], shop:['62% 50%','70% 50%'], hall:['55% 50%','60% 50%'], engine:['60% 50%','60% 50%'], paint:['60% 40%','50% 40%'], polish:['60% 50%','60% 50%'] };
   const U = (id, w) => 'https://images.unsplash.com/photo-' + id + '?w=' + w + '&q=70&auto=format&fit=crop';
   const setImg = (img, key, sizes, widths) => { const p = PH[key]; if (!img || !p) return;
     img.srcset = (widths || [480,720,960,1280]).map(w => U(p.id, w) + ' ' + w + 'w').join(', ');
@@ -776,9 +789,19 @@ footer{background:var(--night);color:#a6b0be;padding:80px 0 120px;font-size:14px
     fit(); mq.addEventListener && mq.addEventListener('change', fit); }
   if (heroKey) $('heroImg').alt = PH[heroKey].alt + ' (illustreeriv foto)';
   else if (window.__heroId) $('heroImg').alt = F.piltAlt ? F.piltAlt + ' (illustreeriv foto)' : 'Illustreeriv foto';
-  const pick = prefs => { const all = prefs.concat(['hands','changer','wrench','balance','stacks','tread','lift']);
+  const REPAIR = ['engine','torque','shop','hall','belts','elec','brakes','grease','lift'];
+  const pick = prefs => { const all = prefs.concat(F.rehvita ? REPAIR : ['hands','changer','wrench','balance','stacks','tread','lift'].concat(REPAIR));
     const k = all.find(k => !used.has(k)) || prefs[0]; used.add(k); return k; };
   const photoFor = n => { n = n.toLowerCase();
+    if (/värv|покрас/.test(n)) return ['paint','sand'];
+    if (/poleer|полир/.test(n)) return ['polish','sand'];
+    if (/retro|taastami|kindlustus|kaskoremont/.test(n)) return ['body','sand','paint'];
+    if (/kere|plekk|кузов/.test(n)) return ['sand','body','paint'];
+    if (/pidur|тормоз/.test(n)) return ['brakes','grease'];
+    if (/elektr|diagn|электр|диагност/.test(n)) return ['elec','engine'];
+    if (/mootor|hammasrihm|sidur|двигат/.test(n)) return ['belts','torque','engine'];
+    if (/remont|hooldus|veermik|õli|töökoda|kontroll|käigukast|kliima|konditsioneer|pihusti|keevit|ремонт|ходов/.test(n)) return F.rehvita || !/rehv|velg|ratas|шин/.test(n) ? ['engine','torque','shop','hall','grease'] : ['lift','wrench'];
+    if (F.rehvita) return ['shop','engine','hall'];
     if (/tasakaal|баланс/.test(n)) return ['balance','changer'];
     if (/hotell|hoiust|ladu|хранен/.test(n)) return ['stacks','tread'];
     if (/vahetus|montaa|paigald|монтаж|замен/.test(n)) return ['changer','hands','wrench'];
@@ -868,7 +891,7 @@ footer{background:var(--night);color:#a6b0be;padding:80px 0 120px;font-size:14px
   /* ---- services (fotoga), prices, why, reviews ---- */
   $('teenusedGrid').innerHTML = F.teenused.map((t,i) => `<article class="svc"><figure><img alt="" loading="lazy" decoding="async" width="960" height="720" data-ph="${pick(photoFor(t[0] + ' ' + t[1]))}"><span class="no">${String(i+1).padStart(2,'0')}</span></figure><div class="svc-body"><h3>${esc(t[0])}</h3><p>${esc(t[1])}</p><span class="price-tag">${esc(t[2])}</span></div></article>`).join('');
   document.querySelectorAll('#teenusedGrid img').forEach(img => setImg(img, img.dataset.ph, '(min-width:981px) 380px, (min-width:641px) 50vw, 100vw'));
-  setImg($('whyImg'), pick(['lift','hands','balance','stacks']), '(min-width:981px) 480px, 100vw', [480,720,960,1280]);
+  setImg($('whyImg'), pick(F.rehvita ? ['hall','shop','lift','grease'] : ['lift','hands','balance','stacks']), '(min-width:981px) 480px, 100vw', [480,720,960,1280]);
   setImg($('cdImg'), 'snow', '100vw', [640,960,1280,1600,2000]);
   $('cdImg').style.objectPosition = '';
   $('hinnadBody').innerHTML = F.hinnad.map(h => `<div class="prow"><span>${esc(h[0])}</span><i aria-hidden="true"></i><b>${esc(h[1])}</b></div>`).join('');
